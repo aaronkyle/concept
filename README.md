@@ -11,8 +11,10 @@ Web publication platform intended to allow multiple authors to contribute textua
  - all text in Markdown
  - GIS ‘enabled’ *the ability to link data to geographic locations is critical
      *  should allow for a narrative to be written that utilizes several 'embedded' maps as examples within a page [(like here)](http://boundlessgeo.com/2013/12/openlayers-3-and-google-maps-api/)
+     *  embedded maps should allow for some direct data querrying, with possibility of linking out to 'detailed' maps, which allow greater capacity for manipulation (especially in desktop applications)
  - focused on visualizations
- 
+ - platform-aware (mobile orientation) 
+
 2. Assumptions:
  - users expect both 'variety' (in terms of UIs) and 'standarization' (in terms of data organization)
 
