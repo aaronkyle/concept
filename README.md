@@ -48,11 +48,23 @@ Considerations in the use of tools and interfaces for producing geo-spatial visu
     * GeoServer – application server for sharing data as web services
     * GeoNode – web-based content management system for geospatial data
     * [OpenLayers](http://openlayers.org/) – library for building web applications
+* [Django] - facilitates python-centric software stack and deployment framework; software and services reply on Django web framework; software applications deployable Django modules.
+ - [django-wms-client](https://github.com/kartoza/django-wms-client)  facilitates  publication of QGIS Server (or any [WMN](http://en.wikipedia.org/wiki/Web_Map_Service)-based project) within a Django project framework (e.g. [Mezzanine CMS](http://mezzanine.jupo.org/)). This wms-client is configured as a standalone project (mainly for testing). For django integration,  it could be published to pypi and then deployed and run as a Django app.
+    * note: Deployment within Django is achieved by adding django-wms-client to INSTALLED_APPS, doing a django sync / migration and then ​adding in your maps using the django admininistration panel. An overview of django-wms-client functionality is provided in the [README](https://github.com/kartoza/django-wms-client/blob/develop/README.md).
+    * note:  some work needed to get QGIS server to work under [nginx](http://nginx.org/) [a task related to the server's internal configuration](https://github.com/cccs-web/core/tree/master/deploy/production).
+    * note: challenge o present different maps for consumption to individual web pages (or map viewing frames); assuming that it be 'best' (or at least, 'possible') to serve multiple qgs projects without needing a separate server running for each one (i.e., per the methods described in Tim's 2012 blog entry, with the challenge for Django-integration being that the [QGIS Server](http://www.qgis.org/en/site/about/features.html?highlight=server#qgis-server) wont serve other *.qgs files even if we clone the wms-client for each.
 
 
 ---
+*Clarifications / Notes*
 
-Questions:
+Tim Sutton has clarified that QGIS server presents a series of QGIS projects using the standard web services : [Web Mapping Service](http://en.wikipedia.org/wiki/Web_Map_Service) (WMS) and [Web Feature Service](http://en.wikipedia.org/wiki/Web_Feature_Service) (WFS). These services can be consumed by various clients including [OpenLayers](http://openlayers.org/) and [Leaflet](http://leafletjs.com/). The WFS specification allow one to ask for available layers to and selectively display all or a subset thereof.​ Tim also explained that each [QGIS-Web-Client](https://github.com/qgis/QGIS-Web-Client) can serve only a single QGIS project (i.e. a `*.qgs` file) due to how the web client is tied into the specific QGIS project it renders.
+
+Tim also clarified that his concept for web publication architecture did not include the QGIS web client.  He noted that our initial discussions were centered around using a 'pure' OpenLayers3 or Leaflet implementation with some added 'extras' for managing layer ordering. This is the underlying logic in the development of the [django-wms-client](https://github.com/kartoza/django-wms-client). Following this approach, SRC-ITS would publish your projects via QGIS server and then register those projects in the django-wms-client app, which would then deliver them as a Leaflet (or Openlayers) project. Tim notes that the app already does a decent job of service discovery when you point it to a WMS [URL](http://en.wikipedia.org/wiki/Uniform_resource_locator).
+
+---
+
+*Unresolved Questions*
 
 1. Architecture of Socifware Environment
 
