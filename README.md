@@ -10,6 +10,7 @@ Web publication platform intended to allow multiple authors to contribute textua
 1. Platform basics:
  - all text in Markdown
  - GIS ‘enabled’ *the ability to link data to geographic locations is critical
+     *  should allow for a narrative to be written that utilizes several 'embedded' maps as examples within a page [(like here)](http://boundlessgeo.com/2013/12/openlayers-3-and-google-maps-api/)
  - focused on visualizations
  
 2. Assumptions:
