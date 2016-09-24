@@ -135,3 +135,16 @@ Once that sort of a "project master" map is in place, our team could also go abo
 [Repository Management and Version Control](data-management-concept-and-context)
 
 A discussion on data repository management and version control can be found [here](data-management-concept-and-context).  SRC-ITS is awaiting an update from Admire about the work carried out to-date on GeoGig integration of shapefiles and our PostGIS database. SRC-ITS would also like some clarification about the advantages of GeoGig (e.h. the "feature-level diffs" referenced by Tim).
+
+
+===
+
+
+**Note:** The data, procedures, and services provided by this repo are **public**
+and should only include items allowed for general redistribution.
+
+The page ['web application concept and context'](/concept/web-application-concept-and-context.md) elaborates the overall idea behind this application and provides a contextual summary of our current development status. The page ['data management concept and context'](/concept/data-management-concept-and-context.md) details our efforts to establish an effective system for file version control and collaborative data repository management.
+
+
+Specific notes on software installation are provided per application, currently for [GeoGig](GeoGig-installation) and [QGIS Server](QGIS-Server-installation); please also check out our [core web application infrastructure](https://github.com/src-its/django-ca) as you evaluate the module.
+
