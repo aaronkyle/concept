@@ -25,8 +25,8 @@ Considerations in the use of tools and interfaces for producing GIS-enabled visu
  - web mapping stack - oriented toward GIS professionals
     * [QGIS](http://www.qgis.org/en/site/) – GIS desktop application akin to ArchGIS desktop
     * PostGIS – a spatial database extender for PostgreSQL
-    * GeoGig – version control / tracking edits to geospatial data
+    * [GeoGig](http://geogig.org/) – version control / tracking edits to geospatial data
     * GeoServer – application server for sharing data as web services
     * GeoNode – web-based content management system for geospatial data
-    * OpenLayers – library for building web applications
+    * [OpenLayers](http://openlayers.org/) – library for building web applications
 
