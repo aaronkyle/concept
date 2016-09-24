@@ -108,12 +108,7 @@ QGIS continues in much the same role, but supplies data to [GeoServer](http://su
 
 ---
 
-Further Use Case:
-
-
-
-
-## SRC-ITS' Considerations, Usage Scenarios, and Usability Priorities
+**Considerations, Usage Scenarios, and Usability Priorities**
 
 With regard to the "need" (or potential need) for printing multiple `*.qgis` files:
 
