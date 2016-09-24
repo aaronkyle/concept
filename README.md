@@ -20,7 +20,7 @@ Web publication platform intended to allow multiple authors to contribute textua
 
 ---
 
-Considerations in the use of tools and interfaces for producing GIS-enabled visualization:
+Considerations in the use of tools and interfaces for producing geo-spatial visualization:
 
 * [Shiney Server](http://shiny.rstudio.com/) - oriented toward quantitative analysts
  - maps with UIs for defined queries [(example)](http://shiny.rstudio.com/gallery/superzip-example.html)
@@ -32,4 +32,22 @@ Considerations in the use of tools and interfaces for producing GIS-enabled visu
     * GeoServer – application server for sharing data as web services
     * GeoNode – web-based content management system for geospatial data
     * [OpenLayers](http://openlayers.org/) – library for building web applications
+
+
+
+---
+
+Target Features:
+
+1. Data Management & Administration
+    * Users should be allowed to create their own project pages
+    * Users should be able to request editorial permissions to existing project pages
+    * Users should be able to choose whether to work from an existing data repository, or to create a new one
+    * Users should be able to import their own data to the server
+
+2. Data Presentation
+    * Each dataset should have a single, master style sheet that can be edited with QGIS
+    * Users should be able to select which layers they would like to present in a web page
+    * User should be able to present multiple map views within a single web page
+    * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
 
