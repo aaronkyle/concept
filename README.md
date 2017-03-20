@@ -6,13 +6,13 @@ trying to spell out what I want from the Internet
 1. Website as basic inter-operability layer.
      * from website as publication tool to software management interface
      * core publication elements: static site pages + blog pages
-     * past issues and modern solutions
+     * past issues and modern solutions - formatting, interactivity.
 
 2. Additional functionality via plug-ins.
-    * doc-meta
-    * gis-analysis vs. publication
-    * team management & task assignments
-    * version / revision control 
+    * [doc-meta](https://github.com/aaronkyle/docmeta) - a tool for collaborative managment of file objects, with ganulated user- and group- permissions.   
+    * [gis-analysis](#) (vs. [publication](#))
+    * team management & task [assignments](#)
+    * version / revision control (incl. for large file systems)
 
 
 ## (Scientific) Web Publication 
