@@ -1,5 +1,21 @@
 # concept
+
 trying to spell out what I want from the Internet
+
+
+1. Website as basic inter-operability layer.
+     * from website as publication tool to software management interface
+     * core publication elements: static site pages + blog pages
+     * past issues and modern solutions
+
+2. Additional functionality via plug-ins.
+    * doc-meta
+    * gis-analysis vs. publication
+    * team management & task assignments
+    * version / revision control 
+
+
+## (Scientific) Web Publication 
 
 ----
 
@@ -35,6 +51,12 @@ trying to spell out what I want from the Internet
     * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
 
 ---
+
+
+## GIS Integration
+
+greater distinction between: results publication (capable of user interaction) & fuctional for analytics
+    * solution: workflow
 
 Considerations in the use of tools and interfaces for producing geo-spatial visualization:
 
