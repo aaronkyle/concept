@@ -1,5 +1,24 @@
 # concept
 
+---
+
+## Design Parameters: 
+
+Our investments and development work has been guided by the following parameters:
+
+1. **The system should be based--to the greatest extent possible--an OpenSource software.** <br />As a 'social' development consultancy dedicated to equal treatment and respect for all (and one that works principally among impoverished communities), we feel that the tools that we develop to for our work should be freely available, and that no person interested in learning about social analysis should be constrained by 'entry costs' such as the need to purchase software licenses.
+
+1. **The system should help to manage collaborative research via revision control.** <br />[Revision control](http://en.wikipedia.org/wiki/Revision_control), also known as version control, is the management of changes to files, such documents, computer code, and other collections of information. Version control systems allow managers of collaborative projects to track when changes have been made to particular files, and--if necessary--to revert changes to a previous state.
+
+1. **The system should encourage use of 'text' files.** <br />For help ensure that CCCS data can be accessed (and written to) by the greatest possible range of applications. , we try to to utilize file types that store data as 'text'--typically encoded either in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) or [ASCII](http://en.wikipedia.org/wiki/ASCII). Files encoded in this way are considered ['human readable'](http://en.wikipedia.org/wiki/Human-readable_medium) in the sense that the presentation of information within the file can be opened by any basic text editor in a format that can be naturally read by humans. This differs from the way 'binary' files (such as MS Office *.doc, *.docx, and *.xml) save data, which is done as a sequence of bytes (binary digits (bits) grouped in eights) that require specific software applications to read, interpret, and re-present data in a human-readable format.
+
+1. **The system should--to the greatest extent possible--encourage authors to utilize a single formatting language.** CCCS produces numerous advisory papers, research reports, and other types of textual data for our clients. Traditionally, our approach to collaborative editing was to circulate document files via email, and to edit these files with mainstream word processing software--most prominently [Microsoft Word](http://en.wikipedia.org/wiki/Microsoft_Word) (a [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editing platform). The challenge we quickly realized with this approach is that [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) word processors, powerful as they are in allowing users to define custom formatting to help express themselves, tend introduce numerous formatting inconsistencies in collaborative authorship contexts.  Still more problematic, as CCCS research teams began to grow in size and as we began working with people using different operating systems to run word-processing software applications, we began to encounter an increasing number of conflicts and bugs in how formatting data was being stored in document files and presented via word-processing applications. For example, we began encountering data and formatting corruptions in files being collaboratively between computers running Windows OS and Mac OSX in spite of work being carried out exclusively in Microsoft Word. The problems we were experiencing apparently were arising from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version. CCCS' desire to avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
+
+
+----
+
+
+
 trying to spell out what I want from the Internet
 
 
