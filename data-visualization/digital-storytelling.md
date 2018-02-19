@@ -1,6 +1,6 @@
 * [Close-Ups of the Genome, Species by Species by Species](https://archive.nytimes.com/www.nytimes.com/imagepages/2007/01/22/science/20070123_SCI_ILLO.html)
 * [Mapping the Decline of ‘Stop-and-Frisk’](https://www.nytimes.com/interactive/2014/09/19/nyregion/stop-and-frisk-map.html)
-* [A visual introduction to machine learning			http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
+* [A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
 * [Design Company](http://multithreaded.stitchfix.com/algorithms/)
 * [The curious connection between warehouse maps, movie recommendations, and structural biology](http://multithreaded.stitchfix.com/blog/2017/08/31/warehouse-layouts/)
 * [The America’s Cup Finale: Oracle’s Path to Victory](http://www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html)
