@@ -1,7 +1,7 @@
 **PLEASE NOTE** : A working file of these tables in available on [Google Drive](https://docs.google.com/a/crossculturalconsult.com/spreadsheets/d/1CI3RIp-CbQcVJ32JwRGfL1_VpPDQa4SISH7Zj3aeLSo/edit?usp=sharing)
 
 
-## CCCS Bibliographic Reference & Provenience Data
+##  Bibliographic Reference & Provenience Data
 
 ### Provenience Data
 
@@ -18,7 +18,7 @@
 <td></td><td></td>
 </tr>
 <tr>
-<td> CCCS folder - orig</td><td></td>
+<td>  folder - orig</td><td></td>
 </tr>
 <tr>
 <td>sub-folder - orig</td>
@@ -62,7 +62,7 @@
 <td>BIBTEX entry type</td><td></td>
 </tr>
 <tr>
-<td>CCCS entry type</td><td></td>
+<td> entry type</td><td></td>
 </tr>
 <tr>
 <td></td><td></td>
@@ -153,7 +153,7 @@
 </tr>
 </table>
 
-## CCCS Review and Analysis Data
+##  Review and Analysis Data
 <table>
 <tr>
 <td>attribute tag</td><td></td>
@@ -168,7 +168,7 @@
 
 ## Currently Non-Utilized BibTex Data Field Values
 
-CCCS isn't currently referencing articles with these values, but we would like to enable the field by default
+ isn't currently referencing articles with these values, but we would like to enable the field by default
 
 | | |
 |---|---|
@@ -204,7 +204,7 @@ CCCS isn't currently referencing articles with these values, but we would like t
 | unpublished | A document having an author and title, but not formally published. | Required fields: author, title, note | Optional fields: month, year, key |  |
 
 
-## CCCS Entry Types
+##  Entry Types
 <table>
 <tr>
 <td width="20%">type</td><td>the field overriding the default type of publication (e.g. "Research Note" for techreport, "{PhD} dissertation" for phdthesis, "Section" for inbook/incollection)</td>
@@ -225,5 +225,3 @@ CCCS isn't currently referencing articles with these values, but we would like t
 | brochure | associated primarily with 'misc' |
 | proposal | associated primarily with 'misc' |
 | terms of reference | associated primarily with 'misc' |
-
-
