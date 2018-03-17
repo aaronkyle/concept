@@ -34,7 +34,7 @@ As research teams began to grow in size, and as offices working with people usin
  * version / revision control (incl. for large file systems)
 
 
-## target deatures
+## target features
 
 ### data Management & administration
 
