@@ -25,27 +25,29 @@ As research teams began to grow in size, and as offices working with people usin
 ## system components
 
 1. A web 'site' as basic interoperability layer
-     * integrated UI tools - from website as publication tool to 'software management interface'
-     * past issues and modern solutions - formatting, 'theming / skinning', application inter-activity.
-     * core publication elements: static site pages + 'blog' pages (rotate in content)
-     * a tool for collaborative managment of file objects, with ganulated user- and group- permissions 
-     * (Scientific) Web Publication
+ * integrated UI tools - from website as publication tool to 'software management interface'
+ * past issues and modern solutions - formatting, 'theming / skinning', application inter-activity.
+ * core publication elements: static site pages + 'blog' pages (rotate in content)
+ * a tool for collaborative managment of file objects, with ganulated user- and group- permissions 
+ * (Scientific) Web Publication
         - allow multiple authors to contribute textual, mathematical, and computational analysis
-     * [gis-analysis](#) (vs. [publication](#))
-     * team management & task [assignments](#)
-     * version / revision control (incl. for large file systems)
+ * [gis-analysis](#) (vs. [publication](#))
+ * team management & task [assignments](#)
+ * version / revision control (incl. for large file systems)
 
 
 ## Target Features
 
 
 ## Data Management & Administration
+
     * Users should be allowed to create their own project pages
     * Users should be able to request editorial permissions to existing project pages
     * Users should be able to choose whether to work from an existing data repository, or to create a new one
     * Users should be able to import their own data to the server
 
 ## Data Presentation
+
     * Each dataset should have a single, master style sheet (with QGIS connected to to edit GIS style sheets)
     * Users should be able to select which data views / mapping layers they would like to present in a web page
     * User should be able to present multiple map views within a single web page
