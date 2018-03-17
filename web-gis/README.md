@@ -129,3 +129,51 @@ IMPORTANT: With respect to the data uploaded to postgreSQL, please remember to k
 The git-annex documentation suggests that people are using it with files stored on S3 [[ex. 1](http://git-annex.branchable.com/special_remotes/S3/), [ex. 2](http://git-annex.branchable.com/tips/using_Amazon_S3/)], which can be utilized as a [VCS](http://en.wikipedia.org/wiki/Revision_control).  The challenge for our use case, I suspect, is to have raster data stored in S3 be accessible to data manipulation software such as QGIS without too much hassle (especially given that all client data must be kept private. and requiring the use of permission rules). One option that may help in this regard is to [mount S3 as a file system directory](http://juliensimon.blogspot.com/2013/08/howto-aws-mount-s3-buckets-from-linux.html). Greater investigation into the implications is needed before pursuing this option.
 
 
+---
+
+
+### Data Management Workflow
+
+As suggested in the discussion about [data management](https://github.com/cccs-web/soc-maps/wiki/data-management-concept-and-context), CCCS needs to establish a common workflow for obtaining, indexing, sharing, and version-controlling geospatial data. This workflow should function at the 'project' level, meaning that the data management occurs within the context of a single client project. 'CCCS' equivalent to any other 'client', with the important exception being that any new functionality that we are developing for our web applications needs to occur on CCCS' infrastructure, which will serve as a "template" for deploying future client projects. 
+
+As discussed preceding section and in our note on [data management](https://github.com/cccs-web/soc-maps/wiki/data-management-concept-and-context), if we are to focus development of map application utilities using `/cccs-web/soc-maps/` (unless there's a strong argument in favor of keeping the application in `/cccs-web/core/`, per the discussion above), then our actual geospatial data needs to be stored and shared in a separate and dedicated repository.  The infrastructure that I see as best suited to CCCS' existing data management workflow involves:
+
+* Git for deployment of the core application architecture [intial set-up and config files]
+* Git or GeoGig for version control and sharing of vector data
+* Git-annex sitting on top of S3 for for version control and sharing of raster data
+
+This git-centric constellation of data management utilities should afford us fine-grained control over data access and allow us to retain detailed records of when and how data are changed and edited. This set-up would be our "canonical" point of truth for all data types.  Should a project wish to change source data for their specific purposes without wishing for their changes to affect all other maps relying on those data, then the source data would need to be "forked" for that specific project.
+
+
+#### Team Workflow Needs / Considerations for Entering Data into the VCS 
+
+Data relevant to geospatial analysis may come in a variety of formats, including spatial data (like shapefiles and geo-referenced images) as well as statistical data like demographic measurements and socio-economic indicator data.
+
+Anyone who obtains new data should prioritize getting it loaded into a [VCS](http://en.wikipedia.org/wiki/Revision_control)-enabled repository ASAP. 
+
+When adding new data, it is imperative to 'track' the following metadata:
+
+* original file name
+* who supplied the data
+* who received the data
+* data data was received
+* initial location where data was entered into the CCCS file system [directory location / path]
+
+
+**Supplying New Data as a Non-Technical User**
+
+Any CCCS team member who receives or obtains geospatial data can give it to a CCCS data administrator for loading into the appropriate repositories. 
+
+**NOTE**: If CCCS chooses to use Git (rather than GeoGig) to maintain a working directory of shapefile data, then non-technical users could upload data directly to the repository on their own. Using GeoGig may preclude this option depending on the level of technical complexity involved.
+
+
+**Supplying New Data as a Mapper**
+
+Mappers should also upload data new data into a version-controlled repository [Git / GeoGig] in the format that it was received from the data originator (i.e. indexing shapefiles in their original formats in a VCS 'source' directory).
+
+If a mapper wishes to choose how and where data are structured in postgreSQL / [PostGIS](http://postgis.net/), then the appropriate work flow is for that mapper to ensure that her or his local database is synced to the master, and then to write a custom loading script that can be executed on the server to load in the source data set from the location where it was entered in the VCS.
+
+**CAVEAT:** CCCS does not have a clear understanding yet for how GeoGig either differentiates between, or combines, individual shapefiles and structured postgreSQL databases. One email received from Kartoza (@gubuntu) suggests that, GeoGig is exported into PostGIS on the server "such that the server database version that is supporting the web maps is always canonical". It may be the case that work through GeoGig (potentially via post-deployment hooks) can decrease or eliminate direct interaction with the database when entering new materials into the repository?
+
+
+
