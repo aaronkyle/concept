@@ -1,44 +1,60 @@
 # concept
 
+The repository seeks to define a system for open digital communication toward aiding investigation of complex social and environmental phenomenon.
+
 ---
 
-## Design Parameters: 
+## design parameters 
 
-Our investments and development work has been guided by the following parameters:
+Parameters for development toward a 'common public good':
 
-1. **The system should be based--to the greatest extent possible--an OpenSource software.** <br />As a 'social' development consultancy dedicated to equal treatment and respect for all (and one that works principally among impoverished communities), we feel that the tools that we develop to for our work should be freely available, and that no person interested in learning about social analysis should be constrained by 'entry costs' such as the need to purchase software licenses.
+1. Systems should be free.  The aim is for learning and performing social analysis should be constrained by 'entry costs' such as the need to purchase software licenses. Toward equal treatment and respect for all, and in an effort to alleviate poverty, the tools that we develop to for our work should be freely available for all others.
 
-1. **The system should help to manage collaborative research via revision control.** <br />[Revision control](http://en.wikipedia.org/wiki/Revision_control), also known as version control, is the management of changes to files, such documents, computer code, and other collections of information. Version control systems allow managers of collaborative projects to track when changes have been made to particular files, and--if necessary--to revert changes to a previous state.
+1. **System must help to manage collaborative research via revision control.** <br />[Revision control](http://en.wikipedia.org/wiki/Revision_control), also known as version control, is the management of changes to files, such documents, computer code, and other collections of information. Version control systems allow managers of collaborative projects to track when changes have been made to particular files, and--if necessary--to revert changes to a previous state.
 
-1. **The system should encourage use of 'text' files.** <br />For help ensure that CCCS data can be accessed (and written to) by the greatest possible range of applications. , we try to to utilize file types that store data as 'text'--typically encoded either in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) or [ASCII](http://en.wikipedia.org/wiki/ASCII). Files encoded in this way are considered ['human readable'](http://en.wikipedia.org/wiki/Human-readable_medium) in the sense that the presentation of information within the file can be opened by any basic text editor in a format that can be naturally read by humans. This differs from the way 'binary' files (such as MS Office *.doc, *.docx, and *.xml) save data, which is done as a sequence of bytes (binary digits (bits) grouped in eights) that require specific software applications to read, interpret, and re-present data in a human-readable format.
+1. **The system encourages use of 'text' files.** <br />To ensure that data can be accessed (and written to) by the greatest possible range of applications. , we try to to utilize file types that store data as 'text'--typically encoded either in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) or [ASCII](http://en.wikipedia.org/wiki/ASCII). Files encoded in this way are considered ['human readable'](http://en.wikipedia.org/wiki/Human-readable_medium) in the sense that the presentation of information within the file can be opened by any basic text editor in a format that can be naturally read by humans. This differs from the way 'binary' files (such as MS Office *.doc, *.docx, and *.xml) save data, which is done as a sequence of bytes (binary digits (bits) grouped in eights) that require specific software applications to read, interpret, and re-present data in a human-readable format.
 
-1. **The system should--to the greatest extent possible--encourage authors to utilize a single formatting language.** CCCS produces numerous advisory papers, research reports, and other types of textual data for our clients. Traditionally, our approach to collaborative editing was to circulate document files via email, and to edit these files with mainstream word processing software--most prominently [Microsoft Word](http://en.wikipedia.org/wiki/Microsoft_Word) (a [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editing platform). The challenge we quickly realized with this approach is that [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) word processors, powerful as they are in allowing users to define custom formatting to help express themselves, tend introduce numerous formatting inconsistencies in collaborative authorship contexts.  Still more problematic, as CCCS research teams began to grow in size and as we began working with people using different operating systems to run word-processing software applications, we began to encounter an increasing number of conflicts and bugs in how formatting data was being stored in document files and presented via word-processing applications. For example, we began encountering data and formatting corruptions in files being collaboratively between computers running Windows OS and Mac OSX in spite of work being carried out exclusively in Microsoft Word. The problems we were experiencing apparently were arising from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version. CCCS' desire to avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
+1. **The system should--to the greatest extent possible--encourage authors to utilize a single formatting language (HTML).** Social development involves interaction between advisory papers, research reports, and other types of textual data. Traditionally approaches (writing here in the early years of the twenty-first-century), common offices approaches to collaborative editing tend to involve irculate document files via email, and to edit these files with mainstream word processing software--most prominently [Microsoft Word](http://en.wikipedia.org/wiki/Microsoft_Word) (a [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editing platform). A common challenge in these environments is that [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) word processors, powerful as they are in allowing users to define custom formatting to help express themselves, tend introduce numerous formatting inconsistencies in collaborative authorship contexts.
+
+As research teams began to grow in size, and as offices working with people using different operating systems to run word-processing software applications, one will inevitably encounter bugs and conflicts in how formatting data is stored in document files and presented via word-processing applications. For example, in spite of work being carried out exclusively in Microsoft Word, formatting corruption often occur in large files that are collaboratively edited between computers running Windows OS and Mac OSX.[[note1](# "[problems arise from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version.")] To avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
 
 
 ----
 
 
+## system components
 
-trying to spell out what I want from the Internet
+1. A web 'site' as basic interoperability layer
+     * integrated UI tools - from website as publication tool to 'software management interface'
+     * past issues and modern solutions - formatting, 'theming / skinning', application inter-activity.
+     * core publication elements: static site pages + 'blog' pages (rotate in content)
+     * a tool for collaborative managment of file objects, with ganulated user- and group- permissions 
+     * (Scientific) Web Publication
+        - allow multiple authors to contribute textual, mathematical, and computational analysis
+     * [gis-analysis](#) (vs. [publication](#))
+     * team management & task [assignments](#)
+     * version / revision control (incl. for large file systems)
 
 
-1. Website as basic inter-operability layer.
-     * from website as publication tool to software management interface
-     * core publication elements: static site pages + blog pages
-     * past issues and modern solutions - formatting, interactivity.
+## Target Features
 
-2. Additional functionality via plug-ins.
-    * [doc-meta](https://github.com/aaronkyle/docmeta) - a tool for collaborative managment of file objects, with ganulated user- and group- permissions.   
-    * [gis-analysis](#) (vs. [publication](#))
-    * team management & task [assignments](#)
-    * version / revision control (incl. for large file systems)
+
+## Data Management & Administration
+    * Users should be allowed to create their own project pages
+    * Users should be able to request editorial permissions to existing project pages
+    * Users should be able to choose whether to work from an existing data repository, or to create a new one
+    * Users should be able to import their own data to the server
+
+## Data Presentation
+    * Each dataset should have a single, master style sheet (with QGIS connected to to edit GIS style sheets)
+    * Users should be able to select which data views / mapping layers they would like to present in a web page
+    * User should be able to present multiple map views within a single web page
+    * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
 
 
 ## (Scientific) Web Publication 
 
-----
-
-** Web (and PDF) publication platform intended to allow multiple authors to contribute textual, mathematical, and computational analysis to investigating complex social and environmental phenomenon.** 
+** Web (and PDF) publication platform intended to allow multiple authors to contribute textual, mathematical, and computational analysis to investigating in complex social and environmental phenomenon.** 
 
 1. Platform basics:
  - all text in Markdown
@@ -46,28 +62,12 @@ trying to spell out what I want from the Internet
      *  should allow for a narrative to be written that utilizes several 'embedded' maps as examples within a page [(like here)](http://boundlessgeo.com/2013/12/openlayers-3-and-google-maps-api/)
      *  embedded maps should allow for some direct data querrying, with possibility of linking out to 'detailed' maps, which allow greater capacity for manipulation (especially in desktop applications)
      *  maps should be 'simultaneously broadcast' over the network (affected how changes / updates are made to style sheets and data)
-     *  platform should alow multiple means for allowing users to load in data and to manage data repositories
+     *  platform should allow multiple means for allowing users to load in data and to manage data repositories
  - focused on visualizations
  - platform-aware (mobile orientation) 
 
 2. Assumptions:
  - users expect both 'variety' (in terms of UIs) and 'standarization' (in terms of data organization)
-
----
-
-**Target Features**
-
-1. Data Management & Administration
-    * Users should be allowed to create their own project pages
-    * Users should be able to request editorial permissions to existing project pages
-    * Users should be able to choose whether to work from an existing data repository, or to create a new one
-    * Users should be able to import their own data to the server
-
-2. Data Presentation
-    * Each dataset should have a single, master style sheet that can be edited with QGIS
-    * Users should be able to select which layers they would like to present in a web page
-    * User should be able to present multiple map views within a single web page
-    * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
 
 ---
 
@@ -97,6 +97,27 @@ Considerations in the use of tools and interfaces for producing geo-spatial visu
 
 
 ---
+
+
+### *Unresolved Questions*
+
+     1. Architecture of Software Environment
+
+      > Do we build as a stack software components, with each component bundled as an individual [Docker](https://www.docker.com/) application? 
+      
+     * a suite of individual docker applications, each wrapping a pre-configured application entity (e.g. postgreSQL, QGIS Server)
+       - **note** in the past, it was challenging to conceptulize how different application are configured to communicate with one another; e.g. how, within docker, the system is configured to pass data manipulated with QGIS to update web style sheets  
+       - **question** how to point the Docker application to the specific *.qgis file that we wish to serve? (it is only hard coded into the loader via file import, or can different applications be pointed to 'external' *.qgis source files?) [Do we have to re-load the docker app each time we make a change to the qgis file in the source repo?  How is docker referencing a source repo outside of its own container?  Via ssh / html paths?  What happens when these paths change?]
+       - **concern** - how to address the large size of each Docker app (or, app suite). Each  Docker repository is rather large in size.  [%%% NOTE SIZES %%%] While this is managable from the standpoint of sharing a development environment for web mappers (allowing them to see how the web mapping application presents data), it makes less sense for other  purposes, such as serving multiple maps for consumption on the site.  With only a few maps online, one would quickly start incurring unnecessary costs for excessive utilization of storage space.
+         - 
+     * scripts pass configurations into Docker
+         - **note** scripting the psql data import means maintaining bundles of import scripts, each of which must be assiduously tracked kept up-to-date in order for the script to work (degree of maintenance ) scripts for tutorials and examples is fine; difficulty is maintaining scripts and ensuring appropriate cautions are declared to end users?
+
+     >  Do we instead build as a complete application, so that component admin can be accomplished directly on the host server?
+
+     - direct access and exposure to the application system architecture and direct communication with applications directly rather than via a virtualization layer.
+
+
 *Clarifications / Notes*
 
 Tim Sutton has clarified that QGIS server presents a series of QGIS projects using the standard web services : [Web Mapping Service](http://en.wikipedia.org/wiki/Web_Map_Service) (WMS) and [Web Feature Service](http://en.wikipedia.org/wiki/Web_Feature_Service) (WFS). These services can be consumed by various clients including [OpenLayers](http://openlayers.org/) and [Leaflet](http://leafletjs.com/). The WFS specification allow one to ask for available layers to and selectively display all or a subset thereof.​ Tim also explained that each [QGIS-Web-Client](https://github.com/qgis/QGIS-Web-Client) can serve only a single QGIS project (i.e. a `*.qgs` file) due to how the web client is tied into the specific QGIS project it renders.
@@ -123,28 +144,6 @@ The [Boundless](http://boundlessgeo.com/) team [actively argue against having ov
 
 QGIS continues in much the same role, but supplies data to [GeoServer](http://suite.opengeo.org/opengeo-docs/geoserver/)&mdash;fulfilling the need for a GIPOT (Graphical Information Point of Truth). It appears that QGIS can be used to publish layers and styling to GeoServer, and also that GeoServer can be used as a source of styling data and styling for both QGIS Server (or GeoExplorer, the equivalent web UI for their deployment framework). As such, it appears that GeoServer may be the functional equivalent (and alternative) to [GeoGig](http://geogig.org/) [though Boundless also maintains GeoGig, so perhaps it's another part of the stack?]. It is unclear how [GeoServer](http://suite.opengeo.org/opengeo-docs/geoserver/) preserves and supplies presentation parameters and symbology from QGIS (icons, layer transparency, etc.). 
 
-
-
----
-
-*Unresolved Questions*
-
-1. Architecture of Socifware Environment
-
- > Do we build as a stack software components, with each component bundled as an individual [Docker](https://www.docker.com/) application? 
- 
-* a suite of individual docker applications, each wrapping a pre-configured application entity (e.g. postgreSQL, QGIS Server)
-  - **note** in the past, it was challenging to conceptulize how different application are configured to communicate with one another; e.g. how, within docker, the system is configured to pass data manipulated with QGIS to update web style sheets  
-  - **question** how to point the Docker application to the specific *.qgis file that we wish to serve? (it is only hard coded into the loader via file import, or can different applications be pointed to 'external' *.qgis source files?) [Do we have to re-load the docker app each time we make a change to the qgis file in the source repo?  How is docker referencing a source repo outside of its own container?  Via ssh / html paths?  What happens when these paths change?]
-  - **concern** - how to address the large size of each Docker app (or, app suite). Each  Docker repository is rather large in size.  [%%% NOTE SIZES %%%] While this is managable from the standpoint of sharing a development environment for web mappers (allowing them to see how the web mapping application presents data), it makes less sense for other  purposes, such as serving multiple maps for consumption on the site.  With only a few maps online, one would quickly start incurring unnecessary costs for excessive utilization of storage space.
-    - 
-* scripts pass configurations into Docker
-    - **note** scripting the psql data import means maintaining bundles of import scripts, each of which must be assiduously tracked kept up-to-date in order for the script to work (degree of maintenance ) scripts for tutorials and examples is fine; difficulty is maintaining scripts and ensuring appropriate cautions are declared to end users?
-
-
->  Do we instead build as a complete application, so that component admin can be accomplished directly on the host server?
-
-- direct access and exposure to the application system architecture and direct communication with applications directly rather than via a virtualization layer.
 
 
 ---
