@@ -19,12 +19,10 @@ Parameters for development toward a 'common public good':
 As research teams began to grow in size, and as offices working with people using different operating systems to run word-processing software applications, one will inevitably encounter bugs and conflicts in how formatting data is stored in document files and presented via word-processing applications. For example, in spite of work being carried out exclusively in Microsoft Word, formatting corruption often occur in large files that are collaboratively edited between computers running Windows OS and Mac OSX.[[note1](# "[problems arise from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version.")] To avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
 
 
-----
-
-
 ## system components
 
 1. A web 'site' as basic interoperability layer
+
  * integrated UI tools - from website as publication tool to 'software management interface'
  * past issues and modern solutions - formatting, 'theming / skinning', application inter-activity.
  * core publication elements: static site pages + 'blog' pages (rotate in content)
@@ -36,25 +34,24 @@ As research teams began to grow in size, and as offices working with people usin
  * version / revision control (incl. for large file systems)
 
 
-## Target Features
+## target deatures
+
+### data Management & administration
+
+ * Users should be allowed to create their own project pages
+ * Users should be able to request editorial permissions to existing project pages
+ * Users should be able to choose whether to work from an existing data repository, or to create a new one
+ * Users should be able to import their own data to the server
+
+### data presentation
+
+ * Each dataset should have a single, master style sheet (with QGIS connected to to edit GIS style sheets)
+ * Users should be able to select which data views / mapping layers they would like to present in a web page
+ * User should be able to present multiple map views within a single web page
+ * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
 
 
-## Data Management & Administration
-
-    * Users should be allowed to create their own project pages
-    * Users should be able to request editorial permissions to existing project pages
-    * Users should be able to choose whether to work from an existing data repository, or to create a new one
-    * Users should be able to import their own data to the server
-
-## Data Presentation
-
-    * Each dataset should have a single, master style sheet (with QGIS connected to to edit GIS style sheets)
-    * Users should be able to select which data views / mapping layers they would like to present in a web page
-    * User should be able to present multiple map views within a single web page
-    * Each map embedded within a web page should be able to allow for some amount of user interaction (toggling on and off layers, changing the base layer, etc.)
-
-
-## (Scientific) Web Publication 
+### (scientific) web publication 
 
 ** Web (and PDF) publication platform intended to allow multiple authors to contribute textual, mathematical, and computational analysis to investigating in complex social and environmental phenomenon.** 
 
@@ -71,10 +68,8 @@ As research teams began to grow in size, and as offices working with people usin
 2. Assumptions:
  - users expect both 'variety' (in terms of UIs) and 'standarization' (in terms of data organization)
 
----
 
-
-## GIS Integration
+### GIS integration
 
 greater distinction between: results publication (capable of user interaction) & fuctional for analytics
     * solution: workflow
@@ -98,9 +93,6 @@ Considerations in the use of tools and interfaces for producing geo-spatial visu
     * note: challenge o present different maps for consumption to individual web pages (or map viewing frames); assuming that it be 'best' (or at least, 'possible') to serve multiple qgs projects without needing a separate server running for each one (i.e., per the methods described in Tim's 2012 blog entry, with the challenge for Django-integration being that the [QGIS Server](http://www.qgis.org/en/site/about/features.html?highlight=server#qgis-server) wont serve other *.qgs files even if we clone the wms-client for each.
 
 
----
+### *unresolved questions*
 
-
-### *Unresolved Questions*
-
-     1. Architecture of Software Environment
+1. Architecture of Software Environment
