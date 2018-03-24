@@ -21,3 +21,11 @@
 * [Visual explanations](http://setosa.io/#/)
 * [MINARD'S SOURCES --From Virginia Tufte and Dawn Finley, August 7, 2002.](https://www.edwardtufte.com/tufte/minard)
 * [Is It Better to Rent or Buy?](https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html)
+* [This is every active satellite orbiting earthhttps://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/z](https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/)
+<!--
+* []()
+* []()
+* []()
+* []()
+* []()
+-->
