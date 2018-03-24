@@ -30,3 +30,5 @@
 * [d3.js force directed node focus:](http://xliberation.com/googlecharts/d3concept.html)
 
 * [dSunburst for your skill map](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
+
+* d3-voronoi-map usage https://bl.ocks.org/kcnarf/238fa136f763f5ad908271a170ef60e2
