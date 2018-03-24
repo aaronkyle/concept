@@ -22,10 +22,11 @@
 * [MINARD'S SOURCES --From Virginia Tufte and Dawn Finley, August 7, 2002.](https://www.edwardtufte.com/tufte/minard)
 * [Is It Better to Rent or Buy?](https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html)
 * [This is every active satellite orbiting earthhttps://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/z](https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/)
-<!--
-* []()
-* []()
-* []()
-* []()
-* []()
--->
+* [Crossfilter: Multidimensional Filtering for Coordinated Views](http://square.github.io/crossfilter/)
+* [D3.js Gantt Chart, example 3](http://bl.ocks.org/dk8996/5538271)
+* [d3 library to build circular graphs](https://github.com/nicgirault/circosjs)
+
+* [DependencyWheel: An Interactive Visualization Of Package Dependencies](http://www.redotheweb.com/DependencyWheel/)
+* [d3.js force directed node focus:](http://xliberation.com/googlecharts/d3concept.html)
+
+* [dSunburst for your skill map](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
