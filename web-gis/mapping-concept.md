@@ -28,3 +28,17 @@ Here we see earthquakes represented on a selectable timeline where D3 generates 
 References:
 
 https://leanpub.com/D3-Tips-and-Tricks/read#leanpub-auto-mapping-with-d3js
+
+
+
+## Mapping w/ d3.js
+
+* [Overlay example for leaflet.js](http://bl.ocks.org/d3noob/7845954)
+* [A full screen leaflet.js map](http://bl.ocks.org/d3noob/7654694)
+* [Christchurch 2010 Timeline](http://bl.ocks.org/tnightingale/4718717)
+* [Visualization of Beijing Air Pollution](https://github.com/scottcheng/bj-air-vis)
+* []()
+* []()
+* []()
+* []()
+
