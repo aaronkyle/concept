@@ -31,9 +31,28 @@
 
 * [dSunburst for your skill map](http://bl.ocks.org/wizicer/f662a0b04425fc0f7489)
 
+
+* http://vizuly.io/product/weighted-tree/?demo=d3js weighted tree
+
+* https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html Four Ways to Slice Obama’s 2013 Budget Proposal
+
+* https://archive.nytimes.com/www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html The Facebook Offering: How It Compares
+
+https://bost.ocks.org/mike/hive/ Hive Plots
+
+https://bost.ocks.org/mike/bubble-map/ 
+
+* http://mbostock.github.io/d3/talk/20111116/iris-parallel.html
+
 * d3-voronoi-map usage https://bl.ocks.org/kcnarf/238fa136f763f5ad908271a170ef60e2
 
+* http://www.findtheconversation.com/concept-map/#oliver-porter The Conversation
 
-Testing embed
+* [Sequences sunburst](https://bl.ocks.org/kerryrodden/7090426)
 
-<script src="https://gist.github.com/aaronkyle/a79912949d7660c53980da98e40f1498.js"></script>
+
+* http://romsson.github.io/dragit/example/nations.html 
+
+https://bost.ocks.org/mike/nations/
+
+* https://www.gapminder.org/world/#$majorMode=chart$is;shi=t;ly=2003;lb=f;il=t;fs=11;al=30;stl=t;st=t;nsl=t;se=t$wst;tts=C$ts;sp=5.59290322580644;ti=2013$zpv;v=0$inc_x;mmid=XCOORDS;iid=phAwcNAVuyj1jiMAkmq1iMg;by=ind$inc_y;mmid=YCOORDS;iid=phAwcNAVuyj2tPLxKvvnNPA;by=ind$inc_s;uniValue=8.21;iid=phAwcNAVuyj0XOoBL_n5tAQ;by=ind$inc_c;uniValue=255;gid=CATID0;by=grp$map_x;scale=log;dataMin=194;dataMax=96846$map_y;scale=lin;dataMin=23;dataMax=86$map_s;sma=49;smi=2.65$cd;bd=0$inds=;modified=60
