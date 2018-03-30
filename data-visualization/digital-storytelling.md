@@ -59,3 +59,21 @@ https://bost.ocks.org/mike/nations/
 
 https://medium.com/@mbostock/introducing-d3-scale-61980c51545f
 https://medium.com/@mbostock/introducing-d3-shape-73f8367e6d12
+
+
+http://icerdesign.com/about/#/skills
+
+https://marmelab.com/ArchitectureTree/
+
+https://bost.ocks.org/mike/bubble-map/
+
+https://archive.nytimes.com/www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html
+https://www.nytimes.com/interactive/2014/01/11/us/politics/who-controls-the-states-and-where-they-stand.html
+http://www.nytimes.com/newsgraphics/2013/11/30/football-conferences/index.html
+https://archive.nytimes.com/www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html
+https://archive.nytimes.com/www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html
+
+https://bost.ocks.org/mike/nations/
+
+https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
+
