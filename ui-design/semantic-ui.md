@@ -1,11 +1,17 @@
-## Semantic-UI + Integrations
 
-* [Semantic-Org/Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React)
+## Layouts 
 
+* [Layouts ](https://semantic-ui.com/usage/layout.html)
 
 ## Responsive Design Elements
 
 * [Responsive UI Examples](https://semantic-ui.com/examples/responsive.html)
+
+
+## Attached Content
+
+* [Attached Content](https://semantic-ui.com/examples/attached.html)
+
 
 
 ## Tables & Grids
@@ -14,6 +20,7 @@
 * [Semantic UI - DataTables](https://datatables.net/examples/styling/semanticui)
 * [Table](http://1.semantic-ui.com/collections/table.html)
 
-## Attached Content
 
-* [Attached Content](https://semantic-ui.com/examples/attached.html)
+## Semantic-UI + Integrations
+
+* [Semantic-Org/Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React)
