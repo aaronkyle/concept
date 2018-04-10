@@ -19,3 +19,26 @@ Markdown is free software, available under a [BSD-style open source license](htt
 * [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
     * [Markdown Basics](https://help.github.com/articles/markdown-basics/)
     * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+
+---
+
+* [Markdown: continue numbered list](https://stackoverflow.com/questions/18088955/markdown-continue-numbered-list)
+* [Support starting numbered lists with arbitrary number #211](https://github.com/gettalong/kramdown/issues/211#issuecomment-256508905)
+
+With kramdown:
+
+```
+{:start="3"}
+1. test
+1. test
+1. test
+```
+
+output:
+
+```
+3. test
+4. test
+5. test
+```
