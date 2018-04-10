@@ -1,7 +1,9 @@
 
 ## DataTables
 
-### [DOM positioning](https://datatables.net/examples/basic_init/dom.html)
+### Working with the DOM
+
+* [DOM positioning](https://datatables.net/examples/basic_init/dom.html)
 
 ### Creating Tables with Complex Structures
 
