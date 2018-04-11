@@ -35,3 +35,6 @@
     - [demo](https://www.publicintegrity.org/2014/07/15/15037/decades-making-decline-irs-nonprofit-regulation)
     - [demo](https://www.themaneater.com/special-sections/mu-fall-2015)
     - [demo](http://world.time.com/2013/12/05/nelson-mandelas-extraordinary-life-an-interactive-timeline/)
+
+* [vis.js](http://visjs.org/docs/timeline/)
+    - [demo](http://visjs.org/timeline_examples.html)
