@@ -38,3 +38,10 @@
 
 * [vis.js](http://visjs.org/docs/timeline/)
     - [demo](http://visjs.org/timeline_examples.html)
+    
+## Tableau
+
+    
+* [Sankey Charts in Tableau](https://www.theinformationlab.co.uk/2015/03/04/sankey-charts-in-tableau/)
+* [Sankey diagram made of dynamically generated polygons](https://community.tableau.com/thread/152115)
+* [Dynamic Long Polygone Sankey](https://public.tableau.com/profile/actinvision#!/vizhome/DynamicLongPolygoneSankey/LongSankeyPolygones)
