@@ -79,3 +79,24 @@ https://bost.ocks.org/mike/nations/
 
 https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html
 
+* [Visualizing Categorical Data as Flows with Alluvial Diagrams](http://digitalsplashmedia.com/2014/06/visualizing-categorical-data-as-flows-with-alluvial-diagrams/)
+* [Visualizing the Sacramento City Budget with RAW’s Alluvial(Sankey) Diagram](http://digitalsplashmedia.com/2015/07/visualizing-the-sacramento-city-budget-with-raws-alluvialsankey-diagram/)
+    - ![](http://digitalsplashmedia.com/Sacramento/SacCityBudget.html)
+
+* [Charles Joseph Minard](http://www.wikiwand.com/en/Charles_Joseph_Minard)
+   - [Flow map](http://www.wikiwand.com/en/Flow_map#/citenote1)
+   - ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Minard%E2%80%99s_map_of_French_wine_exports_for_1864.jpg/600px-Minard%E2%80%99s_map_of_French_wine_exports_for_1864.jpg)
+   
+* ![Minard, Charles-Joseph (1781-1870), “Tableaux graphiques et cartes figuratives,” Bibliothèque numérique patrimoniale des ponts et chaussées, accessed April 12, 2018, https://patrimoine.enpc.fr/document/ENPC01_Fol_10975.](https://patrimoine.enpc.fr/files/original/Cartes/document_ENPC01_Fol_10975/ENPC01_Fol_10975_0055.jpg)
+* ![Minard Update](https://upload.wikimedia.org/wikipedia/commons/e/e2/Minard_Update.png)
+
+* [At the National Conventions, the Words They Used](https://archive.nytimes.com/www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html)
+
+* [The Class of 2011](http://archive.nytimes.com/www.nytimes.com/interactive/2011/06/10/education/commencement-speeches-graphic.html)
+    - ![](https://static01.nyt.com/packages/images/newsgraphics/2011/0610-commencement/new-img1.png)
+
+* [periscopic](http://www.periscopic.com/content/category/behind-the-scenes/)
+
+* [Alluvial Charts and Their Discontents](https://medium.com/@Elijah_Meeks/alluvial-charts-and-their-discontents-10a77d55216b)
+
+* [Millennium Development Goals (MDGs) Visualization | Viz Hub](https://vizhub.healthdata.org/mdg/)
