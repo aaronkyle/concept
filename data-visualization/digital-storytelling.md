@@ -7,6 +7,7 @@
 * [The America’s Cup Finale: Oracle’s Path to Victory](http://www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html)
 * [#MakeoverMonday: A weekly social data project](http://www.makeovermonday.co.uk/)
 * [How to make an alluvial diagram](http://rawgraphs.io/learning/how-to-make-an-alluvial-diagram/)
+    - ![](https://rawgraphs.io/wp-content/uploads/2017/03/alluvial_cover.png)
 * [A World of Change](http://news-lab-trends-experiment.appspot.com/)
 * [Nine Years of SSLC in Karnataka](http://sslc.klp.org.in/)
 * [My Job Hunt - How I Ended Up At Apple](http://benjchristensen.com/2010/02/01/my-job-hunt-how-i-ended-up-at-apple/)
