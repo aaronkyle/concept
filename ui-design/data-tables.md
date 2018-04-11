@@ -13,6 +13,16 @@
 * [TableSaw](https://github.com/filamentgroup/tablesaw)
     * [demo](http://filamentgroup.github.io/tablesaw/demo/kitchensink.html)
 
+* [DataTables](https://datatables.net/)
+* [DataTables plug-in for jQuery](https://github.com/DataTables/DataTables)
+* [Data Tables - Editor](https://editor.datatables.net/)
+
+* [Key Tables](https://sprymedia.co.uk/article/KeyTable)
+* [Key Tables](https://github.com/DataTables/KeyTable)
+* [KeyTable](https://datatables.net/extensions/keytable/#In-DataTables)
+
+* [Responsive](https://datatables.net/extensions/responsive/)
+
 ### Creating Tables with Complex Structures
 
 * [Complex headers (rowspan and colspan)](https://datatables.net/examples/basic_init/complex_header.html)
