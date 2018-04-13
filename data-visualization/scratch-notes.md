@@ -45,3 +45,27 @@
 * [Sankey Charts in Tableau](https://www.theinformationlab.co.uk/2015/03/04/sankey-charts-in-tableau/)
 * [Sankey diagram made of dynamically generated polygons](https://community.tableau.com/thread/152115)
 * [Dynamic Long Polygone Sankey](https://public.tableau.com/profile/actinvision#!/vizhome/DynamicLongPolygoneSankey/LongSankeyPolygones)
+
+
+## Canvas.js
+
+* [Chart with Date Selector](http://jsfiddle.net/canvasjs/zxrkh502/)
+
+## Charts.js
+
+* [Charts.js](https://github.com/chartjs/Chart.js)
+* [Charts.js](http://www.chartjs.org/docs/latest/)
+* [Bar Chart Mulit Axis](http://www.chartjs.org/samples/latest/charts/bar/multi-axis.html)
+* [Stacked Group Chart](http://www.chartjs.org/samples/latest/charts/bar/stacked-group.html)
+* [Point Styles](http://www.chartjs.org/samples/latest/charts/line/point-styles.html)
+* [Polar Area](http://www.chartjs.org/samples/latest/charts/polar-area.html)
+* [Combo Bar and Line](http://www.chartjs.org/samples/latest/charts/combo-bar-line.html)
+* [Custom Points](http://www.chartjs.org/samples/latest/tooltips/custom-points.html)
+
+
+
+## Shiny
+
+* [Gallery](https://shiny.rstudio.com/gallery/)
+* [Movie explorer](https://shiny.rstudio.com/gallery/movie-explorer.html)
+
