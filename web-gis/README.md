@@ -1,27 +1,47 @@
-WORK IN PROGRESS
-
-Objective: To present complex annotated maps on the Internet.
-
-Requirements: Include interactive features akin to google maps where layers are shown/hidden, features are highlighted and spatial analysis may be performed.
-
-Solutions:
-
-[QGIS](http://www.qgis.org/en/site/) is a tool that creates interactive map projects. The maps are presented and analysed within the QGIS tool. Its presentation is adequate for CCCS presentation but it needs to be presented on a web page rather than within the QGIS desktop.
-
-
----
-
 
 
 ----
 
 ## Toward a Coherent System of Managing and Publishing Geospatial Information
 
+**Objective** To present complex annotated maps on the Internet.
+
+**Requirements** Include interactive features akin to google maps where layers are shown/hidden, features are highlighted and spatial analysis may be performed.
+
+**Solutions**
+
+
+* Design via QGIS
+
+[QGIS](http://www.qgis.org/en/site/) is a tool that creates interactive map projects. The maps are presented and analysed within the QGIS tool. Its presentation is adequate for CCCS presentation but it needs to be presented on a web page rather than within the QGIS desktop.
+
+* Split GeoServer and GeoWebCache
+
+GeoWebCache can act as a proxy between GeoServer and a client. It may be advantageous to place GeoWebCache in an public facing servlet container, as it only hosts images and contains no data. You can then host GeoServer in a non-public facing implementation such that only GeoWebCache can access it. This provides a level of isolation for your data, limiting direct data access.
+
+* Multiple GeoServers
+
+It is possible to deploy multiple copies of GeoServer in the same application server. This may be used to implement a “round robin” strategy for handling requests. You could go further and use multiple application servers to host GeoServer instances, making your system more fault tolerant.
+
+For information on this approach see the section on Clustering.
+
+* Separate PostGIS and GeoServer
+
+A recommended installation strategy is to ensure PostGIS and GeoServer are not installed on the same server. This is primarily for security reasons, to prevent PostGIS from being accessed via the web. Give that PostGIS is a separate installation from the WAR bundle, this configuration is straightforward to implement.
+
+
+
+
+
+---
+
+
+
 ### Managing Spatial Data Repositories
 
 #### Concept
 
-I maintains separate geospatial data repositories for publicly-available data that can be displayed on the public website and distinct from data specific to client projects (which typically include a mixture of of both public and proprietary data sources).
+I maintain separate geospatial data repositories for publicly-available data that can be displayed on the public website and distinct from data specific to client projects (which typically include a mixture of of both public and proprietary data sources).
 
 
 Our first, most fundamental, challenge with regard to data management related to how to store and link GIS data (and databases) to best ensure that data are appropriately managed, version-controlled, stored and shared across projects. We wish to avoid excessive and un-tracked branching of information. Related to this challenge are decisions about data storage formats. Most GIS data we receive come in the form of shapefiles. To archive these data (and to preserve along with them the associated meta-data, including 'original' file names and name of the data source), CCCS is currently using [postgreSQL](http://www.postgresql.org/).  Our idea is that using databases to manage shapefiles will also facilitate better interoperability and referential integration with other data types. Among other database applications, postgreSQL is arguably best suited for management of spatial data. The merits of the added efforts of database utilization, however, are not a matter about which CCCS is sufficiently informed at this moment in time.
