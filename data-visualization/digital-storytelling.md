@@ -100,3 +100,7 @@ https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2
 * [Alluvial Charts and Their Discontents](https://medium.com/@Elijah_Meeks/alluvial-charts-and-their-discontents-10a77d55216b)
 
 * [Millennium Development Goals (MDGs) Visualization | Viz Hub](https://vizhub.healthdata.org/mdg/)
+
+
+* [New York Oil and Gas - Production Overview](https://dash-oil-and-gas.plot.ly/)
+     - Excellent demo with source code
