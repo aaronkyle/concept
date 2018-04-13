@@ -89,3 +89,4 @@ highcharts sample:
 
 - [highcharts sample](https://codepen.io/pen/)
 - [stock demo](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/dynamic-update/)
+- [Highstock Demos › Dynamically updated data](https://www.highcharts.com/stock/demo/dynamic-update)
