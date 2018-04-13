@@ -1,12 +1,12 @@
-
-
-----
-
 ## Toward a Coherent System of Managing and Publishing Geospatial Information
+
+My early development work utilized GitHub to version-control both the web mapping software application as well as spatial data .  While this approach made it convenient for simultaneously sharing both spatial data and the applications' code base within one repository, various [developers](http://www.paulwhippconsulting.com/ "Paul Whipp") and [GIS speacialists](http://kartoza.com/ "Kartoza Pty."), recommended against theis 'combined' approach for the reasons: 1) the Git version-control system is non-optimal for management of spatial data unless it is in some plain text format like GML (geographic markup language) or CSV, 2) repository size for spatial data tends to grow too large for Git manage effectively [e.g., one tends to start encountering timeout errors when cloning and pulling larger repositories, and the system may not be able to manage any single file over 2 gigabytes in size (such as a a dump of a spatial database)].
+
+I adopted an alternative system for sharing spatial data using [BTSync](https://www.btsync.com/en/).  While this approach has the advantage of allowing us to share larger-sized repositories of spatial data outside of Git, it has the disadvantage of creating parallel data sources (i.e., the shared BTSync repository on the client side and the sever-side 'production' repository).  Another disadvantage of the BTSync approach is that data are not version controlled.  We therefore view the BTSync data-management approach as a 'temporary' solution. I subsequently worked with Kartoza Pty on using the ['GeoGig'](http://geogig.org/) platform (formerly GeoGit) for distributed version-control of shapefile data&mdash;for the vector datasets. 
 
 ### Managing Spatial Data Repositories
 
-I maintain separate geospatial data repositories for publicly-available data that can be displayed on a public website. This material I keep distinct from data specific to client projects (which typically include a mixture of of both public and proprietary data).
+I currently maintain separate geospatial data repositories for publicly-available data that can be displayed on a public website. This material I keep distinct from data specific to client projects (which typically include a mixture of of both public and proprietary data).
 
 A fundamental challenge for data management is how to store and link GIS data (and databases) to best ensure that data are appropriately managed, version-controlled, stored and shared across projects. 
 
@@ -50,15 +50,29 @@ A recommended installation strategy is to ensure PostGIS and GeoServer are not i
 
 ### Data Management Workflow
 
-As suggested in the discussion about [data management](https://github.com/cccs-web/soc-maps/wiki/data-management-concept-and-context), CCCS needs to establish a common workflow for obtaining, indexing, sharing, and version-controlling geospatial data. This workflow should function at the 'project' level, meaning that the data management occurs within the context of a single client project. 'CCCS' equivalent to any other 'client', with the important exception being that any new functionality that we are developing for our web applications needs to occur on CCCS' infrastructure, which will serve as a "template" for deploying future client projects. 
+Toward a common workflow for obtaining, indexing, sharing, and version-controlling geospatial data:
 
-As discussed preceding section and in our note on [data management](https://github.com/cccs-web/soc-maps/wiki/data-management-concept-and-context), if we are to focus development of map application utilities using `/cccs-web/soc-maps/` (unless there's a strong argument in favor of keeping the application in `/cccs-web/core/`, per the discussion above), then our actual geospatial data needs to be stored and shared in a separate and dedicated repository.  The infrastructure that I see as best suited to CCCS' existing data management workflow involves:
+This workflow should function at the 'project' level, meaning that the data management occurs within the context of a single client project. 
+
+Sites should be inter-operable; able to call and serve data between instances according to permissions. 
+
+Developments should be easily 'pluggable' across infrastructure [i.e. each application is an extensible 'template']. 
+
+Focus development of map application. Keep site and mapping applications as de-linked as possible. 
+
+Geospatial data needs to be stored and shared in a separate and dedicated repository.
 
 * Git for deployment of the core application architecture [intial set-up and config files]
-* Git or GeoGig for version control and sharing of vector data
+
+* Git or GeoGig for version control and sharing of shapefiles / vector data
+
 * Git-annex sitting on top of S3 for for version control and sharing of raster data
 
-This git-centric constellation of data management utilities should afford us fine-grained control over data access and allow us to retain detailed records of when and how data are changed and edited. This set-up would be our "canonical" point of truth for all data types.  Should a project wish to change source data for their specific purposes without wishing for their changes to affect all other maps relying on those data, then the source data would need to be "forked" for that specific project.
+This git-centric constellation of data management utilities should afford us fine-grained control over data access and allow us to retain detailed records of when and how data are changed and edited. 
+
+A choice must be made between Git and GeoGig for shapefiles.  Geogig is best when considering plugging into data using QGIS.  The advantage of saving in and out of Git is that is is more accessible to less technical users (and data is maintained and version controlled in the same format as source materials). The GeoGig software allows users to import raw geospatial data (currently from Shapefiles, PostGIS or SpatiaLite).
+
+This set-up would be our "canonical" point of truth for all data types.  Should a project wish to change source data for their specific purposes without wishing for their changes to affect all other maps relying on those data, then the source data would need to be "forked" for that specific project.
 
 
 #### Team Workflow Needs / Considerations for Entering Data into the VCS 
@@ -73,35 +87,32 @@ When adding new data, it is imperative to 'track' the following metadata:
 * who supplied the data
 * who received the data
 * data data was received
-* initial location where data was entered into the CCCS file system [directory location / path]
+* initial location where data was entered into the file system [directory location / path]
 
 
 **Supplying New Data as a Non-Technical User**
 
-Any CCCS team member who receives or obtains geospatial data can give it to a CCCS data administrator for loading into the appropriate repositories. 
+Any team member who receives or obtains geospatial data can give it to a [data administrator](# "") for loading into the appropriate repositories. 
 
-**NOTE**: If CCCS chooses to use Git (rather than GeoGig) to maintain a working directory of shapefile data, then non-technical users could upload data directly to the repository on their own. Using GeoGig may preclude this option depending on the level of technical complexity involved.
+**NOTE**: If using Git rather than GeoGig to maintain a working directory of shapefile data, non-technical users could upload data directly to the repository on their own.
+
+Using GeoGig may preclude this option depending on the level of technical complexity involved.
 
 
 **Supplying New Data as a Mapper**
 
 Mappers should also upload data new data into a version-controlled repository [Git / GeoGig] in the format that it was received from the data originator (i.e. indexing shapefiles in their original formats in a VCS 'source' directory).
 
-If a mapper wishes to choose how and where data are structured in postgreSQL / [PostGIS](http://postgis.net/), then the appropriate work flow is for that mapper to ensure that her or his local database is synced to the master, and then to write a custom loading script that can be executed on the server to load in the source data set from the location where it was entered in the VCS.
+If a mapper wishes to choose how and where data are structured in postgreSQL / [PostGIS](http://postgis.net/), then the appropriate work flow is for that 
 
-**CAVEAT:** CCCS does not have a clear understanding yet for how GeoGig either differentiates between, or combines, individual shapefiles and structured postgreSQL databases. One email received from Kartoza (@gubuntu) suggests that, GeoGig is exported into PostGIS on the server "such that the server database version that is supporting the web maps is always canonical". It may be the case that work through GeoGig (potentially via post-deployment hooks) can decrease or eliminate direct interaction with the database when entering new materials into the repository?
+mapper to ensure that her or his local database is synced to the master
+
+write a custom loading script that can be executed on the server to load in the source data set from the location where it was entered in the VCS
+    - work through GeoGig (potentially via post-deployment hooks) can decrease or eliminate direct interaction with the database when entering new materials into the repository
 
 
 ### Initial Approach and Current Standing
 
-
-**Repositories and GeoSpatial Data Management**
-
-My early development work utilized GitHub to version-control both the web mapping software application as well as the spatial data that we intended to referenced by that application: [/cccs-web/soc-maps/](https://github.com/cccs-web/soc-maps).  While this approach made it convenient for simultaneously sharing both spatial data and the applications' code base within one repository to our various developers and application users, both CCCS' IT expert, [Paul Whipp](http://www.paulwhippconsulting.com/), and our GIS consultants, [Kartoza Pty.](http://kartoza.com/), recommended against this 'combined' approach. Factors cited in their recommendations include: 1) the Git version-control system is non-optimal for management of spatial data unless it is in some plain text format like GML (geographic markup language) or CSV, 2) repository size for spatial data tends to grow too large for Git manage effectively [e.g., one tends to start encountering timeout errors when cloning and pulling larger repositories, and the system may not be able to manage any single file over 2 gigabytes in size (such as a a dump of a spatial database)].
-
-Following the advice of our consultants, I adopted an alternative system for sharing spatial data using [BTSync](https://www.btsync.com/en/).  While this approach has the advantage of allowing us to share larger-sized repositories of spatial data outside of Git, it has the disadvantage of creating parallel data sources (i.e., the shared BTSync repository on the client side and the sever-side 'production' repository).  Another disadvantage of the BTSync approach is that data are not version controlled.  We therefore view the BTSync data-management approach as a 'temporary' solution.
-
-I worked with Kartoza Pty on using the ['GeoGig'](http://geogig.org/) platform (formerly GeoGit) for distributed version-control of shapefile data&mdash;for the vector datasets. The GeoGig software allows users to import raw geospatial data (currently from Shapefiles, PostGIS or SpatiaLite).
 
 
 
@@ -109,13 +120,13 @@ I worked with Kartoza Pty on using the ['GeoGig'](http://geogig.org/) platform (
 
 With regard to the creation and management of geospatial data in a [postgreSQL](http://www.postgresql.org/) database format, the current standing is is as follows:
 
-Kartoza Pty. created [scripts to load both CCCS' public geospatial data repository](https://github.com/cccs-web/soc-maps/blob/master/public_loader.sh) and [that of our clients](http://gitlab.crossculturalconsult.com/abadi/esms-maps/blob/master/loader.sh) into postgreSQL.
+Kartoza Pty. created [scripts to load both public geospatial data repository](https://github.com/cccs-web/soc-maps/blob/master/public_loader.sh) and that of clients.
 
 As introduced above, these script reference data that is currently stored in BTSync repositories.
 
 My 'public' data resides on our local machines and on the server at `/home/sync/maps/public/` [15.0 GB]. 
 
-Our client projects are organized by name within an umbrella directory `/home/sync/cccs-maps/private/`.
+Our client projects are organized by name within an umbrella directory `/home/sync/maps/private/`.
 
 
 In their current formulation, the data import scripts load shapefiles into a [postgreSQL](http://www.postgresql.org/) that is embedded within a [Docker container](https://www.docker.com/) [^1] 
@@ -125,8 +136,7 @@ In their current formulation, the data import scripts load shapefiles into a [po
 
 [NOTE^2: The Docker-oriented data import scripts for my public repository appear to have worked fine. [Those for our client project](http://gitlab.crossculturalconsult.com/abadi/esms-maps/blob/master/loader.sh), by contrast, [return many errors](http://gitlab.crossculturalconsult.com/abadi/esms-maps/blob/master/error-report.txt).  
 
-Also, our client project had a record of numerous `*.lyr`.  CCCS has recently converted these to a non-proprietary format so that they can also be loaded. We raise these points here for context; they are elaborated in the [respective client project wiki]()].
-
+Clients project will sometimes utilize `*.lyr` file format.  This is difficult to convert these to a non-proprietary format so that they can also be loaded. 
 
 #### Overcoming Challenges&mdash;Next Steps
 
@@ -153,33 +163,17 @@ This proposed software stack and workflow *should* allow us the capacity to shar
 
 With regard to moving forward with ['GeoGig'](http://geogig.org/) in particular:
 
-I needs to create separate GeoGig repositories for 'public' data and for each of our 'client' projects (focusing initially on 'abadi'. The GeoGig repositories must have their 'MASTER' branch hosted on CCCS' servers. 
+I needs to create separate GeoGig repositories for 'public' data and for each of our 'client' projects (focusing initially on 'client'). The GeoGig repositories must have their 'MASTER' branch hosted on company servers. 
 
 Progress with regard to enabling GeoGig on our server for shared team access:
 
-   1. We installed GeoGig to our data server:<br />
+   1.  Establish database 'geogig' user and add PATH variable to the user's `/bashrc` file to allow the user to call the geogig application.
 
-		geogig@ip-10-167-186-14:/home/aaron$ geogig version
-
-		Project Version : 1.0-beta1
-		Build Time : August 14, 2014 at 17:44:46 ART
-		Build User Name : Gabriel Roldan
-		Build User Email : gabriel.roldan@gmail.com
-		Git Branch : r1.0-beta1
-		Git Commit ID : 9aae709f4f451802a09c14293c92a46372c868bd
-		Git Commit Time : August 14, 2014 at 17:43:33 ART
-		Git Commit Author Name : Gabriel Roldan
-		Git Commit Author Email : gabriel.roldan@gmail.comG
-		Git Commit Message : Set version to 1.0-beta1
-
-
-   1.  We created a 'geogig' user added the appropriate the PATH variable to the user's `/bashrc` file to allow the user to call the geogig application
-
-1. We created a DNS entry to link traffic coming in from http://geogig.crossculturalconsult.com to our desired geogig server
+1. Created a DNS entry to link traffic coming in from http://geogig.url.com to our desired geogig server
 
 **Remaining tasks** to get the GeoGig set-up "working" for our current map-production needs are:
 
-   1. We need to configure nginx appropriately to allow us to push and pull data to each GeoGig project
+   1. Configure nginx appropriately to allow us to push and pull data to each GeoGig project
 
    1. Once GeoGig is up on the server, we then need to import all our existing data.
    
@@ -189,11 +183,16 @@ Progress with regard to enabling GeoGig on our server for shared team access:
    
    1. We'll need to improve our documentation and team understanding about GeoGig database management.
    
+
+---
+
+
 We would like to learn more about the extent to which it is possible (and recommended) to use GeoGig to manage and version-control other data (such as census data of socio-economic indicators).
 
 We should spend some time to identify and prioritize needed tutorials and coaching sessions of database version-control systems.
 
-*Next Steps for Integrating Git-annex*
+
+## Next Steps for Integrating Git-Annex
 
 The git-annex documentation suggests that people are using it with files stored on S3 [[ex. 1](http://git-annex.branchable.com/special_remotes/S3/), [ex. 2](http://git-annex.branchable.com/tips/using_Amazon_S3/)], which can be utilized as a [VCS](http://en.wikipedia.org/wiki/Revision_control).  The challenge for our use case, I suspect, is to have raster data stored in S3 be accessible to data manipulation software such as QGIS without too much hassle (especially given that all client data must be kept private. and requiring the use of permission rules). One option that may help in this regard is to [mount S3 as a file system directory](http://juliensimon.blogspot.com/2013/08/howto-aws-mount-s3-buckets-from-linux.html). Greater investigation into the implications is needed before pursuing this option.
 
