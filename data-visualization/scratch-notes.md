@@ -69,3 +69,15 @@
 * [Gallery](https://shiny.rstudio.com/gallery/)
 * [Movie explorer](https://shiny.rstudio.com/gallery/movie-explorer.html)
 
+
+## Other approaches and tools
+
+* (Year in Review: 2017 in 12 Charts)[http://www.worldbank.org/en/news/feature/2017/12/15/year-in-review-2017-in-12-charts]
+    - note: Some of the individual graphs on this page appear to be built on top of D3.js (though it is unclear to me if an intermediary tool was used, such as Tableau). Others were built with raphael.js.  Data seems to be pulled in directly from sourced dataset (e.g. as JSON] and then rendered in whatever the site uses to produce charts.  It is unclear whether the authors hand-drew each chart.
+    
+* [CO2 emissions (kg per 2011 PPP $ of GDP)](https://data.worldbank.org/indicator/EN.ATM.CO2E.PP.GD.KD?end=2014&start=1960&view=chart)    
+* [Our World in Data](https://ourworldindata.org/about)
+* [Sustainable Development Goals - Tracker](https://github.com/owid/sdg-tracker.org)
+* [Sustainable Development Goals - Tracker](https://sdg-tracker.org/)
+* [Static production bundle of ourworldindata.org interactive charts https://ourworldindata.org](https://github.com/owid/grapher-static)
+* [Interactive data visualizations done quickly](https://github.com/owid/owid-grapher)
