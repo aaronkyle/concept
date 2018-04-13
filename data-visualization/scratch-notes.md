@@ -76,10 +76,17 @@
 * [Interactive data visualizations done quickly](https://github.com/owid/owid-grapher)
 
 
----
-
-highcharts sample:
+## highcharts sample:
 
 - [highcharts sample](https://codepen.io/pen/)
 - [stock demo](http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/demo/dynamic-update/)
 - [Highstock Demos › Dynamically updated data](https://www.highcharts.com/stock/demo/dynamic-update)
+
+## user journey / ux
+
+* [How to Create a Customer Journey Map](https://uxmastery.com/how-to-create-a-customer-journey-map/)
+![player journey](https://uxmastery.com/wp-content/uploads/2014/09/healthrageous_journey.jpg)
+
+* [How To Create UX Personas](https://uxmastery.com/create-ux-personas/)
+
+![](https://uxmastery.com/wp-content/uploads/2015/05/gregg1-e1434663609967.jpg)
