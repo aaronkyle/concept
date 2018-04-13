@@ -106,3 +106,6 @@ https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2
      - Excellent demo with source code
  
  * ![](https://camo.githubusercontent.com/1dc355609efa6730ddebe0209cf04347840d5016/68747470733a2f2f63646e2e7261776769742e636f6d2f706c6f746c792f646173682d6f696c2d616e642d6761732d64656d6f2f6d61737465722f73637265656e73686f74732f53637265656e73686f74312e706e673f746f6b656e3d414b2d6e5a48527a4570706969674e34345935697a44516353633335637149696b73355a5571347a7741253344253344)
+
+* [This One Chart Shows You Just How Cumbersome The Obamacare Website Really Is](http://www.ibtimes.com/one-chart-shows-you-just-how-cumbersome-obamacare-website-really-1536548?ft=k1v75)
+ *  ![This One Chart Shows You Just How Cumbersome The Obamacare Website Really Is](http://infobeautiful3.s3.amazonaws.com/2013/10/1276_lines_of_code5.png)
