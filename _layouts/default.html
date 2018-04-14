@@ -12,9 +12,7 @@
     <![endif]-->
     
     <!-- adding in semantic ui -->
-    {% if page.jsarr %}
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    {% endif %}
     <!-- end: adding in semantic ui -->
     
   </head>
@@ -62,14 +60,12 @@
     <script>
     
         
-    <!-- adding in semantic ui (seeking to limit inclusion of D3.js only to pages marked jsarr) -->
- {% if page.jsarr %}
+    <!-- adding in semantic ui -->
     <script
      src="https://code.jquery.com/jquery-3.1.1.min.js"
      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
      crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
- {% endif %}
     <!-- end: adding in semantic ui -->
     
     
