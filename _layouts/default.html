@@ -73,11 +73,11 @@
   
 
     <div class="ui main text container"> <!--start main text container -->
-     <!-- 
+
     <div class="wrapper">
+      
       <header>
-     -->
-    <div class="ui four wide column"
+
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
@@ -102,21 +102,14 @@
         </ul>
         {% endif %}
     
-   <!--
       </header>
+      
       <section>
-    -->
-    
-    </div>
-    <div class="ui twelve wide column"
          
       {{ content }}
 
-    <!--
+
       </section>
-     -->
-    
-     </div>
 
       <footer>
         {% if site.github.is_project_page %}
@@ -126,7 +119,7 @@
       </footer>
     </div>
       
-    </div> <!--end  main text container --> 
+    </div> <!--end main text container --> 
     
       
       <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
