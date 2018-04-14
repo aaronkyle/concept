@@ -8,6 +8,11 @@
 * [Math on GitHub Pages](http://g14n.info/2014/09/math-on-github-pages/)
 
 
+* [How to supported latex in github-pages](https://stackoverflow.com/questions/26275645/how-to-supported-latex-in-github-pages)
+
+
+* [Django Pandoc Field](https://github.com/JaapJoris/django-pandocfield)
+
 ---
 
 https://github.com/github/markup/issues/897
