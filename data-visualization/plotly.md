@@ -1,4 +1,7 @@
 
+* [Plotly.js Open-Source Announcement in plotly.js](https://plot.ly/javascript/open-source-announcement/)
+
+* [plotly.js](https://plot.ly/javascript/)
 
 * [Mixed Subplots in plotly.js](https://plot.ly/javascript/mixed-subplots/)
 * [Groupby in plotly.js: How to use D3.js-based Group By in Plotly.js.](https://plot.ly/javascript/group-by/)
@@ -9,3 +12,7 @@
 * [Scatter Plots in plotly.js: How to make D3.js-based line and scatter plots in JavaScript. Examples of basic and colored line and scatter plots.](https://plot.ly/javascript/line-and-scatter/)
 * [Line Charts in plotly.js: How to make D3.js-based line charts in JavaScript.](https://plot.ly/javascript/line-charts/)
 * [Scatter Plots in plotly.js: How to make D3.js-based line and scatter plots in JavaScript. Examples of basic and colored line and scatter plots.](https://plot.ly/javascript/line-and-scatter/)
+
+* [Scatter Plots on Mapbox in plotly.js: How to make scatter plots on Mapbox maps in Plotly.JS](https://plot.ly/javascript/scattermapbox/)
+
+* [example: nobel-prize-awarded-women](https://plot.ly/~empet/6640/nobel-prize-awarded-women/#code)
