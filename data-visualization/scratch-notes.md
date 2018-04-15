@@ -92,3 +92,29 @@
 ![](https://uxmastery.com/wp-content/uploads/2015/05/gregg1-e1434663609967.jpg)
 
 ![Raphaël](https://github.com/DmitryBaranovskiy/raphael)
+
+
+* [GapMinder: Income & Life Expectancy](https://www.gapminder.org/tools/#_data_/_lastModified:1523805153698&lastModified:1523805153698;&chart-type=bubbles)
+
+* [GapMinder: Data](https://www.gapminder.org/data/)
+
+* [CanvasJS: JavaScript Line Charts & Graphs](https://canvasjs.com/html5-javascript-line-chart/)
+
+* [amCharts: Line Chart with Scroll and Zoom](https://www.amcharts.com/demos/line-chart-with-scroll-and-zoom/)
+
+* [Our World in Data](https://ourworldindata.org/)
+
+* [ReactJS: Hello World](https://reactjs.org/docs/hello-world.html)
+* [Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
+
+* [VizGuide](http://vizguide.camsys.com/charts.htm)
+
+* [Raphaël—JavaScript Library](http://dmitrybaranovskiy.github.io/raphael/)
+
+* [Behandlade förslag under regeringen Reinfeldt II (2010-2014)](http://www.demokratikollen.se/forslagen/reinfeldt2)
+
+* [Alluvial Charts and Their Discontents](http://elijahmeeks.com/#content/blog/2015_06_10_sankey)
+
+* [Visualizing paths as flows in a Sankey diagram (D3.js)](http://www.jonaseinarsson.se/2015/paths-sankey-d3.html)
+
+* [Hacking a chord diagram to visualize a flow](https://www.visualcinnamon.com/2015/08/stretched-chord.html)
