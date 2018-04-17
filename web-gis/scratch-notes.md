@@ -29,3 +29,6 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 
 * [Boundless Server: Deployment](http://suite.opengeo.org/docs/latest/sysadmin/deploy/index.html)
 
+---
+
+* [D3 Workshop Series: Mapping Data with D3](http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/)
