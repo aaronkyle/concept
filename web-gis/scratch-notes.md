@@ -32,3 +32,5 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 ---
 
 * [D3 Workshop Series: Mapping Data with D3](http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/)
+
+* [D3 Workshop Series: Geocoding Using QGIS](http://duspviz.mit.edu/tutorials/geocoding/)
