@@ -118,3 +118,5 @@
 * [Visualizing paths as flows in a Sankey diagram (D3.js)](http://www.jonaseinarsson.se/2015/paths-sankey-d3.html)
 
 * [Hacking a chord diagram to visualize a flow](https://www.visualcinnamon.com/2015/08/stretched-chord.html)
+
+* [Textures.js: SVG patterns for Data Visualization](http://riccardoscalco.github.io/textures/)
