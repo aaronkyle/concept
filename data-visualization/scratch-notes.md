@@ -120,3 +120,7 @@
 * [Hacking a chord diagram to visualize a flow](https://www.visualcinnamon.com/2015/08/stretched-chord.html)
 
 * [Textures.js: SVG patterns for Data Visualization](http://riccardoscalco.github.io/textures/)
+
+* [Interactive Scatter Plot/Legend](https://bl.ocks.org/floofydugong/9c94ab01d8c3ed8ea3821d4a7e119b07)
+
+* [Interactive visualization in R](http://www.rebeccabarter.com/blog/2017-04-20-interactive/)
