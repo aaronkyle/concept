@@ -122,3 +122,10 @@ Rendering Math in GitHub using iPython notebooks
 
 * [testing github](https://github.com/cben/sandbox)
 * [testing github](https://github-cben-sandbox.anat-beni.net/README)
+
+
+
+---
+
+
+* [Integrating mathjax and markdown in django](https://somesquares.org/blog/2013/4/integrating-mathjax-and-markdown-django/)
