@@ -49,3 +49,6 @@ Other Project Manangement....
 
 * [Overleaf](https://www.overleaf.com/benefits)
 * [Overleaf: New: Collaborate Online and Offline with Overleaf and Git (beta)](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.WtN1w4jwZPY)
+
+
+* [Editors in ONLYOFFICE 9.6 come with EasyBib and WordPress](http://www.onlyoffice.com/blog/2018/03/editors-in-onlyoffice-9-6-come-with-easybib-and-wordpress/)
