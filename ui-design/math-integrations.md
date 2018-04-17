@@ -13,6 +13,21 @@
 
 * [Django Pandoc Field](https://github.com/JaapJoris/django-pandocfield)
 
+
+---
+
+
+* [KaTeX](https://khan.github.io/KaTeX/)
+    - The fastest math typesetting library for the web.
+
+* [KaTeX](https://github.com/Khan/KaTeX)
+
+* [kramdown: Math Engine MathJax](https://kramdown.gettalong.org/math_engine/mathjax.html)
+
+* [kramdown: Math Blocks](https://kramdown.gettalong.org/syntax.html#math-blocks)
+    - This syntax feature is not part of the original Markdown syntax. The idea comes from the Maruku and Pandoc packages.
+
+
 ---
 
 https://github.com/github/markup/issues/897
@@ -99,3 +114,11 @@ Now you can include the snippets in your website using Jekyll include tags
 {% include math/display/matrix.html %}
 
 
+---
+
+Rendering Math in GitHub using iPython notebooks
+
+* [Grabbed from https://github.com/odewahn/ipynb-examples, converted to v3 for GitHub to render.](https://gist.github.com/cyhsutw/d5983d166fb70ff651f027b2aa56ee4e)
+
+* [testing github](https://github.com/cben/sandbox)
+* [testing github](https://github-cben-sandbox.anat-beni.net/README)
