@@ -12,6 +12,16 @@ Markdown can be [converted easily](Working-with-Pandoc) to other formatting and 
 Markdown is free software, available under a [BSD-style open source license](http://daringfireball.net/projects/markdown/license).
 
 
+---
+
+
+* [kramdown Syntax](https://kramdown.gettalong.org/syntax.html#math-blocks)
+    - fast, pure-Ruby Markdown-superset converter
+
+---
+
+
+
 ### References:
 
 * [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
