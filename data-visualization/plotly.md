@@ -16,3 +16,8 @@
 * [Scatter Plots on Mapbox in plotly.js: How to make scatter plots on Mapbox maps in Plotly.JS](https://plot.ly/javascript/scattermapbox/)
 
 * [example: nobel-prize-awarded-women](https://plot.ly/~empet/6640/nobel-prize-awarded-women/#code)
+
+* [Benchmarks: Sample load times for Plotly graphs](https://plot.ly/benchmarks/)
+
+* [plot.ly/create/](https://plot.ly/create/)
+* [Hello Dash](https://dash.plot.ly/getting-started)
