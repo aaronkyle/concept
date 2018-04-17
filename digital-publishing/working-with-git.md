@@ -1,4 +1,4 @@
-## Notes on using Git to set-up the CCCS website
+## Notes on using Git
 
 -  initialized empty Git repository in /var/www/ by running `git init`
 - [attempted to link server and GitHub repositories](https://help.github.com/articles/create-a-repo) using `git remote add origin https://github.com/cccs-web/core.git`
@@ -62,3 +62,6 @@ Once production becomes live and changes less frequently, we might tag the produ
 | question | |
 | urgent | |
 | wontfix | |
+
+
+* [Using Custom Javascript In Jekyll Blogs](http://blog.emmatosch.com/2016/03/09/using-custom-javascript-in-jekyll-blogs.html)
