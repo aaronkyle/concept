@@ -43,3 +43,9 @@ Alternative to GitHub
 Git Annex
 
 Other Project Manangement....
+
+
+---
+
+* [Overleaf](https://www.overleaf.com/benefits)
+* [Overleaf: New: Collaborate Online and Offline with Overleaf and Git (beta)](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.WtN1w4jwZPY)
