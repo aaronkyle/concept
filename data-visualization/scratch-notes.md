@@ -124,3 +124,7 @@
 * [Interactive Scatter Plot/Legend](https://bl.ocks.org/floofydugong/9c94ab01d8c3ed8ea3821d4a7e119b07)
 
 * [Interactive visualization in R](http://www.rebeccabarter.com/blog/2017-04-20-interactive/)
+
+* [GoJS Samples](https://gojs.net/latest/samples/)
+
+* [Flow Builder](https://gojs.net/latest/samples/flowBuilder.html)
