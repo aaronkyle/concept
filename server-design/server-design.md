@@ -17,3 +17,5 @@ AWS CloudFormation enables you to create and provision AWS infrastructure deploy
 * [Docker Basics for Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)
 * [Docker for AWS setup & prerequisites](https://docs.docker.com/docker-for-aws/)
 * [Connect to Your Container Instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance-connect.html)
+
+* [Ludicrously Fast Page Loads - A Guide for Full-Stack Devs](https://www.speedshop.co/2015/10/07/frontend-performance-chrome-timeline.html)
