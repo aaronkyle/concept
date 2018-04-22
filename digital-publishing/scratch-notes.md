@@ -52,3 +52,27 @@ Other Project Manangement....
 
 
 * [Editors in ONLYOFFICE 9.6 come with EasyBib and WordPress](http://www.onlyoffice.com/blog/2018/03/editors-in-onlyoffice-9-6-come-with-easybib-and-wordpress/)
+
+---
+
+## Data-Driven Web Documents
+
+* [plain text, papers, pandoc](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
+* [Jupyter widgets enable interactive data visualization in the Jupyter notebooks.](http://jupyter.org/widgets.html)
+* [A simple way to share Jupyter Notebooks](https://nbviewer.jupyter.org/)
+* [Welcome to Bokeh in the Jupyter Notebook!](https://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/index.ipynb)
+* [htmlwidgets for R ](http://www.htmlwidgets.org/)
+* [A IPython Notebook to analyze the Gaza-Israel 2012 crisis](https://nbviewer.jupyter.org/gist/darribas/4121857)
+* [selection histogram](https://demo.bokehplots.com/apps/selection_histogram)
+* [gallery](https://bokeh.pydata.org/en/latest/docs/gallery.html)
+* [jupyter](https://nbviewer.jupyter.org/)
+* [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)
+* [Interactive HTML Reporting Using D3](http://www.mwsug.org/proceedings/2014/DV/MWSUG-2014-DV09.pdf)
+* [Making a Website Using Blogdown, Hugo, and GitHub ](https://proquestionasker.github.io/blog/Making_Site/)
+* [R Markdown Websites](http://rmarkdown.rstudio.com/lesson-13.html)
+* [RStudio, R Markdown, and Distributing Your R Scripts on the Web using RPubs](https://www.safaribooksonline.com/blog/2014/01/29/rstudio-r-markdown-r-scripts-rpubs/)
+* [r-noteboobs](https://blog.rstudio.com/2016/10/05/r-notebooks/)
+* [Flowing Data through Templates - the Art of Silicon Paginator](https://www.siliconpublishing.com/blog/2016/04/flowing-data-through-templates-the-art-of-silicon-paginator)
+* [Showcase of beautiful typography done in TeX & friends](https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends/50140#50140)
+* [TeX as the basis for data driven document generation system?](https://tex.stackexchange.com/questions/65404/tex-as-the-basis-for-data-driven-document-generation-system)
+* [using-data-science](https://content.pivotal.io/blog/using-data-science-to-make-sense-of-unstructured-texta)
