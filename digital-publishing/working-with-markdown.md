@@ -1,3 +1,5 @@
+## About
+
 Markdown refers to both:
 
 1. a [markup syntax](http://en.wikipedia.org/wiki/Markup_language) that was designed as an "easy-to-read, easy-to-write plain text format"
@@ -7,17 +9,10 @@ The overriding design goal in initial formulation of Markdown’s formatting syn
 
 It is important to note that there is no clearly-defined Markdown standard.  The original writeup and implementation by John Gruber is referred to by some as 'vanilla' Markdown, with other "flavours" of the syntax being created as different vendors write their own variants of the language to correct flaws or add missing features.
 
-Markdown can be [converted easily](Working-with-Pandoc) to other formatting and printing languages.  It is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
-
 Markdown is free software, available under a [BSD-style open source license](http://daringfireball.net/projects/markdown/license).
 
----
 
-Adapted from the introductary post of [Ghost](https://ghost.org/) blogging software:
-
-
-
-## Getting Started
+## Getting Started <sup>[[ref]](# "Adapted from the introductary post of [Ghost](https://ghost.org/) blogging software")
 
 Writing in markdown is designed to be easy, using minimat *formatting* to style content.
 
@@ -142,6 +137,10 @@ output:
 ---
 
 
+## Converting Markdown to HTML
+
+Markdown can be [converted easily](Working-with-Pandoc) to other formatting and printing languages.  It is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
 
 ### References:
 
@@ -150,5 +149,3 @@ output:
 * [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
     * [Markdown Basics](https://help.github.com/articles/markdown-basics/)
     * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-
