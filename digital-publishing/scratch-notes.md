@@ -87,3 +87,4 @@ Other Project Manangement....
 * [jekyll](https://github.com/jekyll/jekyll/tree/master/docs)
 * [Jekyll: Deployment methods](https://jekyllrb.com/docs/deployment-methods/)
 * [Jekyll: GitHub Pages](https://jekyllrb.com/docs/github-pages/)
+* [ellisonleao/pelican-semantic-ui](https://github.com/ellisonleao/pelican-semantic-ui/tree/f558c70ea5562459da2c59e3be3261db417f3300)
