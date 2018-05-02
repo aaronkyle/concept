@@ -88,3 +88,10 @@ Other Project Manangement....
 * [Jekyll: Deployment methods](https://jekyllrb.com/docs/deployment-methods/)
 * [Jekyll: GitHub Pages](https://jekyllrb.com/docs/github-pages/)
 * [ellisonleao/pelican-semantic-ui](https://github.com/ellisonleao/pelican-semantic-ui/tree/f558c70ea5562459da2c59e3be3261db417f3300)
+
+---
+* [https://khan.github.io/KaTeX/](https://khan.github.io/KaTeX/)
+* [Function Support in KaTeX](https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX)
+* [Function Support in KaTeX (alt)](https://khan.github.io/KaTeX/function-support.html)
+* [Things that KaTeX does not (yet) support](https://github.com/Khan/KaTeX/wiki/Things-that-KaTeX-does-not-%28yet%29-support)
+* [KaTeX and MathJax Comparison Demo](https://www.intmath.com/cg5/katex-mathjax-comparison.php)
