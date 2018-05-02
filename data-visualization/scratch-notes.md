@@ -129,4 +129,4 @@
 
 * [Flow Builder](https://gojs.net/latest/samples/flowBuilder.html)
 
-![World's Biggest Data Breaches](mojombo.github.io/images/posts/2016-11-10/breaches.png)
+* ![World's Biggest Data Breaches](https://mojombo.github.io/images/posts/2016-11-10/breaches.png)
