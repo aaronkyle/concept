@@ -76,3 +76,9 @@ Other Project Manangement....
 * [Showcase of beautiful typography done in TeX & friends](https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends/50140#50140)
 * [TeX as the basis for data driven document generation system?](https://tex.stackexchange.com/questions/65404/tex-as-the-basis-for-data-driven-document-generation-system)
 * [using-data-science](https://content.pivotal.io/blog/using-data-science-to-make-sense-of-unstructured-texta)
+
+## Website Publishing Software
+
+* https://github.com/ellisonleao/pelican-semantic-ui
+* https://github.com/yichiuan/pelican-semantic-ui
+* https://github.com/rothnic/semantic-pelican
