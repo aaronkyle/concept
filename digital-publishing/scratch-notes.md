@@ -82,3 +82,8 @@ Other Project Manangement....
 * https://github.com/ellisonleao/pelican-semantic-ui
 * https://github.com/yichiuan/pelican-semantic-ui
 * https://github.com/rothnic/semantic-pelican
+* [Pelican 3.6.3](http://docs.getpelican.com/en/3.6.3/tips.html)
+* [GitHub: User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
+* [jekyll](https://github.com/jekyll/jekyll/tree/master/docs)
+* [Jekyll: Deployment methods](https://jekyllrb.com/docs/deployment-methods/)
+* [Jekyll: GitHub Pages](https://jekyllrb.com/docs/github-pages/)
