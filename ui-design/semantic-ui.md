@@ -2,6 +2,12 @@
 ## Layouts 
 
 * [Layouts ](https://semantic-ui.com/usage/layout.html)
+* [Example: Semantic UI Fixed Template](https://semantic-ui.com/examples/fixed.html)
+
+## Menus
+
+* [Menu](https://semantic-ui.com/collections/menu.html)
+* [Example: Semantic ui Sidebar + Navbar](https://codepen.io/telatkaya/pen/dpPNWd)
 
 ## Responsive Design Elements
 
@@ -11,7 +17,6 @@
 ## Attached Content
 
 * [Attached Content](https://semantic-ui.com/examples/attached.html)
-
 
 
 ## Tables & Grids
@@ -24,3 +29,4 @@
 ## Semantic-UI + Integrations
 
 * [Semantic-Org/Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React)
+
