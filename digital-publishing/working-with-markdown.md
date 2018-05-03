@@ -142,6 +142,10 @@ output:
 Markdown can be [converted easily](Working-with-Pandoc) to other formatting and printing languages.  It is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
 
+## Other Markdown Flavors
+
+* [Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 ### References:
 
 * [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
