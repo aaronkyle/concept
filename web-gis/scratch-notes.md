@@ -1,4 +1,10 @@
-To start: This repository focuses on OpenSource solutions to web mapping.
+## About Geo-Mapping (for web and print)
+
+* [Command-Line Cartography, Part 1](https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c)
+
+### A Caveat:
+
+This repository focuses on OpenSource solutions to web mapping.
 
 There are, of course, other means of quickly creating production-quality maps, such as Mapbox, CartoDB, QGIS Cloud [which is based on an OpenSource stack], LizMaps and others.  While promoted as 'free', the un-paid licences for these systems only give users a rather meager amount of space or don’t include helpful tools. These services are terrific for learning web mapping and starting to build a portfoloi, but for full control one really needs to build a system from scratch.
 
@@ -60,3 +66,5 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 * [OpenLayers in QGIS Without Writing Code – Part 1](https://boundlessgeo.com/2015/06/building-openlayers-3-web-app-without-writing-code/)
 
 * [Geographic Information Systems Stack Exchange](https://gis.stackexchange.com/questions/175462/seeking-tutorial-for-boundless-web-app-builder)
+
+* [US map of states with populations by ethnicity](https://bl.ocks.org/SuYoungHong/f4a4d387ead290850e58bf92a6c4dbb6)
