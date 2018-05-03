@@ -143,3 +143,5 @@
 * [A Map to Perfection: Using D3.js to Make Beautiful Web Maps](https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautiful-web-maps)
 
 * [d3.geomap - Create Geographic Maps for the Web](https://d3-geomap.github.io/)
+
+* [Create a simple Donut Chart using D3.js](http://www.adeveloperdiary.com/d3-js/create-a-simple-donut-chart-using-d3-js/)
