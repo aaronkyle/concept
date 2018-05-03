@@ -130,3 +130,16 @@
 * [Flow Builder](https://gojs.net/latest/samples/flowBuilder.html)
 
 * ![World's Biggest Data Breaches](https://mojombo.github.io/images/posts/2016-11-10/breaches.png)
+
+* [d3 v.4 donut](https://codepen.io/skingrapher/pen/bLJPea?page=12)
+* [D3 Concept Map, Reimagined](https://codepen.io/mightymagenta/pen/MQRxmL?page=12)
+* [CSS Animation - Keyframes](https://codepen.io/webslingerm/pen/GQNBpQ?page=14)
+* [Donut Chart (percent of percent concentric) D3 v4](https://codepen.io/jonlink/pen/OQENMJ?page=13)
+
+* [How to Show Data on Mouseover in d3.js](https://chartio.com/resources/tutorials/how-to-show-data-on-mouseover-in-d3js/)
+
+* [Over 1000 D3.js Examples and Demos](http://techslides.com/over-1000-d3-js-examples-and-demos)
+
+* [A Map to Perfection: Using D3.js to Make Beautiful Web Maps](https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautiful-web-maps)
+
+* [d3.geomap - Create Geographic Maps for the Web](https://d3-geomap.github.io/)
