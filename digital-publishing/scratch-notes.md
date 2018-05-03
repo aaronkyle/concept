@@ -101,3 +101,12 @@ Other Project Manangement....
 
 * [ExifReader: A JavaScript Exif info parser.](https://github.com/mattiasw/ExifReader)
 * [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
+
+
+---
+
+### Theming
+
+* [Import your old & busted site or blog for use with Jekyll.](http://import.jekyllrb.com/)
+* [Themes](https://jekyllrb.com/docs/themes/)
+* [Templates](https://jekyllrb.com/docs/templates/)
