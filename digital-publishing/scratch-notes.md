@@ -101,14 +101,27 @@ Other Project Manangement....
 
 * [ExifReader: A JavaScript Exif info parser.](https://github.com/mattiasw/ExifReader)
 * [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
-* [Is it possible to modify the exif data of an image taken from Canvas in HTML5?
-](https://stackoverflow.com/questions/33361443/is-it-possible-to-modify-the-exif-data-of-an-image-taken-from-canvas-in-html5/33362323)
+* [Is it possible to modify the exif data of an image taken from Canvas in HTML5?](https://stackoverflow.com/questions/33361443/is-it-possible-to-modify-the-exif-data-of-an-image-taken-from-canvas-in-html5/33362323)
+* [ExifExodus](https://oxism.com/ExifExodus/)
 
 Part of publishing is ensuring that records are accurate, safe, and secure.  The contextual metadata attached to files (such as PDFs) is not always (read: rarely) accurate, and it is not always secure to publish metadata (such as locational data written into many smartphone images).
 
+[EXIF](http://en.wikipedia.org/wiki/Exchangeable_image_file_format) is a type of metadata that is embedded in photo files from most types of cameras and phones.
+
+This metadata includes information about the device used to capture the photo, but also often includes the GPS coordinates of where the photo was taken.
+
+Many users unknowingly share this information with the general public and site/app owners when uploading photos online.
+
+This has been a common vector of privacy lapses, including cases where journalists have unintentionally published photos with GPS data intact.
+
+Recent press has also revealed the NSA’s collection of EXIF data in its [XKeyscore](http://en.wikipedia.org/wiki/XKeyscore) program.
+
+
 When working locally on file (i.e. on my computer), I can avail of Phil Harvey's [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) to manipulate metadata.  For web publications, I need to perform these manipulations in another way.
 
+Is EXIF without merit?
 
+That’s certainly not the implication of this project. Metadata adds another dimension to photos and is valuable for preserving context. This project aims to educate and give users a choice in the matter of sharing it with specific services (and the web at large).
 
 ### Theming
 
