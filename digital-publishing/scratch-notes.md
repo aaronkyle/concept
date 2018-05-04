@@ -103,6 +103,10 @@ Other Project Manangement....
 * [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
 * [Is it possible to modify the exif data of an image taken from Canvas in HTML5?](https://stackoverflow.com/questions/33361443/is-it-possible-to-modify-the-exif-data-of-an-image-taken-from-canvas-in-html5/33362323)
 * [ExifExodus](https://oxism.com/ExifExodus/)
+* [pre-processor/Exiftool.js](http://docs.mokr.org/stream-multipart-upload/pre-processor_Exiftool.js.html)
+* [imgo](https://github.com/imgo/imgo/wiki)
+* [exif-js](https://github.com/exif-js/exif-js/blob/master/example/index.html)
+* [JavaScript Exif reader.](http://fengyuanchen.github.io/exif/)
 
 Part of publishing is ensuring that records are accurate, safe, and secure.  The contextual metadata attached to files (such as PDFs) is not always (read: rarely) accurate, and it is not always secure to publish metadata (such as locational data written into many smartphone images).
 
@@ -128,3 +132,9 @@ That’s certainly not the implication of this project. Metadata adds another di
 * [Import your old & busted site or blog for use with Jekyll.](http://import.jekyllrb.com/)
 * [Themes](https://jekyllrb.com/docs/themes/)
 * [Templates](https://jekyllrb.com/docs/templates/)
+
+
+## JavaScript
+
+* [jQuery append() Method](https://www.w3schools.com/jquery/html_append.asp)
+* [How to capture an image from a DOM element with javascript](https://ourcodeworld.com/articles/read/38/how-to-capture-an-image-from-a-dom-element-with-javascript)
