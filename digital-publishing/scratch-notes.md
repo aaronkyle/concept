@@ -97,13 +97,6 @@ Other Project Manangement....
 * [KaTeX and MathJax Comparison Demo](https://www.intmath.com/cg5/katex-mathjax-comparison.php)
 
 
-## Working with EXIF data
-
-* [ExifReader: A JavaScript Exif info parser.](https://github.com/mattiasw/ExifReader)
-* [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
-
-
----
 
 ### Theming
 
