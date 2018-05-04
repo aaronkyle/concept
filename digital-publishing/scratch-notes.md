@@ -97,6 +97,18 @@ Other Project Manangement....
 * [KaTeX and MathJax Comparison Demo](https://www.intmath.com/cg5/katex-mathjax-comparison.php)
 
 
+## Working with EXIF data
+
+* [ExifReader: A JavaScript Exif info parser.](https://github.com/mattiasw/ExifReader)
+* [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
+* [Is it possible to modify the exif data of an image taken from Canvas in HTML5?
+](https://stackoverflow.com/questions/33361443/is-it-possible-to-modify-the-exif-data-of-an-image-taken-from-canvas-in-html5/33362323)
+
+Part of publishing is ensuring that records are accurate, safe, and secure.  The contextual metadata attached to files (such as PDFs) is not always (read: rarely) accurate, and it is not always secure to publish metadata (such as locational data written into many smartphone images).
+
+When working locally on file (i.e. on my computer), I can avail of Phil Harvey's [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) to manipulate metadata.  For web publications, I need to perform these manipulations in another way.
+
+
 
 ### Theming
 
