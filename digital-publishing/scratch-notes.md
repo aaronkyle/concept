@@ -99,6 +99,7 @@ Other Project Manangement....
 
 ## Working with EXIF data
 
+* [Welcome to Piexifjs’s documentation!](http://piexifjs.readthedocs.io/en/latest/)
 * [ExifReader: A JavaScript Exif info parser.](https://github.com/mattiasw/ExifReader)
 * [Exif be gone: Remove exif data using a node.js transform stream](https://github.com/joshbuddy/exif-be-gone)
 * [Is it possible to modify the exif data of an image taken from Canvas in HTML5?](https://stackoverflow.com/questions/33361443/is-it-possible-to-modify-the-exif-data-of-an-image-taken-from-canvas-in-html5/33362323)
@@ -109,6 +110,10 @@ Other Project Manangement....
 * [JavaScript Exif reader.](http://fengyuanchen.github.io/exif/)
 * [Removing GPS data using from an image using Pillow and Piexif](https://stackoverflow.com/questions/38483074/removing-gps-data-using-from-an-image-using-pillow-and-piexif?rq=1)
 * [SmallSureThing: Python for sentient beings.](https://www.smallsurething.com/how-to-remove-exif-data-from-jpeg-images-in-python/)
+
+* [Welcome to Piexifjs’s documentation!](http://piexifjs.readthedocs.io/en/latest/)
+* [On digital still cameras](http://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf)
+
 
 Part of publishing is ensuring that records are accurate, safe, and secure.  The contextual metadata attached to files (such as PDFs) is not always (read: rarely) accurate, and it is not always secure to publish metadata (such as locational data written into many smartphone images).
 
