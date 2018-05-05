@@ -107,6 +107,8 @@ Other Project Manangement....
 * [imgo](https://github.com/imgo/imgo/wiki)
 * [exif-js](https://github.com/exif-js/exif-js/blob/master/example/index.html)
 * [JavaScript Exif reader.](http://fengyuanchen.github.io/exif/)
+* [Removing GPS data using from an image using Pillow and Piexif](https://stackoverflow.com/questions/38483074/removing-gps-data-using-from-an-image-using-pillow-and-piexif?rq=1)
+* [SmallSureThing: Python for sentient beings.](https://www.smallsurething.com/how-to-remove-exif-data-from-jpeg-images-in-python/)
 
 Part of publishing is ensuring that records are accurate, safe, and secure.  The contextual metadata attached to files (such as PDFs) is not always (read: rarely) accurate, and it is not always secure to publish metadata (such as locational data written into many smartphone images).
 
