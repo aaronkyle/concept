@@ -12,3 +12,23 @@
 
 * [HTML: Living Standard — Last Updated 9 April 2018](https://html.spec.whatwg.org/multipage/sections.html#outlines)
 * [A Preview of HTML 5](http://alistapart.com/article/previewofhtml5)
+
+## File Uploader
+
+* [Fine Uploader is the easiest javascript file uploader library to set up.](https://fineuploader.com/demos.html)
+    - Code examples are provided, whether you are using a jQuery wrapper, or plain JavaScript.
+    
+* [Browse Image and Insert into Iframe](https://stackoverflow.com/questions/20959737/browse-image-and-insert-into-iframe)
+
+* [JSFiddeL Browse Image and Insert into Iframe](http://jsfiddle.net/zero298/kWLcx/)
+
+* [How do you insert an image in Javascript?](https://www.quora.com/How-do-you-insert-an-image-in-Javascript)
+
+* [Multiple File Upload Input](https://davidwalsh.name/multiple-file-upload)
+    - Old article, old demo: https://davidwalsh.name/demo/multiple-file-upload.php
+     
+ * [JavaScript and HTML DOM Reference](https://www.w3schools.com/jsref/)
+     - [HTML DOM Image Object](https://www.w3schools.com/jsref/dom_obj_image.asp)
+ 
+ * [Input FileUpload files Property](https://www.w3schools.com/jsref/prop_fileupload_files.asp)
+      [w3schools demo: file uploader](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_fileupload_files)
