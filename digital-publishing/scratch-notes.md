@@ -145,3 +145,7 @@ That’s certainly not the implication of this project. Metadata adds another di
 
 * [jQuery append() Method](https://www.w3schools.com/jquery/html_append.asp)
 * [How to capture an image from a DOM element with javascript](https://ourcodeworld.com/articles/read/38/how-to-capture-an-image-from-a-dom-element-with-javascript)
+
+## Math rendering
+
+* [Matplotlib](https://matplotlib.org/gallery/index.html)
