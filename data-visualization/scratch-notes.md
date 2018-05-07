@@ -145,3 +145,6 @@
 * [d3.geomap - Create Geographic Maps for the Web](https://d3-geomap.github.io/)
 
 * [Create a simple Donut Chart using D3.js](http://www.adeveloperdiary.com/d3-js/create-a-simple-donut-chart-using-d3-js/)
+
+* [Crossfilter](http://square.github.io/crossfilter/)
+* [Crossfilter](https://github.com/square/crossfilter/tree/gh-pages)
