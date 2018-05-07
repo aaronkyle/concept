@@ -32,3 +32,10 @@
  
  * [Input FileUpload files Property](https://www.w3schools.com/jsref/prop_fileupload_files.asp)
       [w3schools demo: file uploader](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_fileupload_files)
+
+
+* [DataTables: Download](https://datatables.net/download/)
+* [Introducing Responsive for DataTables](https://datatables.net/blog/2014-07-16)
+* [Responsive](https://datatables.net/extensions/responsive/)
+
+* [Bootstrap'](https://getbootstrap.com/docs/3.3/css/)
