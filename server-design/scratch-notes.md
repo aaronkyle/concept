@@ -5,3 +5,4 @@
 * [The evolution of data center storage architecture](https://searchdatacenter.techtarget.com/guide/The-evolution-of-data-center-storage-architecture)
     - Changes in the data center storage architecture are at the forefront of how IT infrastructure evolves to tackle emerging workloads and handle new applications.
     
+* [Another reason why your Docker containers may be slow](https://hackernoon.com/another-reason-why-your-docker-containers-may-be-slow-d37207dec27f)
