@@ -80,3 +80,5 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 * [More than you ever wanted to know about GeoJSON](https://macwright.org/2015/03/23/geojson-second-bite.html)
 
 * [lon lat lon lat](https://macwright.org/lonlat/)
+
+* [map school](https://mapschool.io/)
