@@ -150,3 +150,15 @@
 * [Crossfilter](https://github.com/square/crossfilter/tree/gh-pages)
 
 * [Pillow: Python Imaging Library (Fork)](https://github.com/python-pillow/Pillow)
+
+* [A Tour through the Visualization Zoo](https://queue.acm.org/detail.cfm?id=1805128)
+
+* [http://koalastothemax.com/](http://koalastothemax.com/)
+
+* [Les Misérables character interaction](https://homes.cs.washington.edu/~jheer//files/zoo/ex/networks/arc.html)
+
+* [http://vadim.ogievetsky.com/](http://vadim.ogievetsky.com/)
+
+* [UW Interactive Data Lab  ](https://idl.cs.washington.edu/)
+
+* [	THE VISUAL DISPLAY OF QUANTITATIVE INFORMATION](https://www.edwardtufte.com/tufte/books_vdqi)
