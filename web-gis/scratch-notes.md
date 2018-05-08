@@ -73,3 +73,10 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 * [Tangram](https://github.com/tangrams)
 * [Long-term support for Mapzen maps, vector & terrain tiles](https://mapzen.com/blog/long-term-support-mapzen-maps/)
 * [nextzen.js](https://github.com/nextzen/nextzen.js)
+
+* [GIS with Python, Shapely, and Fiona](https://macwright.org/2012/10/31/gis-with-python-shapely-fiona.html)
+    - Shapely and Fiona are essential Python tools for geospatial programming written by Sean Gillies. Use them instead of ESRI’s Python toolchain. They are free, stable, and mean you can post your code on GitHub and nonrich people will be able to run it.
+    
+* [More than you ever wanted to know about GeoJSON](https://macwright.org/2015/03/23/geojson-second-bite.html)
+
+* [lon lat lon lat](https://macwright.org/lonlat/)
