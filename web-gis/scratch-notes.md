@@ -68,3 +68,8 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 * [Geographic Information Systems Stack Exchange](https://gis.stackexchange.com/questions/175462/seeking-tutorial-for-boundless-web-app-builder)
 
 * [US map of states with populations by ethnicity](https://bl.ocks.org/SuYoungHong/f4a4d387ead290850e58bf92a6c4dbb6)
+
+* [Nextzen: Long-term support for Mapzen maps, vector & terrain tiles](https://www.nextzen.org/)
+* [Tangram](https://github.com/tangrams)
+* [Long-term support for Mapzen maps, vector & terrain tiles](https://mapzen.com/blog/long-term-support-mapzen-maps/)
+* [nextzen.js](https://github.com/nextzen/nextzen.js)
