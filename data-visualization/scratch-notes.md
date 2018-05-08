@@ -148,3 +148,5 @@
 
 * [Crossfilter](http://square.github.io/crossfilter/)
 * [Crossfilter](https://github.com/square/crossfilter/tree/gh-pages)
+
+* [Pillow: Python Imaging Library (Fork)](https://github.com/python-pillow/Pillow)
