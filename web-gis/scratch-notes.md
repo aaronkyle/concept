@@ -81,4 +81,6 @@ Big Data with Open GIS Solutions](http://info.boundlessgeo.com/rs/242-IZP-883/im
 
 * [lon lat lon lat](https://macwright.org/lonlat/)
 
+* [The case for open-source GIS](http://millermountain.com/geospatialblog/2018/01/16/open-source-gis/)
+
 * [map school](https://mapschool.io/)
