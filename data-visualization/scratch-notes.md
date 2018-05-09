@@ -176,3 +176,4 @@
 * [vis.js examples](https://www.l2f.inesc-id.pt/~david/wiki/pt/extensions/vis/examples/)
 * [custom time bar](https://www.l2f.inesc-id.pt/~david/wiki/pt/extensions/vis/examples/timeline/13_past_and_future.html)
 * [timeline example](https://codepen.io/jean2607/pen/gWeyzB)
+* [mxGraph JavaScript](https://jgraph.github.io/mxgraph/javascript/index.html)
