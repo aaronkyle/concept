@@ -166,3 +166,8 @@
 * [flowchart.js](http://flowchart.js.org/)
 * [flowchart.js](https://github.com/adrai/flowchart.js/)
 * [flowchart.js example](https://github.com/adrai/flowchart.js/blob/master/example/index.html)
+
+* [A D3-based renderer for Dagre](https://github.com/dagrejs/dagre-d3)
+* [dagrejs/dagre](https://github.com/dagrejs/dagre)
+* [cola.js](http://ialab.it.monash.edu/webcola/)
+* [Layout with hierarchical grouping](http://ialab.it.monash.edu/webcola/examples/gridifiedSmallGroups.html)
