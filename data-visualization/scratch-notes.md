@@ -161,4 +161,8 @@
 
 * [UW Interactive Data Lab  ](https://idl.cs.washington.edu/)
 
-* [	THE VISUAL DISPLAY OF QUANTITATIVE INFORMATION](https://www.edwardtufte.com/tufte/books_vdqi)
+* [THE VISUAL DISPLAY OF QUANTITATIVE INFORMATION](https://www.edwardtufte.com/tufte/books_vdqi)
+
+* [flowchart.js](http://flowchart.js.org/)
+* [flowchart.js](https://github.com/adrai/flowchart.js/)
+* [flowchart.js example](https://github.com/adrai/flowchart.js/blob/master/example/index.html)
