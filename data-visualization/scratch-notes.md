@@ -171,3 +171,8 @@
 * [dagrejs/dagre](https://github.com/dagrejs/dagre)
 * [cola.js](http://ialab.it.monash.edu/webcola/)
 * [Layout with hierarchical grouping](http://ialab.it.monash.edu/webcola/examples/gridifiedSmallGroups.html)
+
+
+* [vis.js examples](https://www.l2f.inesc-id.pt/~david/wiki/pt/extensions/vis/examples/)
+* [custom time bar](https://www.l2f.inesc-id.pt/~david/wiki/pt/extensions/vis/examples/timeline/13_past_and_future.html)
+* [timeline example](https://codepen.io/jean2607/pen/gWeyzB)
