@@ -32,3 +32,11 @@
 ## Semantic-UI + Integrations
 
 * [Semantic-Org/Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React)
+
+---
+
+* [Integration](https://github.com/Semantic-Org/Semantic-UI/wiki/Integration)
+
+* []()
+
+* []()
