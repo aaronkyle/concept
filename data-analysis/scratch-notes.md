@@ -7,3 +7,4 @@
 
 * [An Overview of the Tesseract OCR Engine ](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/33418.pdf)
 * [Optical character recognition (OCR)](https://cloud.google.com/vision/docs/ocr#try_it)
+* [Convert PDF and photo files to text](https://support.google.com/drive/answer/176692?co=GENIE.Platform%3DDesktop&hl=en)
