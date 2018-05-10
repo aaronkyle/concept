@@ -53,3 +53,16 @@
 * [SO, WHAT MAKES NODE.JS SO EXCELLENT (AND EFFICIENT) FOR BACK-END PROGRAMMING?](https://www.upwork.com/hiring/development/what-is-node-js/)
 
 * [jugglingdb](https://github.com/1602/jugglingdb)
+
+
+* [How can we access any database using Javascript for creating a website?](https://www.researchgate.net/post/How_can_we_access_any_database_using_Javascript_for_creating_a_website)
+* [demo_db_insert.js](https://www.w3schools.com/nodejs/shownodejs_cmd.asp?filename=demo_db_insert)
+* [Node.js MySQL Insert Into](https://www.w3schools.com/nodejs/nodejs_mysql_insert.asp)
+* [PHP - AJAX and MySQL](https://www.w3schools.com/php/php_ajax_database.asp)
+* [PHP - AJAX and MySQL](https://www.w3schools.com/php/php_ajax_database.asp)
+* [Send data from javascript to a mysql database](https://stackoverflow.com/questions/8412505/send-data-from-javascript-to-a-mysql-database)
+* [Load JSON file locally using pure Javascript](https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript)
+* [load json from file into object](https://stackoverflow.com/questions/11005767/load-json-from-file-into-object)
+* [Loading D3.js data from a simple JSON string](https://stackoverflow.com/questions/15764698/loading-d3-js-data-from-a-simple-json-string)
+* [Does d3.json() and JSON.parse() produce the same results?](https://stackoverflow.com/questions/38532992/does-d3-json-and-json-parse-produce-the-same-results)
+* [Reading in Data](http://learnjsdata.com/read_data.html)
