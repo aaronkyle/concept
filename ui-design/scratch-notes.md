@@ -39,3 +39,17 @@
 * [Responsive](https://datatables.net/extensions/responsive/)
 
 * [Bootstrap'](https://getbootstrap.com/docs/3.3/css/)
+
+
+* [Comparison of JavaScript frameworks](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
+* [CSS framework](https://en.wikipedia.org/wiki/CSS_framework)
+
+* [Express](https://expressjs.com/)
+* [Express](https://en.wikipedia.org/wiki/Express.js)
+* [How to share data between web applications?](https://serverfault.com/questions/776263/how-to-share-data-between-web-applications)
+* [Full Stack Python](https://www.fullstackpython.com/postgresql.html)
+
+* [Choosing the Right Software Stack](https://www.upwork.com/hiring/development/choosing-the-right-software-stack-for-your-website/)
+* [SO, WHAT MAKES NODE.JS SO EXCELLENT (AND EFFICIENT) FOR BACK-END PROGRAMMING?](https://www.upwork.com/hiring/development/what-is-node-js/)
+
+* [jugglingdb](https://github.com/1602/jugglingdb)
