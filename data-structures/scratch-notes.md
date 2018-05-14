@@ -7,11 +7,11 @@
 * []()
 * []()
 
-## [Editing Case sensitivity for SQL identifiers](https://github.com/ontop/ontop/wiki/Case-sensitivity-for-SQL-identifiers/_edit)
+## [Case sensitivity for SQL identifiers](https://github.com/ontop/ontop/wiki/Case-sensitivity-for-SQL-identifiers/_edit)
 
-''valid for Ontop Version 1''
 
-=== Identifiers for Metadata ===
+### Identifiers for Metadata
+
 The treatment of the casing of identifiers differs between database engines. As a general rule, if quotes are consistently not used, neither in creating nor accessing tables, views, and columns, ontop will always support the identifiers. (The exception is when the database is setup with a non-normal default case, see for H2 below.) Unquoted table and view names are translated internally to a default case of the database engine. Quoted identifiers are mostly supported, but ontop does not support accessing objects which have identifiers only differing in the case, e.g. "Table" and "table". This is quite unusual, probably even bad database design, but technically possible in most databases.
 
 * Oracle and H2 changes unquoted identifiers to uppercase. 
