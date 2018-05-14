@@ -1,5 +1,5 @@
 
-* [JSON.parse(https://www.w3schools.com/js/js_json_parse.asp)
+* [JSON.parse](https://www.w3schools.com/js/js_json_parse.asp)
 
 * [The key differences between SQL and NoSQL DBs.](http://www.monitis.com/blog/cc-in-review-the-key-differences-between-sql-and-nosql-dbs/)
 * []()
