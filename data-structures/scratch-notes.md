@@ -7,6 +7,8 @@
 * []()
 * []()
 
+https://stackoverflow.com/questions/2009005/are-column-and-table-name-case-sensitive-in-mysql
+
 ## [Case sensitivity for SQL identifiers](https://github.com/ontop/ontop/wiki/Case-sensitivity-for-SQL-identifiers/_edit)
 
 
