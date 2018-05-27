@@ -46,4 +46,49 @@ Quoted columns in the query are transformed in unquoted columns so that they wil
 
  
 
+ ---
+ 
+ BIBLIOGRAPHY CREATION:
+
+The process of bibliography creation should be straight-forward.  It basically amounts to opening each file and plugging in the data for each field in the following Google spread sheet:
+
+https://docs.google.com/spreadsheet/ccc?key=0AoFJqNbvcLPmdDRwbENzamszX3ZnMl9SdFZSb3B5eHc
+
+Example entries are listed
+
+ARTICLE RENAMING:
+
+We will also use the above linked Google Spreadsheet to track our changes to each file name.
+
+Our formula for re-naming articles is as follows:
+ 
+journal_initials [space] year [comma, no space] volume [comma, no space] issue [space] dash [space] author's last name + DOC-FORMAT
+
+in short, this format is:
+
+ji YYYY,V#,I#, P##-P## - AUTHOR.file
+
+thus, for a bibliographic entry such as: 
+
+Robin Kennish and Graham Schmidt. 2001.  "What's thatTitle?" Journal of Latin American Studies, Vol.  5 Issue 6: 232-291.   Chicago: Token University Press.  ISSN : 01239876
+ 
+The full citation would be:
+
+jlas 2001,5,6,232-291 - Kennish and Schmidt.pdf
+
+As you do this, please consider the following:
+
+For two authors – separate the names using ‘and’’  (as in the example above)
+
+For three authors, the citation format uses 'et al'.  This, if our pretend article above was written by Kennish,  Schmidt and Leo, that would carry over to the file name as follows:
+
+jlas 2001,5,6,232-291 - Kennish et al.
+
+Also, it is OK to omit some level of detail (like the page number) for speed.  It actually has relevance in some citation formats, but is easily something we can tweak later.
+
+Omitting details in the file name makes more sense when it is possible to download and save e-books (less likely):
+
+*This Book Title* 2005  by Graham Schmidt.  Penguin Press, Token University Press.  IBSN : 562398765
+
+2005 - Schmidt.pdf
  
