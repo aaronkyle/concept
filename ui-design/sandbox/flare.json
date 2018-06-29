@@ -1,0 +1,287 @@
+{
+"name": "flare",
+"children": [
+      {
+        "name": "Assessment",
+        "children": [
+          {
+            "name": "KEN: Bridge Int'l Academies-01",
+            "size": 1
+          },
+          {
+            "name": "NGA: Eleme Fertilizer II-01",
+            "size": 1
+          },
+          {
+            "name": "GEO: AGL-01",
+            "size": 1
+          },
+          {
+            "name": "GHA: Meridian PSL-01",
+            "size": 1
+          },
+          {
+            "name": "TGO: Togo LCT-02",
+            "size": 1
+          },
+          {
+            "name": "PHL: Rizal Commrcl. Banking Corp.-01",
+            "size": 1
+          },
+          {
+            "name": "EGY: Alex Dev Ltd-02",
+            "size": 1
+          }
+        ]
+      },
+      {
+        "name": "Compliance",
+        "children": [
+          {
+            "name": "Appraisal",
+            "children": [
+              {
+                    "name": "PER: Yanacocha-11",
+                    "size": 1
+                  },
+                  {
+                    "name": "EGY: Alex Dev Ltd-03",
+                    "size": 1
+                  }
+            ]
+          },
+          {
+            "name": "Investigation",
+            "children": [
+              {
+                    "name": "CHL: Alto Maipo-01,2",
+                    "size": 2
+                  },
+                  {
+                    "name": "UKR: Axzon-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "PER: Yanacocha-09,10",
+                    "size": 2
+                  },
+                  {
+                    "name": "ZAF: Lonmin-02",
+                    "size": 1
+                  },
+                  {
+                    "name": "CRI: Reventazon HPP‐ 01,02",
+                    "size": 2
+                  },
+                  {
+                    "name": "KEN: Bidco Bev. & Det.-01,04",
+                    "size": 2
+                  },
+                  {
+                    "name": "GTM: CIFI-01/Santa Cruz",
+                    "size": 1
+                  },
+                  {
+                    "name": "EGY: Alex Dev-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "ALB: Enso Albania-01",
+                    "size": 1
+                  }
+            ]
+          },
+          {
+            "name": "Monitoring",
+            "children": [
+              {
+                    "name": "MYS: Bilt Paper-02",
+                    "size": 1
+                  },
+                  {
+                    "name": "TGO: Togo LCT-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "IND: Vizhinjam-01,02,03",
+                    "size": 3
+                  },
+                  {
+                    "name": "GTM: Real LRIF-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "Lydian Intl3-01,02",
+                    "size": 1
+                  },
+                  {
+                    "name": "WORLD: IFC Financial Markets",
+                    "size": 1
+                  },
+                  {
+                    "name": "IND: Tata Ultra Mega-01",
+                    "size": 2
+                  },
+                  {
+                    "name": "IND: Tata Tea-01,02",
+                    "size": 1
+                  },
+                  {
+                    "name": "COL: Eco Oro-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "HND: Dinant-01,02,03",
+                    "size": 3
+                  },
+                  {
+                    "name": "IDN: Wilmar Group-03",
+                    "size": 1
+                  },
+                  {
+                    "name": "IND: India Infrastructure Fund-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "HND: Ficohsa-01,02",
+                    "size": 2
+                  }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dispute Resolution",
+        "children": [
+          {
+            "name": "Mediation",
+            "children": [
+              {
+                "name": "MMR: Myanma Awba Group-01",
+                "size": 1
+              },
+              {
+                "name": "ALB: Bankers Petroleum-01",
+                "size": 1
+              },
+              {
+                "name": "KHM: VEIL II-01",
+                "size": 1
+              },
+              {
+                "name": "ALB: Kurum Hydro-01",
+                "size": 1
+              },
+              {
+                "name": "NIC: Ingenio Montelimar-01",
+                "size": 1
+              },
+              {
+                "name": "GIN: NedBank Group Ltd-01",
+                "size": 1
+              },
+                      {
+                "name": "UZB: Indorama Kokand-01",
+                "size": 1
+              },
+              {
+                "name": "EGY: Egyptian Indian Polyester Co. Sokhna-02",
+                "size": 1
+              }
+            ]
+          },
+          {
+            "name": "Monitoring",
+            "children": [
+              {
+                "name": "KHM: Cambodia Airport-01",
+                "size": 1
+              },
+              {
+                "name": "UGA: Bujagali Energy-05",
+                "size": 1
+              },
+              {
+                "name": "CMR: Chad-Cameroon Pipeline-02",
+                "size": 1
+              },
+              {
+                "name": "TCD: Chad-Cameroon Pipeline-03",
+                "size": 1
+              },
+              {
+                "name": "UGA: Agri-Vie Fund-01",
+                "size": 1
+              },
+              {
+                "name": "MNG: Oyu Tolgoi-01",
+                "size": 1
+              },
+              {
+                "name": "MNG: Oyu Tolgoi-02",
+                "size": 1
+              },
+              {
+                "name": "COL: Alqueria-01",
+                "size": 1
+              },
+              {
+                "name": "MAR: Zalagh-01",
+                "size": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Closure",
+        "children": [
+          {
+            "name": "Compliance",
+            "children": [
+              {
+                "name": "Appraisal",
+                "children": [
+                  {
+                    "name": "BLR: Strominvest II-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "GEO: Trans-Anatolian Pipeline-01",
+                    "size": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Dispute Resolution",
+            "children": [
+              {
+                "name": "Mediation",
+                "children": [
+                  {
+                    "name": "BGD: United Ashuganj Energy Ltd-01",
+                    "size": 1
+                  },
+                  {
+                    "name": "UGA: Bidco Bev. & Det-03",
+                    "size": 1
+                  }
+                ]
+              },
+              {
+                "name": "Monitoring",
+                "children": [
+                  {
+                    "name": "UGA: Agri-Vie Fund-02",
+                    "size": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}
