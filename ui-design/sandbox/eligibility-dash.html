@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Internal site - Compliance Advisor/Ombudsman</title>
+  <link href="/static/css/main.b893cae9.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="app">
+    <div class="skin-blue" data-reactroot="">
+      <header class="main-header">
+        <nav class="navbar navbar-static-top" role="navigation" style="padding: 0px 0px 0px 10px; top: 0px; width: 100%; border-bottom-color: rgb(11, 149, 221); border-bottom-width: 1px; border-bottom-style: solid; position: fixed; background-color: rgb(255, 255, 255);"><a class="cursor"><img src="/static/media/logo.b6134214.png"></a><br class="visible-xs"><a class="sidebar-toggle visible-xs" role="button" href="#" data-toggle="push-menu"><span class="sr-only">Toggle navigation</span></a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu"><select class="header_option"><option value="1">Country</option><option value="2">Region</option><option value="22">Sector</option><option value="710">Name</option><option value="711">Assigned To</option><option value="712">Keyword</option></select></li>
+              <li
+                class="dropdown visible-xs mobilesearch"><a class="dropdown-toggle" style="padding: 30px 10px 0px 0px;" href="#" data-toggle="dropdown"><span class="hidden-xs">User Name</span><!-- react-text: 16 -->&nbsp; &nbsp;<!-- /react-text --><i class="fa fa-search" aria-hidden="true"></i></a>
+                <ul
+                  class="dropdown-menu " style="padding: 10px;">
+                  <li class="user-header">
+                    <div class="input-group "><input name="q" class="form-control" type="text" placeholder="Search Case"><span class="input-group-btn" style="width: 0px;"><button name="search" class="btn btn-flat" id="search-btn" type="submit"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDNUQ2MkQ5Mzg5ODExRThBOTNGQjM2QzBEQUZDRkM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDNUQ2MkRBMzg5ODExRThBOTNGQjM2QzBEQUZDRkM3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REM1RDYyRDczODk4MTFFOEE5M0ZCMzZDMERBRkNGQzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REM1RDYyRDgzODk4MTFFOEE5M0ZCMzZDMERBRkNGQzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7NLe3EAAABm0lEQVR42qSUPUhCYRSG7zUXIYJ+DKkgggrBaGhuaYxKIvqlhgqaWhqktvaKoqEcIwr6JWoJrMGxPWwRDYdqEDPChiC40HvhNQ4HvV7phYf7nU+/13OP53xmPB43lGrBEhgDnaAZfIAEuAIH4NsoI4+K50AG7IB+EOB3msAA2AMpMO7GcAMc87CTWsEFiDgZLoJVsZ8Fa6AXtIA+sA4++bkJNkFYG5qoYR2eaeDn3gMYBbkSCbSBGAgxtssTBD8yw3lhluWv5sq87isYBF+MO8CMfmWZ9jbIV6jhC4iKOKwNe0QcM9zpTqy7tWGDiPMuDd/FulEbynr5XRoGxLqgDRMiHnJpOCzWj9rwWsQR9p2TujiaRd1owyPwxrge3IP2MmZB/iE+xinO95+8HPRlZmqyaZ/APg/neUGMMDOfOP8MLD0pxfUK+9BjVKdLNrelL4ddNmmmgkFa9eEEOAU1pa6vW9ZpgSVIsq2SIpMQu+FcmZ7Ypt4SGdiDfkicNMvnFJ+T9oxXWy8pi6ZnYm/aa/xPFm/5As23fgUYAKZlVlSyblLhAAAAAElFTkSuQmCC"></button></span></div>
+                  </li>
+            </ul>
+            </li>
+            <li class="search_box hidden-xs">
+              <div class="input-group header_searchbox "><input name="q" class="form-control" type="text" placeholder="Search Case" value=""><span class="input-group-btn" style="width: 44px;"><button name="search" class="btn btn-flat" id="search-btn" type="submit"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDNUQ2MkQ5Mzg5ODExRThBOTNGQjM2QzBEQUZDRkM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDNUQ2MkRBMzg5ODExRThBOTNGQjM2QzBEQUZDRkM3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REM1RDYyRDczODk4MTFFOEE5M0ZCMzZDMERBRkNGQzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REM1RDYyRDgzODk4MTFFOEE5M0ZCMzZDMERBRkNGQzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7NLe3EAAABm0lEQVR42qSUPUhCYRSG7zUXIYJ+DKkgggrBaGhuaYxKIvqlhgqaWhqktvaKoqEcIwr6JWoJrMGxPWwRDYdqEDPChiC40HvhNQ4HvV7phYf7nU+/13OP53xmPB43lGrBEhgDnaAZfIAEuAIH4NsoI4+K50AG7IB+EOB3msAA2AMpMO7GcAMc87CTWsEFiDgZLoJVsZ8Fa6AXtIA+sA4++bkJNkFYG5qoYR2eaeDn3gMYBbkSCbSBGAgxtssTBD8yw3lhluWv5sq87isYBF+MO8CMfmWZ9jbIV6jhC4iKOKwNe0QcM9zpTqy7tWGDiPMuDd/FulEbynr5XRoGxLqgDRMiHnJpOCzWj9rwWsQR9p2TujiaRd1owyPwxrge3IP2MmZB/iE+xinO95+8HPRlZmqyaZ/APg/neUGMMDOfOP8MLD0pxfUK+9BjVKdLNrelL4ddNmmmgkFa9eEEOAU1pa6vW9ZpgSVIsq2SIpMQu+FcmZ7Ypt4SGdiDfkicNMvnFJ+T9oxXWy8pi6ZnYm/aa/xPFm/5As23fgUYAKZlVlSyblLhAAAAAElFTkSuQmCC"></button></span></div>
+            </li>
+            <li class="submit_case">
+              <div><a href="/offlinecomplaint">File a Complaint</a></div>
+            </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <aside class="main-sidebar leftSideBarBg" id="leftsidebar" style="width: 65px; height: 637.56px;">
+        <section class="sidebar">
+          <ul class="sidebar-menu" data-widget="tree">
+            <li><a class="sidebar-toggle" role="button" href="#" data-toggle="push-menu"><img class="square toggle-down" src="/static/media/side-arrow.077f444d.png"></a></li>
+            <li>
+              <div class="user-panel">
+                <div class="pull-left image"><img class="img-circle" alt="User Image" src="/static/media/avatar.ba868aa1.png"></div>
+                <div class="pull-left info">
+                  <p>John Doe</p>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown notifications-menu"><a class="dropdown-toggle alertmenu" href="#" data-toggle="dropdown"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI3NEM3Mzg2NDMwRjExRThBRTExOTQ2REFERERCMTMyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI3NEM3Mzg3NDMwRjExRThBRTExOTQ2REFERERCMTMyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mjc0QzczODQ0MzBGMTFFOEFFMTE5NDZEQUREREIxMzIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Mjc0QzczODU0MzBGMTFFOEFFMTE5NDZEQUREREIxMzIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz73sOvSAAABSklEQVR42mL8//8/Az0BEwOdATkWMgPxEiD+CaWZaW2hOxCrALEklHanpYWcQGwFxHeB+B2UtoKKU9VCDiBuBOInQGwOxOuh4uuhfJB4M1QdfgBKpQSwNBBfBOJlQCyPQ408VP4SVD1O8whZxg3EV4G4hAiHgXAxVD03LjWMBPJhLxALAHEyCfE8F4g/AHExqUHKD8RvgViSSN/BsAQQv4bqx5DHl2icgPgkED8nMSW/AOJTUP0kpVJdIL5EZoEC0qdGqoWc0LggB3yExv3QLEtHLRw6FrJRaDYbKSWNBxC/BGIzEksZGDaD6vcgpvD2gyq2INMyGLYE4ldQ8/AW3qCmwxkgvkKFKAOVVsZAzA4TwGZhGg3Syix8FhICcWg1+w8gXkS0bjLiZh8QvwDixVB6Hyn6ybFQEYj3A/FPKK1Iin7GYd/yBggwALnEjFvOB/a1AAAAAElFTkSuQmCC"><label class="label label-warning notification_tooltip">2</label><span>&nbsp; Alerts</span></a>
+              <ul
+                class="dropdown-menu alert_dropdown">
+                <li>ALERT</li>
+                <li><span><!-- react-text: 55 -->DR mediation report for Case <!-- /react-text --><a href="">1589</a><!-- react-text: 57 --> <!-- /react-text --><br><!-- react-text: 59 --> has been sent for revision by <!-- /react-text --><br><!-- react-text: 61 -->John Doe<!-- /react-text --></span></li>
+                <li><span><!-- react-text: 64 -->DR mediation settlement agreement  <!-- /react-text --><br><!-- react-text: 66 --> for Case <!-- /react-text --><a href="">2589</a><!-- react-text: 68 --> has been approved by <!-- /react-text --><br><!-- react-text: 70 -->John Doe<!-- /react-text --></span></li>
+                <li><span><!-- react-text: 73 -->Case <!-- /react-text --><a href="">3589</a><!-- react-text: 75 --> has been moved to <!-- /react-text --><br><!-- react-text: 77 -->DR - Monitoring<!-- /react-text --></span></li>
+          </ul>
+          </li>
+          <li class="active"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ2NDBBMTYzNDMwRTExRThCMTdBQjZFQzIwMzNBQzU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ2NDBBMTY0NDMwRTExRThCMTdBQjZFQzIwMzNBQzU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDY0MEExNjE0MzBFMTFFOEIxN0FCNkVDMjAzM0FDNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDY0MEExNjI0MzBFMTFFOEIxN0FCNkVDMjAzM0FDNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz45KIUKAAABFUlEQVR42mL8//8/Az0BEwOdwfC3kAVKlwBxCxBfB2I3RkbG1yBBYPyyAakAIOaigl3ngfgiyFAQ/v4fAYphKoDs/P/UA59AdsF8eBeItaHsW0iuOgXEj4CYn0LfgbLCLpgvQFgWiJuAOJyW8QfOgvTMhyC7RvMhbSwEhi0zENsBsQytLWSEJpp1QBwIxD+A2AqY8c9DHSIFpOqAmIMKdh0D4lmwbPEHKYNWIKWqcipm/D/IGX8Tkg93IrlqMRArUtGH8IxPlzgczfjDK+PTpbZArvG3w+pDoKXfgBl/M5RtCaRWULE+DIdZqIwkqYbENgNiOSp5zhPZhzVA3Apt0yxCUjQdiJ9TsU0DL0tHswXVAECAAQDO7ztv57zDYgAAAABJRU5ErkJggg=="><!-- react-text: 81 --> <!-- /react-text --><span class="element" style="display: none;">&nbsp;  Eligibility Dashboard</span></a></li>
+          <li
+            class="hide-element"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU1OUVBQTA2NDMwRTExRTg4MzUzRkEzMzVGQTBEMTJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU1OUVBQTA3NDMwRTExRTg4MzUzRkEzMzVGQTBEMTJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTU5RUFBMDQ0MzBFMTFFODgzNTNGQTMzNUZBMEQxMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTU5RUFBMDU0MzBFMTFFODgzNTNGQTMzNUZBMEQxMkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz698CK+AAABzUlEQVR42tyWPUjDQBTHGxtBKogfIBVUHFyF6uSg0A5OLn4URHQSUXCoIrg6OrgoroKLFBFFXFycHBx0EMSCoIulKIp0cbB2qMbfwbWEM7FJ+gF68ONd8/run3u5d3eaYRi+qjYhmMfBfwOwDR8S0Q+40dAVR6hIbAzGYRm+YA38xG0Vibu2VDectZgpdsFhTEFDU1IpfkzChfKG57AJh/CiaVpWCtZhghCFJRhQ4vphD7T8A91i+mLApJLqHCatPpfCSfxpbM4irksdXHexvmYZIGzj63Y6iFPBU2iFRhu/mOFt2QRJ1Vy5yrDGV+VW43KT0KsmiFgT5go7UoqgXkSkHpOBWjgCIXopfQ2YZpvQV757xsui2YesFO2DQQZ6lr4Z2LCJG4VjL4LrcAAtMIzYjckXhzObuAdHO7nc98KKvxOiHk+isLqX6g5qMIVJ/c86JAVj0C77EeipmCCD+zGrYmHQn8aewHypgvov3+4ToSF5Fu7Ks3DR9EIrmCmb8Ani77yUhUhhB7xDL7TBo/Ql7GqN9ua6LERK4R7iEIQE7FSsLGRKI/IGkO9nKvYNpeiTqZ/+k3VoNcNQGW/jP+65VtfESrTCNfFbgAEA9y1zKdo+BMMAAAAASUVORK5CYII="><!-- react-text: 86 --> <!-- /react-text --><span class="element" style="display: none;">&nbsp; Assessment Dashboard</span></a></li>
+            <li
+              class="hide-element"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA2QUE1RkVDNDMwRjExRTg5NjU5QkI2QUQ3Q0UzNzY5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA2QUE1RkVENDMwRjExRTg5NjU5QkI2QUQ3Q0UzNzY5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDZBQTVGRUE0MzBGMTFFODk2NTlCQjZBRDdDRTM3NjkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDZBQTVGRUI0MzBGMTFFODk2NTlCQjZBRDdDRTM3NjkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz65+UfEAAACCUlEQVR42szWT0gUYRjH8VHXXFrUFSWDDkImXqQUifUiuB4rvLYXw0PRn4MtEZ5TL6KHjMTLgiCyESR4KQwvKWSBYAl5kSIILyIIy6IZmW7fF56Jl2mW2fddCx/47O7svLM/3p33mRknl8s5eIKD3PHUVzTJ7/6lRL1QB3iHOae4qsQQBjDmNyCkvb/BuFN8qcBIvp2lzn+ukM93XcKkfmDENjCMqGHgfjEzfC3+SZ2Ic3hWmNQhPtkGJpA0DMziom3g+DH148k9hzZ1GhdQJdtRk8CkxTk8g03sYhv3cRn9WA0KfI7FgIAyPEYjhuWYjLb/Eh5gGfcw9WeP3DZUPcp3S/ExjSXUBozrwR6uu9/ZBPZiA9UB4+rkPYEsztkEqvvnF1wJGBdDBndlewGj6rNpW7SjAvOyrT6XeMbEsIBqdErrpdBj04dqMbxXp15aQQVPaqFumGqPZ+jFkTxNNNv0YURbjS3oQFy203ilhd2Qa6wjx/zyBp5HawGB7oV9BdfwEndwW2bqDVNVj896W7w1eCpTi6FcWyDd+C770ijzWUS38FR/agvLgigPmOEpvMBDWQhuxWW2A56ZuReJj+jDB8eg2V1J7KCxwPGDmPE2volSzOIb2gLGDWENlcUEOnIOJ+RpfQpxRBFCA25iHfOo0Y+1DXS1IyVXn5+ycLbkH7jqd8xvAQYAHORx59eHCNQAAAAASUVORK5CYII="><!-- react-text: 91 --> <!-- /react-text --><span class="element" style="display: none;">&nbsp; DR Dashboard</span></a></li>
+              <li><a href="../consultant_directory.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyQ0NDOERENDMwRjExRThBNDhGRTA1MjM0QTg4RDdGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyQ0NDOERFNDMwRjExRThBNDhGRTA1MjM0QTg4RDdGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTJDQ0M4REI0MzBGMTFFOEE0OEZFMDUyMzRBODhEN0YiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTJDQ0M4REM0MzBGMTFFOEE0OEZFMDUyMzRBODhEN0YiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5NBqPpAAACT0lEQVR42sSWTUhVQRSA77NnEv6l/YBgIUkggb+L2qRhtBQyWlTQwlUbkyjahyLoQkFxFYQYLdqYuclVqSASRZAili3StwkRjQx8iqW9viPnwji9d6/vvqcNfJyZc2fmzMw5c+Y6jlVisdij2P6VtbDzbymAF/DQSW8pholwgo9roVAokk5r7G5HZjgHXMLiMz1Gt1yC6T2s+CziGhTCBxjmVLb8xskOj8NRg6w9GLuL+ARXoRQew3v0J4OcdQ8MeHy/AFvQaOjyYQJeeowrkTANB3BDEwxyfMOugvpP5mqmOoU8Rvu7lw+zkZmGzu9IixL4+LPY1u+JDcIi5Fr6px4Gv8DFOPo6+AURP5+d0PN16ffx4RmIQhscVl0FzEOvnw+TDhrtcxkWQXwX0bTV7y4g5aDRfs/1Gt0iKEZlAj1auUof0c1r3yuIJ3AD3bt4QdOOzPG5+J1QCxswxpg7TDZL/Y2xKNndA2jVRPAKXSX9vtlB47e7asR9qIc56IMZ9JM6cRROQwOsw20YglHohpvmfKF4PpRjYmVN2n4mUUzbvOjnENIWeUQjfQxG6LehfWp0QaXoFtQFC55Bg8yAVTOrJJm1ZqFlV9DItaCdbfTLM+qnIB/eBnwcZFy57cOvHhfffUWWAxpcgjLbYJGV2jrUL46RK/8ENPgbDu0yyGRR69w3bYPpLP/lxe+zfHheHlNr1wMB56+yk7n4cAW2Dd2mUZd01WX5OJkyDq9TevFT+GvbuYcH78ME+hxNRen+EY5r8Afcg+v7sMHoXwEGANxxrT1srFz4AAAAAElFTkSuQmCC"><!-- react-text: 96 --> <!-- /react-text --><span class="element" style="display: none;">&nbsp; Consultant Directory</span></a></li>
+              <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFENEQxQzRCNDMwRjExRTg5Njg4RDc4NjE0MDMxRENFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFENEQxQzRDNDMwRjExRTg5Njg4RDc4NjE0MDMxRENFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUQ0RDFDNDk0MzBGMTFFODk2ODhENzg2MTQwMzFEQ0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUQ0RDFDNEE0MzBGMTFFODk2ODhENzg2MTQwMzFEQ0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6Qb71BAAACgklEQVR42ryWTUgVURTHm7RIMTSst4haBKKbSBDhLXygRG5cpUgJfS1a5EZoKRiRQSAi4cIgpciFLtqkqfShUpAYRRCBWCEWItIH2kMLS4x4/c7rTIwyM2/ue1MXftz5/s85595zjpVIJLb815GuIO+dTfwZX+EFdEIlWH7vbc3gX3fCOMRhTq+NwTSidf9CUMYRmIQGWIN56IJuRO/ArrAFn8BpuAL1UAVvYQdE4Cmi+9KKIc/thkOQr+fnoRfaYFY+DIfhG5yAAliENxss9RPkXhRuwAddIN+hwyG44iGWD8+hHwbEvb4u5YH9MMzhQ/gBxyAP2iHb8Whc3VgMd6ERRmAUZtXd76GW79W6Wsh5FcShR9yy6d4lWf6bXOplWZa6ewEuw+vklnEKchzTl894WN4CNx2CUwHEiqBCQ1L5V5A5Ap+g0SemSascx78CiEXVYy/FO854SHwmLMu6brAtbrvETLbISY1tIdyHJliFlmz92wNMx6HEcB/mBBHDCLFcvl1iW3gKHnNj3lDwKPyEGRiCGk0GF2Rl6iquRqyaebukQ1tQLtwyFBt2uTbmOH7lcv+RLXgQpkzU8MY7pk7TXGgLFjgyfqoRs1dqirEOzfxY3E0waCIfNDCmFa5pHDcmb/gM5SEW9W2wDnu8ypMEOBpiI1EGS7hz0UvwntazsEadftO9pxHTtfSUheBOqYNLktJ8myjNf88kF2Yo2AVDKbs25lyYtstPmmIN8EXqaaA2UbP7R7hqaqmUNFhOliCTvlRFxdIJKA0gtBf6tLTF0mqE1b1tupBG4Zw2UIW6KIrVfVIFVrXyRzLuvHX1SqF9oMnBHsvqgYta2gKP3wIMABDkujGWEoDJAAAAAElFTkSuQmCC"><!-- react-text: 101 --> <!-- /react-text --><span class="element" style="display: none;">&nbsp; Reports</span></a></li>
+              </ul>
+        </section>
+      </aside>
+      <div class="leftPanelBg">
+        <div class="content-wrapper" id="mainContent">
+          <section class="content-header">
+            <h1>Eligibility Dashboard</h1></section>
+          <section class="content container-fluid">
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-xs-2"><label>Showing Cases for </label></div>
+              <div class="col-lg-3 col-md-3 col-xs-2"><label>START DATE</label>
+                <div><span class="input-group" id="example-datepicker_group"><input class="form-control" style="width: 100%;" type="text" placeholder="MM/DD/YYYY" value="07/01/2018" autocomplete="on"><!-- react-empty: 116 --><div style="position: relative;"></div><input id="example-datepicker" type="hidden" value="2018-07-01T12:00:00.000Z" data-formattedvalue="07/01/2018"><span class="input-group-addon" style="cursor: pointer;"><div style="opacity: 1;">×</div></span></span>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-xs-2"><label>END DATE</label>
+                <div><span class="input-group" id="example-datepicker1_group"><input class="form-control" style="width: 100%;" type="text" placeholder="MM/DD/YYYY" value="07/31/2018" autocomplete="on"><!-- react-empty: 126 --><div style="position: relative;"></div><input id="example-datepicker1" type="hidden" value="2018-07-31T12:00:00.000Z" data-formattedvalue="07/31/2018"><span class="input-group-addon" style="cursor: pointer;"><div style="opacity: 1;">×</div></span></span>
+                </div>
+              </div>
+              <div class="col-lg-1 col-md-1 col-xs-2"><button class="btnDatePicker btn btn-success" type="button">Apply</button></div>
+              <div></div>
+              <div class="col-lg-3 col-md-3 col-xs-4">
+                <div class="threat_list pull-right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1MThkNmFmZC02ZTEwLWJmNDItOWM3Ny05MTk1MWVlNTYxYWEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUI1NkEwQTAzODk5MTFFOEI2OEZGRjA1MzRENjE5NzYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUI1NkEwOUYzODk5MTFFOEI2OEZGRjA1MzRENjE5NzYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTE4ZDZhZmQtNmUxMC1iZjQyLTljNzctOTE5NTFlZTU2MWFhIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUxOGQ2YWZkLTZlMTAtYmY0Mi05Yzc3LTkxOTUxZWU1NjFhYSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlA9NYYAAACLSURBVHjaYnycknKbgYFhIRAvkpk9+xEDHsAIVPwfygbR+4B4ARCvA2r8hk8xMvgMxKugGo8CNf7HpxgZ3IE5k4WBMFAB4gggfkZI8S4g7gPRIKdgU/wLiJcCcT9QwWVkCWTFb4B4OhBPBSp6ic0amOI0IF4CVPQdr6NAoQEEDMRgJgYSwLBXDBBgAL2MTR8TfbgWAAAAAElFTkSuQmCC">
+                  <!-- react-text: 137 -->Threat
+                  <!-- /react-text --><span class="vrt_bar">|</span><img src="/static/media/circle_orange.7bc902e5.png">
+                  <!-- react-text: 140 -->Overdue
+                  <!-- /react-text --><span class="vrt_bar">|</span><img src="/static/media/circle_yellow.81efcc0d.png">
+                  <!-- react-text: 143 -->Neardue
+                  <!-- /react-text -->
+                </div>
+              </div>
+            </div>
+            <div class="threatListStyle">
+              <div>
+                <div style="border: 1px solid rgb(225, 225, 225); border-image: none;">
+                  <div class="box-header">
+                    <div class="border"><button class="btn btn-box-tool card_btn_img"><img class="chevron-right" src="/static/media/right-arrow.50cfafd8.png"><h5 class="box-title card_header">Case Summary</h5></button></div>
+                  </div>
+                  <div class="container collapse">
+                    <div class="border">
+                      <div class="col-md-4 col-xs-4">
+                        <div class="chat-image" id="assignmentChartcontainer" data-highcharts-chart="0">
+                          <div class="highcharts-container " id="highcharts-0taqsou-0" style="width: 300px; height: 300px; text-align: left; line-height: normal; overflow: hidden; font-family: Roboto; font-size: 16px; font-weight: bold; position: relative; z-index: 0;"
+                            dir="ltr"><svg xmlns="http://www.w3.org/2000/svg" class="highcharts-root" style="font-family: Roboto; font-size: 16px; font-weight: bold;" viewBox="0 0 300 300" width="300" height="300" version="1.1"><desc>Created with Highcharts 6.1.0</desc><defs><clipPath id="highcharts-0taqsou-1"><rect fill="none" x="0" y="0" width="280" height="243" /></clipPath></defs><rect class="highcharts-background" fill="#ffffff" x="0" y="0" width="300" height="300" rx="0" ry="0" /><rect class="highcharts-plot-background" fill="none" x="10" y="42" width="280" height="243" /><rect class="highcharts-plot-border" fill="none" x="10" y="42" width="280" height="243" /><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker" style="cursor: pointer;" transform="translate(10 42) scale(1)"><path class="highcharts-point highcharts-color-0" fill="#7cb5ec" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 139.977 10 A 111.5 111.5 0 1 1 139.845 10.0001 M 139.923 65.7501 A 55.75 55.75 0 1 0 139.989 65.75" /></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series " transform="translate(10 42) scale(1)" /></g><text class="highcharts-title" style="color: rgb(51, 51, 51); font-size: 18px; fill: #333333;" text-anchor="middle" x="150" y="24"><tspan>ASSIGNMENT</tspan></text><text class="highcharts-subtitle" style="color: rgb(102, 102, 102); fill: #666666;" text-anchor="middle" x="150" y="163"><tspan>39</tspan></text><g class="highcharts-legend"><rect class="highcharts-legend-box" visibility="hidden" fill="none" x="0" y="0" width="8" height="8" rx="0" ry="0" /><g><g /></g></g></svg></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-xs-4">
+                        <div class="chat-image" id="statusChartcontainer" data-highcharts-chart="1">
+                          <div class="highcharts-container " id="highcharts-0taqsou-2" style="width: 300px; height: 300px; text-align: left; line-height: normal; overflow: hidden; font-family: Roboto; font-size: 16px; font-weight: bold; position: relative; z-index: 0;"
+                            dir="ltr"><svg xmlns="http://www.w3.org/2000/svg" class="highcharts-root" style="font-family: Roboto; font-size: 16px; font-weight: bold;" viewBox="0 0 300 300" width="300" height="300" version="1.1"><desc>Created with Highcharts 6.1.0</desc><defs><clipPath id="highcharts-0taqsou-3"><rect fill="none" x="0" y="0" width="280" height="243" /></clipPath></defs><rect class="highcharts-background" fill="#ffffff" x="0" y="0" width="300" height="300" rx="0" ry="0" /><rect class="highcharts-plot-background" fill="none" x="10" y="42" width="280" height="243" /><rect class="highcharts-plot-border" fill="none" x="10" y="42" width="280" height="243" /><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker" style="cursor: pointer;" transform="translate(10 42) scale(1)"><path class="highcharts-point highcharts-color-0" fill="#7cb5ec" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 139.977 10 A 111.5 111.5 0 1 1 139.845 10.0001 M 139.923 65.7501 A 55.75 55.75 0 1 0 139.989 65.75" /></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series " transform="translate(10 42) scale(1)" /></g><text class="highcharts-title" style="color: rgb(51, 51, 51); font-size: 18px; fill: #333333;" text-anchor="middle" x="150" y="24"><tspan>STATUS</tspan></text><text class="highcharts-subtitle" style="color: rgb(102, 102, 102); fill: #666666;" text-anchor="middle" x="150" y="163"><tspan>39</tspan></text><g class="highcharts-legend"><rect class="highcharts-legend-box" visibility="hidden" fill="none" x="0" y="0" width="8" height="8" rx="0" ry="0" /><g><g /></g></g></svg></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-xs-4">
+                        <div class="chat-image" id="regionChartcontainer" data-highcharts-chart="2">
+                          <div class="highcharts-container " id="highcharts-0taqsou-4" style="width: 300px; height: 300px; text-align: left; line-height: normal; overflow: hidden; font-family: Roboto; font-size: 16px; font-weight: bold; position: relative; z-index: 0;"
+                            dir="ltr"><svg xmlns="http://www.w3.org/2000/svg" class="highcharts-root" style="font-family: Roboto; font-size: 16px; font-weight: bold;" viewBox="0 0 300 300" width="300" height="300" version="1.1"><desc>Created with Highcharts 6.1.0</desc><defs><clipPath id="highcharts-0taqsou-5"><rect fill="none" x="0" y="0" width="280" height="243" /></clipPath></defs><rect class="highcharts-background" fill="#ffffff" x="0" y="0" width="300" height="300" rx="0" ry="0" /><rect class="highcharts-plot-background" fill="none" x="10" y="42" width="280" height="243" /><rect class="highcharts-plot-border" fill="none" x="10" y="42" width="280" height="243" /><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker" style="cursor: pointer;" transform="translate(10 42) scale(1)"><path class="highcharts-point highcharts-color-0" fill="#7cb5ec" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 139.977 10 A 111.5 111.5 0 0 1 227.118 51.911 L 183.559 86.7055 A 55.75 55.75 0 0 0 139.989 65.75 Z" /><path class="highcharts-point highcharts-color-1" fill="#434348" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 227.188 51.9982 A 111.5 111.5 0 0 1 248.739 146.159 L 194.37 133.829 A 55.75 55.75 0 0 0 183.594 86.7491 Z" /><path class="highcharts-point highcharts-color-2" fill="#90ed7d" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 248.714 146.268 A 111.5 111.5 0 0 1 188.478 221.91 L 164.239 171.705 A 55.75 55.75 0 0 0 194.357 133.884 Z" /><path class="highcharts-point highcharts-color-3" fill="#f7a35c" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 188.378 221.958 A 111.5 111.5 0 0 1 91.6818 221.987 L 115.841 171.743 A 55.75 55.75 0 0 0 164.189 171.729 Z" /><path class="highcharts-point highcharts-color-4" fill="#8085e9" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 91.5813 221.938 A 111.5 111.5 0 0 1 31.3252 146.441 L 85.6626 133.97 A 55.75 55.75 0 0 0 115.791 171.719 Z" /><path class="highcharts-point highcharts-color-5" fill="#f15c80" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 31.3003 146.332 A 111.5 111.5 0 0 1 52.7708 52.0499 L 96.3854 86.7749 A 55.75 55.75 0 0 0 85.6502 133.916 Z" /><path class="highcharts-point highcharts-color-6" fill="#e4d354" stroke="#ffffff" stroke-linejoin="round" stroke-width="1" transform="translate(0)" d="M 52.8403 51.9627 A 111.5 111.5 0 0 1 139.845 10.0001 L 139.923 65.7501 A 55.75 55.75 0 0 0 96.4202 86.7313 Z" /></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series " transform="translate(10 42) scale(1)" /></g><text class="highcharts-title" style="color: rgb(51, 51, 51); font-size: 18px; fill: #333333;" text-anchor="middle" x="150" y="24"><tspan>REGION</tspan></text><text class="highcharts-subtitle" style="color: rgb(102, 102, 102); fill: #666666;" text-anchor="middle" x="150" y="163"><tspan>14</tspan></text><g class="highcharts-legend"><rect class="highcharts-legend-box" visibility="hidden" fill="none" x="0" y="0" width="8" height="8" rx="0" ry="0" /><g><g /></g></g></svg></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="box border_bottom_cont" style="margin-bottom: 70px;">
+                <ul class="nav nav-tabs box-header no_box_show padding_zero">
+                  <li class="active">
+                    <a class="gridBtn" href="javascript:void(0)" data-toggle="tab">
+                      <!-- react-text: 165 -->My Cases (
+                      <!-- /react-text -->
+                      <!-- react-text: 166 -->0
+                      <!-- /react-text -->
+                      <!-- react-text: 167 -->)
+                      <!-- /react-text -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="gridBtn" href="javascript:void(0)" data-toggle="tab">
+                      <!-- react-text: 170 -->All Cases (
+                      <!-- /react-text -->
+                      <!-- react-text: 171 -->0
+                      <!-- /react-text -->
+                      <!-- react-text: 172 -->)
+                      <!-- /react-text -->
+                    </a>
+                  </li>
+                  <li class="pull-right"><img class="excelprint" src="/static/media/excel.50fc2415.png"></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane in active" id="my_cases">
+                    <div class="react-bs-table-container">
+                      <div class="react-bs-table-tool-bar ">
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8">
+                            <div class="btn-group btn-group-sm" role="group"><button id="exportToCSV" style="display: none;">Custom Export CSV Btn</button></div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4"></div>
+                        </div>
+                      </div>
+                      <div class="react-bs-table react-bs-table-bordered" style="height: 100%;">
+                        <div class="react-bs-container-header table-header-wrapper">
+                          <table class="table table-hover table-bordered">
+                            <colgroup>
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 15%; min-width: 15%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 12%; min-width: 12%;">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th title="Case Name" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="caseName">
+                                  <!-- react-text: 200 -->Case Name
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Received On" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="receivedOn">
+                                  <!-- react-text: 208 -->Received On
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Project Name" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="projectName">
+                                  <!-- react-text: 216 -->Project Name
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Institution" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="institutionName">
+                                  <!-- react-text: 224 -->Institution
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Country" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="country">
+                                  <!-- react-text: 232 -->Country
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Region" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="regionName">
+                                  <!-- react-text: 240 -->Region
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Due On" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="dueOn">
+                                  <!-- react-text: 248 -->Due On
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Analyst" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="userName">
+                                  <!-- react-text: 256 -->Analyst
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                                <th title="Status" class="sort-column" style="text-align: left;" data-is-only-head="false" data-field="statusName">
+                                  <!-- react-text: 264 -->Status
+                                  <!-- /react-text --><span class="order"><span class="dropdown"><span class="caret" style="margin: 10px 0px 10px 5px; color: rgb(204, 204, 204);"></span></span><span class="dropup"><span class="caret" style="margin: 10px 0px; color: rgb(204, 204, 204);"></span></span>
+                                  </span>
+                                  <div></div>
+                                </th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="react-bs-container-body" style="height: 100%;">
+                          <table class="table table-bordered table-hover">
+                            <colgroup>
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 15%; min-width: 15%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 12%; min-width: 12%;">
+                              <col style="width: 10%; min-width: 10%;">
+                              <col style="width: 12%; min-width: 12%;">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="react-bs-table-no-data" colspan="9" data-toggle="collapse">There is no data to display</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="s-alert-wrapper"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-lg-10 col-md-9 col-xs-9" style="padding: 0px; text-align: right;">
+                    <ul class="pagination">
+                      <li class="disabled"><a href="#">«</a></li>
+                      <li class="disabled"><a href="#">⟨</a></li>
+                      <li class="disabled"><a href="#">⟩</a></li>
+                      <li class="disabled"><a href="#">»</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-1 col-1-10 col-xs-1" style="margin: 25px 0px; padding: 0px; text-align: center; display: inline-block;"><span>Page size</span></div>
+                  <div class="col-lg-1 col-md-2 col-xs-2" style="margin: 20px 0px; padding: 0px; display: inline-block;">
+                    <div class="dataTables_length"><select style="width: 70px; height: 30px;"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="main-footer footer-style">© 2018 The Office of the Compliance Advisor/Ombudsman, All rights reserved.</footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="/static/js/main.ae8cbcbe.js"></script>
+</body>
+
+</html>
