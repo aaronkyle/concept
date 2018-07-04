@@ -11650,8 +11650,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 @font-face {
   font-family: FontAwesome;
-  src: url(../../static/media/fontawesome-webfont.674f50d2.eot);
-  src: url(../../static/media/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../../static/media/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(../../static/media/fontawesome-webfont.fee66e71.woff) format("woff"), url(../../static/media/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(../../static/media/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
+  src: url(../../static/media/fontawesome-webfont.eot);
+  src: url(../../static/media/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../../static/media/fontawesome-webfont.woff2) format("woff2"), url(../../static/media/fontawesome-webfont.woff) format("woff"), url(../../static/media/fontawesome-webfont.ttf) format("truetype"), url(../../static/media/fontawesome-webfont.svg#fontawesomeregular) format("svg");
   font-weight: 400;
   font-style: normal
 }
@@ -14587,8 +14587,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 @font-face {
   font-family: Ionicons;
-  src: url(../../static/media/ionicons.2c2ae068.eot);
-  src: url(../../static/media/ionicons.2c2ae068.eot#iefix) format("embedded-opentype"), url(../../static/media/ionicons.24712f6c.ttf) format("truetype"), url(../../static/media/ionicons.05acfdb5.woff) format("woff"), url(../../static/media/ionicons.621bd386.svg#Ionicons) format("svg");
+  src: url(../../static/media/ionicons.eot);
+  src: url(../../static/media/ionicons.eot#iefix) format("embedded-opentype"), url(../../static/media/ionicons.ttf) format("truetype"), url(../../static/media/ionicons.woff) format("woff"), url(../../static/media/ionicons.svg#Ionicons) format("svg");
   font-weight: 400;
   font-style: normal
 }
@@ -17556,7 +17556,7 @@ p {
 }
 
 .wwapg_banner {
-  background-image: url(../../static/media/wwa-banner.b12e64d1.jpg);
+  background-image: url(../../static/media/wwa-banner.jpg);
   min-height: 670px;
   background-attachment: fixed;
   background-position: 50% 0;
