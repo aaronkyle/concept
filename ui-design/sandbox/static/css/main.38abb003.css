@@ -11650,8 +11650,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 @font-face {
   font-family: FontAwesome;
-  src: url(/static/media/fontawesome-webfont.674f50d2.eot);
-  src: url(/static/media/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/static/media/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(/static/media/fontawesome-webfont.fee66e71.woff) format("woff"), url(/static/media/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(/static/media/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
+  src: url(./static/media/fontawesome-webfont.674f50d2.eot);
+  src: url(./static/media/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(./static/media/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(./static/media/fontawesome-webfont.fee66e71.woff) format("woff"), url(./static/media/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(./static/media/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
   font-weight: 400;
   font-style: normal
 }
@@ -14587,8 +14587,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 @font-face {
   font-family: Ionicons;
-  src: url(/static/media/ionicons.2c2ae068.eot);
-  src: url(/static/media/ionicons.2c2ae068.eot#iefix) format("embedded-opentype"), url(/static/media/ionicons.24712f6c.ttf) format("truetype"), url(/static/media/ionicons.05acfdb5.woff) format("woff"), url(/static/media/ionicons.621bd386.svg#Ionicons) format("svg");
+  src: url(./static/media/ionicons.2c2ae068.eot);
+  src: url(./static/media/ionicons.2c2ae068.eot#iefix) format("embedded-opentype"), url(./static/media/ionicons.24712f6c.ttf) format("truetype"), url(./static/media/ionicons.05acfdb5.woff) format("woff"), url(./static/media/ionicons.621bd386.svg#Ionicons) format("svg");
   font-weight: 400;
   font-style: normal
 }
@@ -17556,7 +17556,7 @@ p {
 }
 
 .wwapg_banner {
-  background-image: url(/static/media/wwa-banner.b12e64d1.jpg);
+  background-image: url(./static/media/wwa-banner.b12e64d1.jpg);
   min-height: 670px;
   background-attachment: fixed;
   background-position: 50% 0;
@@ -17618,7 +17618,7 @@ label, section#wwapg p, ul {
 }
 
 .hww_ops_right_cont {
-  background-image: url(/static/media/ops_right_cont.b6492afb.png);
+  background-image: url(./static/media/ops_right_cont.png);
   padding: 10px 20px;
   text-align: center
 }
@@ -17743,10 +17743,10 @@ section#osa {
 
 section#intro.hwwdrintro {
   height: 45vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(./static/media/hww-banner.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
   background-size: cover;
   background-repeat: no-repeat
 }
@@ -18200,7 +18200,7 @@ label.faq_list:not(.collapsed) .fa.fa-caret-down {
 }
 
 .hww_ourservice_advisory {
-  background-image: url(/static/media/advisory_bg.ca500a76.png);
+  background-image: url(./static/media/advisory_bg.png);
   padding: 40px;
   padding-bottom: 20px
 }
@@ -18212,7 +18212,7 @@ label.faq_list:not(.collapsed) .fa.fa-caret-down {
 }
 
 .hww_ourservice_eligiblityassessment {
-  background-image: url(/static/media/eligiblity_assesment_bg.e35002ce.png);
+  background-image: url(./static/media/eligiblity_assesment_bg.png);
   padding: 56px 0
 }
 
@@ -18233,7 +18233,7 @@ label.faq_list:not(.collapsed) .fa.fa-caret-down {
 }
 
 .hww_ourservice_outreach {
-  background-image: url(/static/media/outreach_bg.ac9ea9c7.png);
+  background-image: url(./static/media/outreach_bg.png);
   padding: 50px;
   text-align: center;
   padding-bottom: 60px;
@@ -18242,7 +18242,7 @@ label.faq_list:not(.collapsed) .fa.fa-caret-down {
 }
 
 .hww_ourservice_disputeresolution {
-  background-image: url(/static/media/disputeresolution_bg.218218c9.png);
+  background-image: url(./static/media/disputeresolution_bg.png);
   padding: 56px 0
 }
 
@@ -18253,7 +18253,7 @@ label.faq_list:not(.collapsed) .fa.fa-caret-down {
 }
 
 .hww_ourservice_complaince {
-  background-image: url(/static/media/complaince_bg.687ac050.png);
+  background-image: url(./static/media/complaince_bg.png);
   padding: 40px;
   padding-bottom: 20px;
   height: 100%
@@ -18382,10 +18382,10 @@ p.resources_header_cont>label {
 }
 
 .resources_news_cont {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(/static/media/news.792aeaab.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/news.792aeaab.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/news.792aeaab.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/news.792aeaab.png)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(./static/media/news.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/news.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/news.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/news.png)
 }
 
 .resources_news_cont, .resources_video_cont {
@@ -18398,17 +18398,17 @@ p.resources_header_cont>label {
 }
 
 .resources_video_cont {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(/static/media/videos.c4667614.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/videos.c4667614.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/videos.c4667614.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/videos.c4667614.png)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(./static/media/videos.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/videos.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/videos.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/videos.png)
 }
 
 .resources_publications_cont {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(/static/media/publications.387fcc97.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/publications.387fcc97.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/publications.387fcc97.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/publications.387fcc97.png)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(./static/media/publications.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/publications.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/publications.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/publications.png)
 }
 
 .resources_publications_cont, .resources_reports_cont {
@@ -18421,10 +18421,10 @@ p.resources_header_cont>label {
 }
 
 .resources_reports_cont {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(/static/media/reports.b7b2b0cf.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/reports.b7b2b0cf.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/reports.b7b2b0cf.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(/static/media/reports.b7b2b0cf.png)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .43137254901960786)), to(rgba(0, 0, 0, .43137254901960786))), url(./static/media/reports.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/reports.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/reports.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .43137254901960786), rgba(0, 0, 0, .43137254901960786)), url(./static/media/reports.png)
 }
 
 .link_resources_detail {
@@ -19293,7 +19293,7 @@ input.innert_textbox, select.innert_select {
 
 .b-select-wrap:after {
   content: "";
-  background: url(/static/media/select_option_arrow.d88fa402.png) no-repeat;
+  background: url(./static/media/select_option_arrow.d88fa402.png) no-repeat;
   padding: 12px 8px;
   position: absolute;
   right: 5px;
@@ -20105,7 +20105,7 @@ input[type=text] {
 }
 
 .homepg {
-  background-image: url(/static/media/hww-banner.428dc1ec.png);
+  background-image: url(./static/media/hww-banner.png);
   min-height: 600px;
   background-attachment: fixed;
   background-position: 50% -42%;
@@ -20232,7 +20232,7 @@ a:active, a:focus, a:hover {
 }
 
 .hww_ourservice_eligiblityassessment {
-  background-image: url(/static/media/eligiblity_assesment_bg.e35002ce.png);
+  background-image: url(./static/media/eligiblity_assesment_bg.png);
   padding: 56px 0;
   text-align: center;
   background-repeat: no-repeat;
@@ -20246,7 +20246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hww_ourservice_disputeresolution {
-  background-image: url(/static/media/disputeresolution_bg.218218c9.png)
+  background-image: url(./static/media/disputeresolution_bg.png)
 }
 
 .hww_ourservice_complainces, .hww_ourservice_disputeresolution {
@@ -20257,7 +20257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hww_ourservice_complainces {
-  background-image: url(/static/media/complaince_bg.687ac050.png);
+  background-image: url(./static/media/complaince_bg.png);
   height: 100%
 }
 
@@ -20270,7 +20270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hww_ourservice_advisorys {
-  background-image: url(/static/media/advisory_bg.ca500a76.png);
+  background-image: url(./static/media/advisory_bg.png);
   padding: 56px 0;
   text-align: center;
   background-repeat: no-repeat;
@@ -20287,7 +20287,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hww_ourservice_outreachs {
-  background-image: url(/static/media/outreach_bg.ac9ea9c7.png);
+  background-image: url(./static/media/outreach_bg.png);
   padding: 56px 0;
   text-align: center;
   background-repeat: no-repeat;
@@ -20358,7 +20358,7 @@ div#howtofilecomplaint label {
 }
 
 .homepg {
-  background-image: url(/static/media/homepage.1622ef95.png);
+  background-image: url(./static/media/homepage.png);
   min-height: 600px;
   background-attachment: fixed;
   background-position: 50% -42%;
@@ -20543,7 +20543,7 @@ p.card-text {
 }
 
 .caseupdate_parallex {
-  background-image: url(/static/media/homepage_caseupdate_bg.41d196b5.png);
+  background-image: url(./static/media/homepage_caseupdate_bg.png);
   min-height: 500px;
   background-attachment: fixed;
   background-position: 50%;
@@ -20786,7 +20786,7 @@ p.card-text {
 }
 
 .hww_parallex {
-  background-image: url(/static/media/hpg_hww.58d79dbd.png);
+  background-image: url(./static/media/hpg_hww.png);
   min-height: 400px;
   padding-top: 60px;
   background-attachment: fixed;
@@ -20908,7 +20908,7 @@ span.card_label_video {
 }
 
 .event_parallex {
-  background-image: url(/static/media/hpg_hww.58d79dbd.png);
+  background-image: url(./static/media/hpg_hww.png);
   min-height: 400px;
   padding-top: 60px;
   background-attachment: fixed;
@@ -21066,10 +21066,10 @@ h2, h3, label, p, span {
 
 section#introEligibility.hwwdrintro {
   height: 45vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(./static/media/hww-banner.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
   background-size: cover;
   background-repeat: no-repeat
 }
@@ -21102,7 +21102,7 @@ section#introEligibility.cao_staffs_header {
 }
 
 .caseupdate_parallex {
-  background-image: url(/static/media/homepage_caseupdate_bg.41d196b5.png);
+  background-image: url(./static/media/homepage_caseupdate_bg.png);
   min-height: 500px;
   background-attachment: fixed;
   background-position: 50%;
@@ -22498,10 +22498,10 @@ section#intro.filecompln, section#intro.News, section#intro.wherewework {
 
 section#introEligibility.hwwdrintro {
   height: 45vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(./static/media/hww-banner.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
   background-size: cover;
   background-repeat: no-repeat
 }
@@ -23020,10 +23020,10 @@ section#introEligibility.cao_staffs_header {
 
 section#introEligibility.hwwdrintro {
   height: 45vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(./static/media/hww-banner.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
   background-size: cover;
   background-repeat: no-repeat
 }
@@ -23061,10 +23061,10 @@ section#introEligibility.cao_staffs_header {
 
 section#introEligibility.hwwdrintro {
   height: 45vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(/static/media/hww-banner.428dc1ec.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .34))), url(./static/media/hww-banner.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .34)), url(./static/media/hww-banner.png);
   background-size: cover;
   background-repeat: no-repeat
 }
@@ -24388,8 +24388,8 @@ td, th {
 
 @font-face {
   font-family: Glyphicons Halflings;
-  src: url(/static/media/glyphicons-halflings-regular.f4769f9b.eot);
-  src: url(/static/media/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(/static/media/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(/static/media/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(/static/media/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(/static/media/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg")
+  src: url(./static/media/glyphicons-halflings-regular.f4769f9b.eot);
+  src: url(./static/media/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(./static/media/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(./static/media/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(./static/media/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(./static/media/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg")
 }
 
 .glyphicon {
