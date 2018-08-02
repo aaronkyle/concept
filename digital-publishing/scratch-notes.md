@@ -154,6 +154,7 @@ That’s certainly not the implication of this project. Metadata adds another di
 --
 
 * [Ghost Blog Markdown Make Links Open In A New Tab Trick](http://ghost.skillshub.info/ghost-blog-markdown-make-links-open-in-a-new-tab-trick/)
+    - [Home page](http://ghost.skillshub.info" target="_blank) 
 * [Can I create links with 'target=“_blank”' in Markdown?](https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown)
     - Kramdown supports it. It's compatible with standard Markdown syntax, but has many extensions, too. You would use it like this: `[link](url){:target="_blank"}`
 * []()
