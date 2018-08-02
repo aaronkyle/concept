@@ -189,7 +189,7 @@
 * [stacked-ba](https://jsfiddle.net/ju04x49c/8/)
 * [Stacked Bar Chart](https://bl.ocks.org/mbostock/3886208)
 * [Normalized Stacked Bar Chart](https://bl.ocks.org/mbostock/3886394)
-* []()
+* [Timetable](http://jsfiddle.net/rxbaoj1r/)
 * []()
 * []()
 * []()
