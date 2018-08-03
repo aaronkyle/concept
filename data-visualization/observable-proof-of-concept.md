@@ -51,7 +51,7 @@ c8886772defb0340
   margin-left: -50vw;
   margin-right: -50vw;
 }
-#visual { min-height: 40vw }
+#chart { min-height: 40vw }
 </style>
 
 [Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
@@ -71,6 +71,19 @@ c8886772defb0340
     "display": "div.fullwidth",
   };
   
+  
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
+  for (let i in renders) {
+    let s = renders[i], a = s.match(/^\w+/);
+    if (a) {
+      renders[i] = document.createElement(a[0]);
+      target.appendChild(renders[i]);
+      if (a = s.match(/\.(\w+)$/))
+        renders[i].className = a[1]; 
+    }
+    else
+      renders[i] = document.querySelector(renders[i]);
+  }
 Runtime.load(notebook, (cell) => {
   if (cell.name === "chart") {
     return {
@@ -81,3 +94,4 @@ Runtime.load(notebook, (cell) => {
   }
 });
 </script>
+
