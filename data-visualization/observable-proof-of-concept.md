@@ -9,8 +9,9 @@ c8886772defb0340
 
 [Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
 
+[Cloned notebook](https://beta.observablehq.com/d/6aca016d75a62fa1)
 
-https://visionscarto.net/observable-jekyll/
+[Fil's tutorial](https://visionscarto.net/observable-jekyll/)
 
 <div id="chart"></div>
 
