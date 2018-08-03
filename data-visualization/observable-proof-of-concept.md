@@ -57,7 +57,20 @@ c8886772defb0340
 [Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
 
 
+<div id="chart"></div>
+
 <script>
+  
+  // NOTEBOOK CONFIGURATION
+  import notebook from "https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340";
+
+  // BOILERPLATE
+  const target = document.querySelector("#chart");
+  const renders = {
+    "viewof p": "p",
+    "display": "div.fullwidth",
+  };
+  
 Runtime.load(notebook, (cell) => {
   if (cell.name === "chart") {
     return {
