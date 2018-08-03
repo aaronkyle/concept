@@ -1,25 +1,18 @@
-
-<p>Link to Observable notebook](http://beta.observablehq.com/@epichef/deterministic-sir-model<p>
+<!-- 
+<p><a href="http://beta.observablehq.com/@epichef/deterministic-sir-model">Viewing cloned cells from this Observable notebook.<p>
+<p>To get this working, I had to <a href="https://beta.observablehq.com/d/6aca016d75a62fa1">clone the original notebook</a> and grab <hfre="https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340">my own API</a> key: .</p>
 <p>Demo API: https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340]</p>
----
+-->
 
-c8886772defb0340
+This example derives originally form <a href="">@fil's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix</a>
 
-
-
-[Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
-
-[Cloned notebook](https://beta.observablehq.com/d/6aca016d75a62fa1)
-
-[Fil's tutorial](https://visionscarto.net/observable-jekyll/)
-
----
+<--- JEKYLL-formatted post meta-data
 layout: post
-title:  "Tissot’s indicatrix"
-date:   2018-05-24 12:00:00 +0200
-author: Philippe Rivière
+title:  Observable Proof-of-Concet
+date:   2018-08-03 08:00:00 +0000
+author: based on the work of Philippe Rivière, Jeremy Ashkenas, and Mike Bostock
 categories: explore
----
+--->
 
 <div id="visual"></div>
 
