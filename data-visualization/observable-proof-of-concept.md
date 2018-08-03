@@ -53,12 +53,12 @@ categories: explore
 <style>
 /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
 .fullwidth {
-  width: 100vw;
+  width: 60vw;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: -10vw;
+  margin-right: -10vw;
 }
 #visual { min-height: 40vw }
 </style>
