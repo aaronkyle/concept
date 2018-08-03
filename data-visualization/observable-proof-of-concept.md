@@ -23,8 +23,7 @@ c8886772defb0340
   // BOILERPLATE
   const target = document.querySelector("#chart");
   const renders = {
-    "viewof p": "p",
-    "display": "div.fullwidth",
+    "chart": "chart",
   };
   
   
