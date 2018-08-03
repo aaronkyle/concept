@@ -4,15 +4,15 @@
 <p>Demo API: https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340]</p>
 -->
 
-This example derives originally form <a href="">@fil's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix</a>
+This example derives originally form <a href="https://beta.observablehq.com/@fil">@fil's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix.</a>
 
-<--- JEKYLL-formatted post meta-data
+<!-- JEKYLL-formatted post meta-data
 layout: post
 title:  Observable Proof-of-Concet
 date:   2018-08-03 08:00:00 +0000
 author: based on the work of Philippe Rivière, Jeremy Ashkenas, and Mike Bostock
 categories: explore
---->
+-->
 
 <div id="visual"></div>
 
