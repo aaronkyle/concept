@@ -26,7 +26,7 @@ categories: explore
 <script type="module">
 
   // NOTEBOOK CONFIGURATION
-  import notebook from "https://api.observablehq.com/@fil/tissots-indicatrix.js?key=1ef8c91929d29461";
+  import notebook from "https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340";
 
   // BOILERPLATE
   const target = document.querySelector("#visual");
