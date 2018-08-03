@@ -57,8 +57,8 @@ categories: explore
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -10vw;
-  margin-right: -10vw;
+  margin-left: -60vw;
+  margin-right: -60vw;
 }
 #visual { min-height: 40vw }
 </style>
