@@ -4,7 +4,7 @@
 <p>Demo API: https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340]</p>
 -->
 
-This example derives originally form <a href="https://beta.observablehq.com/@fil">@fil's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix.</a>
+This example derives originally form <a href="https://beta.observablehq.com/@fil">Philippe Rivière's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix.</a>
 
 <!-- JEKYLL-formatted post meta-data
 layout: post
