@@ -15,7 +15,7 @@ c8886772defb0340
 <script>
   
   // NOTEBOOK CONFIGURATION
-  import notebook from "https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340";
+  import notebook from "https://api.observablehq.com/d/5d1d6e0b62cecc51.js?key=18bad08f6c90e705";
 
   // BOILERPLATE
   const target = document.querySelector("#chart");
@@ -37,15 +37,9 @@ c8886772defb0340
     else
       renders[i] = document.querySelector(renders[i]);
   }
-Runtime.load(notebook, (cell) => {
-  if (cell.name === "chart") {
-    return {
-      fulfilled: (value) => {
-        document.getElementById("chart").appendChild(value);
-      }
-    };
-  }
-});
+Runtime.load(bar_chart, (variable) => {
+    if (variable.name === "chart") return {fulfilled: resolve};
+  });
 </script>
 
 
