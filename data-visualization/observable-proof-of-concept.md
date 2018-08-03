@@ -10,12 +10,14 @@ c8886772defb0340
 [Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
 
 
+https://visionscarto.net/observable-jekyll/
+
 <div id="chart"></div>
 
 <script>
   
   // NOTEBOOK CONFIGURATION
-  import notebook from "https://api.observablehq.com/d/5d1d6e0b62cecc51.js?key=18bad08f6c90e705";
+  import notebook from "https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340";
 
   // BOILERPLATE
   const target = document.querySelector("#chart");
@@ -25,23 +27,7 @@ c8886772defb0340
   };
   
   
-  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
-  for (let i in renders) {
-    let s = renders[i], a = s.match(/^\w+/);
-    if (a) {
-      renders[i] = document.createElement(a[0]);
-      target.appendChild(renders[i]);
-      if (a = s.match(/\.(\w+)$/))
-        renders[i].className = a[1]; 
-    }
-    else
-      renders[i] = document.querySelector(renders[i]);
-  }
-Runtime.load(bar_chart, (variable) => {
-    if (variable.name === "chart") return {fulfilled: resolve};
-  });
 </script>
-
 
 <style>
 /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
@@ -55,3 +41,8 @@ Runtime.load(bar_chart, (variable) => {
 }
 #chart { min-height: 40vw }
 </style>
+
+<p id="chart-p"></p>
+<div class="fullwidth">
+  <div id="display"></div>
+</div>
