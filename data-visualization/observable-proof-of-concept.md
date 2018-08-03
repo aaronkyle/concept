@@ -23,7 +23,7 @@ c8886772defb0340
   // BOILERPLATE
   const target = document.querySelector("#chart");
   const renders = {
-    "chart": "chart",
+    "chart": "chart.fullwidth",
   };
   
   
@@ -44,5 +44,5 @@ c8886772defb0340
 
 <p id="chart-p"></p>
 <div class="fullwidth">
-  <div id="display"></div>
+  <div id="chart"></div>
 </div>
