@@ -53,14 +53,14 @@ categories: explore
 <style>
 /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
 .fullwidth {
-  width: 60vw;
+  width: 80vw;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -60vw;
-  margin-right: -60vw;
+  left: 10%;
+  right: 10%;
+  margin-left: -160vw;
+  margin-right: -160vw;
 }
-#visual { min-height: 40vw }
+#visual { min-height: 20vw }
 </style>
 
 [Source](https://beta.observablehq.com/@fil/tissots-indicatrix)
