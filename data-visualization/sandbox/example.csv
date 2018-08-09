@@ -1,0 +1,311 @@
+division,sub-division,country,city,zip,lat,lon
+Engineering & Technologies,Bi Bohr- und Rohrtechnik,Austria,Vienna,1210,48.281,16.411
+Engineering & Technologies,Bi GreyLogix,Austria,Vienna,1210,48.281,16.411
+Maintenance. Modifications & Operations,Bi Chemserv,Austria,Linz,4021,48.306,14.286
+Maintenance. Modifications & Operations,Bi Chemserv,Austria,Krems,3500,48.409,15.614
+Maintenance. Modifications & Operations,Bi Chemserv,Austria,Schwechat,2320,48.12,16.393
+Maintenance. Modifications & Operations,Bi Chemserv,Austria,Kirchdorf ad Krems,4560,47.906,14.122
+Maintenance. Modifications & Operations,Bi Chemserv,Germany,Burghausen,84489,48.167,12.822
+Maintenance. Modifications & Operations,Bi Personalmanagement,Austria,Linz,4031,48.306,14.286
+Maintenance. Modifications & Operations,Bi Personalmanagement,Austria,Krems,3500,48.409,15.614
+Maintenance. Modifications & Operations,Bi Personalmanagement,Austria,Vienna,1230,48.281,16.411
+Maintenance. Modifications & Operations,Bi Personalmanagement,Austria,Zeltweg,8740,47.183,14.75
+Other Operations division,Bi Gerätetechnik,Austria,Wels,A-4600,48.167,14.033
+Other Operations division,Bi Gerätetechnik,Austria,Linz,4031,48.306,14.286
+Other Operations division,Bi Gerätetechnik,Austria,Vienna,A-1230,48.281,16.411
+Other Operations division,Bi Gerätetechnik,Austria,Salzburg,5020,47.799,13.044
+Other Operations division,Bi Maschinen- und Apparatebau,Austria,Linz,4030,48.306,14.286
+Engineering & Technologies,Bi Industrietechnik Salzburg,Belgium,Antwerp,,51.22,4.403
+Engineering & Technologies,Bi Tebodin North West Europe,Belgium,Zwijndrecht - Antwerp,2070,51.22,4.327
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Belgium,Zwijndrecht,2070,51.22,4.327
+Maintenance. Modifications & Operations,Bi ROB Group,Belgium,Zwijndrecht,B-2070,51.22,4.327
+Maintenance. Modifications & Operations,Bi Salamis Inc.,Canada,Newfoundland,PO Box 398,53.135509,-57.660436
+Maintenance. Modifications & Operations,Bi Salamis Inc.,Canada,Edmonton,,53.544389,-113.490927
+Maintenance. Modifications & Operations,Bi VAM Anlagentechnik,Chile,Santiago,9390381,-33.44889,-70.669265
+Engineering & Technologies,Bi Industrietechnik Salzburg,China,Shanghai,,31.23039,121.473702
+Maintenance. Modifications & Operations,Bi Euromont,Czech Republic,Litvinov,,50.598426,13.610242
+Maintenance. Modifications & Operations,Bi Industrial Services Czech,Czech Republic,Most,434 01,50.501555,13.632912
+Maintenance. Modifications & Operations,Bi VAM Anlagentechnik,Czech Republic,Stet,411 08,50.452987,14.374222
+Engineering & Technologies,Bi GreyLogix,Denmark,Odense M,5230,55.379062,10.40334
+Maintenance. Modifications & Operations,Bi Industrier Norge/Denmark,Denmark,Søborg,2860,55.735202,12.514807
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Harjavalta,FI-29200,61.31371,22.141306
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Jyväskylä,FI-40500,62.242603,25.747257
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Kotka,FI-48600,60.466567,26.94594
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Kulloo,FI-06850,60.341552,25.485103
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Naantali,FI-21100,60.466088,22.025087
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Oulu,FI-90400,65.012089,25.465077
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Raahe,FI-92120,64.683954,24.488365
+Maintenance. Modifications & Operations,Bi Industrial Services Finland,Finland,Rauma,FI-26100,61.130885,21.505926
+Engineering & Technologies,Bi LTM Industrie,France,Gonfreville,76700,49.502579,0.233079
+Engineering & Technologies,Bi LTM Industrie,France,Toussieu,69780,45.654397,4.985048
+Engineering & Technologies,Bi Peters Engineering,France,Malakoff,F-92240,48.817275,2.29776
+Engineering & Technologies,Bi Peters Engineering,France,Toussieu,F- 69780,45.654397,4.985048
+Maintenance. Modifications & Operations,Bi Industrial Services Prefal,France,Petiville,76330,49.242471,-0.175009
+Maintenance. Modifications & Operations,Bi Industrial Services Prefal,France,Martigues,13500,43.404811,5.053728
+Engineering & Technologies,Bi EMS,Germany,Cloppenburg,49661,52.844198,8.053016
+Engineering & Technologies,Bi EMS,Germany,Stade Snow,21683,53.623758,9.490766
+Engineering & Technologies,Bi EMS,Germany,Wilhelmshaven,26388,53.53234,8.106872
+Engineering & Technologies,Bi EMS,Germany,Emden,26723,53.359403,7.206009
+Engineering & Technologies,Bi EMS,Germany,Salzwedel,29410,52.850339,11.164668
+Engineering & Technologies,Bi EMS,Germany,Neuenkirchen,26943,52.239462,7.371455
+Engineering & Technologies,Bi EMS,Germany,Oberhausen,46047,51.496334,6.863776
+Engineering & Technologies,Bi EMS,Germany,Buseck,35418,50.608277,8.782881
+Engineering & Technologies,Bi Engineering & Technologies,Germany,Würzburg,97080,49.791304,9.953355
+Engineering & Technologies,Bi Engineering & Technologies,Germany,Stuttgart,70191,48.775846,9.182932
+Engineering & Technologies,Bi Engineering & Technologies,Germany,Berlin,12459,52.520007,13.404954
+Engineering & Technologies,Bi GreyLogix,Germany,Flensburg,24941,54.793743,9.446996
+Engineering & Technologies,Bi GreyLogix,Germany,Brunsbüttel,25541,53.89889,9.133885
+Engineering & Technologies,Bi GreyLogix,Germany,Hamburg,20097,53.551085,9.993682
+Engineering & Technologies,Bi GreyLogix,Germany,Markranstädt,4420,51.304616,12.221126
+Engineering & Technologies,Bi GreyLogix,Germany,Leverkusen,51375,51.045925,7.01922
+Engineering & Technologies,Bi GreyLogix,Germany,Ludwigshafen,67056,49.47741,8.44518
+Engineering & Technologies,Bi GreyLogix,Germany,Neustadt an der Weinstraße,67433,49.350186,8.148689
+Engineering & Technologies,Bi GreyLogix,Germany,Karlsruhe,76187,49.00689,8.403653
+Engineering & Technologies,Bi Industrietechnik Salzburg,Germany,Dresden,1067,51.050409,13.737262
+Engineering & Technologies,Bi Industrietechnik Salzburg,Germany,Heidelberg,68723,49.398752,8.672434
+Engineering & Technologies,Bi Industrietechnik Salzburg,Germany,Penzberg,82377,47.75612,11.369802
+Engineering & Technologies,Bi Industrietechnik Salzburg,Germany,Rhineland,42781,50.118346,7.308953
+Engineering & Technologies,Bi Industrietechnik Salzburg,Germany,Stuttgart,70565,48.775846,9.182932
+Engineering & Technologies,Bi Noell,Germany,Würzburg,97080,49.791304,9.953355
+Engineering & Technologies,Bi Peters Engineering,Germany,Ludwigshafen,D-67069,49.47741,8.44518
+Engineering & Technologies,Bi Peters Engineering,Germany,Mainz-Hechtsheim,D-55129,49.959258,8.267416
+Engineering & Technologies,Bi Peters Engineering,Germany,Schwarzheide,1987,51.477261,13.856191
+Engineering & Technologies,Bi Peters Engineering,Germany,Duisburg,D-47249,51.434408,6.762329
+Engineering & Technologies,Bi Rohrleitungsbau,Germany,Hamburg,21107,53.551085,9.993682
+Engineering & Technologies,Bi Rohrleitungsbau,Germany,Guben,3172,51.951486,14.695565
+Engineering & Technologies,Bi Rohrleitungsbau,Germany,Bitterfeld-Wolfen,6749,51.6246,12.307993
+Engineering & Technologies,Bi Rohrleitungsbau,Germany,Ludwigshafen,67059,49.47741,8.44518
+Engineering & Technologies,Bi Rohrleitungsbau,Germany,Burghausen,84489,48.172561,12.831075
+Engineering & Technologies,Bi Rotring Engineering,Germany,Buxtehude,21614,53.467486,9.691574
+Engineering & Technologies,Bi Rotring Engineering,Germany,Sulingen,,52.683341,8.810926
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Gelsenkirchen,45892,51.517744,7.085717
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Duisburg,47053,51.434408,6.762329
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Gelsenkirchen,45892,51.517744,7.085717
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Großräschen,1983,51.590745,14.008556
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Hofheim-Wallau,65719,50.061996,8.372318
+Maintenance. Modifications & Operations,Bi arnholdt,Germany,Recklinghausen,45665,51.614065,7.197945
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Germany,Grenzach-Wyhlen,79639,47.552355,7.658088
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Heidelberg,69123,49.398752,8.672434
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Hemmingstedt,25770,54.14727,9.072098
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Brunsbüttel,25541,53.89889,9.133885
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Broderstorf,18184,54.081318,12.262614
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Hamburg,20539,53.551085,9.993682
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Minden,32423,52.296492,8.894921
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Wittenberg,6886,51.873983,12.627966
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Bitterfeld-Wolfen,6803,51.6246,12.307993
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Bohlen,4575,51.200695,12.387038
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Schkopau,6258,51.390075,11.985151
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Leuna,6237,51.323266,12.024228
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Uerdingen,47829,51.354788,6.642895
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Neuss,41468,51.204197,6.687951
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Dormagen,41538,51.093685,6.828911
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Leverkusen,51368,51.045925,7.01922
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Bergisch Gladbach,51439,50.992309,7.128621
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Heinsberg,52525,51.060038,6.118373
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Düren,52355,50.802951,6.481105
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Frankfurt,65926,50.110922,8.682127
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Ludwigshafen,67065,49.47741,8.44518
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Edenkoben,67480,49.283333,8.133333
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Mannheim,68219,49.487459,8.466039
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Heidelberg,69123,49.398752,8.672434
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Leimen,69181,49.34909,8.687885
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Heidenheim,89522,48.689396,10.161095
+Maintenance. Modifications & Operations,Bi Maintenance,Germany,Gersthofen,86368,48.42425,10.876347
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Wilhelmshaven,,53.53234,8.106872
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Schwedt,,53.06247,14.273464
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Salzgitter,,52.137866,10.389913
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Bernburg,,51.783358,11.753733
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Bitterfeld,,51.626533,12.313306
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Oberhausen,,51.496334,6.863776
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Dusseldorf,,51.227741,6.773456
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Leverkusen,,51.045925,7.01922
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Dormagen,,51.093685,6.828911
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Frankfurt,,50.110922,8.682127
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Chemnitz,,50.827845,12.92137
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Frankfurt,,50.110922,8.682127
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Bad Friedrichshall,,49.234394,9.207974
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Ebhaisen,,48.587869,8.675462
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Siegenburg,,48.753735,11.848565
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Kempten,,47.72857,10.315783
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Simbach am Inn,,48.267586,13.027363
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Burghausen,,48.172561,12.831075
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Marl,,51.659123,7.106022
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Hamburg,22113,53.551085,9.993682
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Dortmund,44379,51.513587,7.465298
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Speyer,67346,49.317277,8.441217
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Leuna,6237,51.323266,12.024228
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Puchheim,82178,48.163226,11.342161
+Maintenance. Modifications & Operations,Bi OKI Isoliertechnik,Germany,Pforzheim,75181,48.892186,8.694629
+Other Operations division,Bi FRB,Germany,Voerde-Friedrichsfeld,46562,51.629399,6.657988
+Other Operations division,Bi FRB,Germany,Stuttgart,70565,48.775846,9.182932
+Other Operations division,Bi FRB,Germany,bursting land,15910,48.241942,10.083201
+Other Operations division,Bi FRB,Germany,Stadthagen,31655,52.32521,9.199823
+Other Operations division,Bi Gerätetechnik,Germany,Voerde,46562,51.600521,6.654411
+Other Operations division,Bi Gerätetechnik,Germany,Bitterfeld,6749,51.626533,12.313306
+Other Operations division,Bi Gerätetechnik,Germany,Bochum,44805,51.481845,7.216236
+Other Operations division,Bi Gerätetechnik,Germany,Ludwigshafen,67059,49.47741,8.44518
+Other Operations division,Babcock Fertigungszentrum,Germany,Oberhausen,46049,51.496334,6.863776
+Other Operations division,Babcock Kraftwerksservice,Germany,Peitz,3185,51.866667,14.416667
+Maintenance. Modifications & Operations,Babcock Borsig Steinmüller Kuwait,Kuwait,Safat,PO Box 26401,29.371265,47.973479
+Engineering & Technologies,Bi GreyLogix,Netherlands,Schiedam,PO box 922 - 3100 AX,51.91696,4.398819
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Zwartewaal,3238,51.883536,4.220093
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,SC Roosendaal,4704,51.517646,4.452068
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Deest,6653,51.889231,5.666011
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Groningen,9723,53.219384,6.566502
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Velsen-Noord,1951,52.472747,4.639247
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Roosendaal,4704,51.535849,4.465321
+Maintenance. Modifications & Operations,Bi Industrial Services België/Nederland,Netherlands,Le Rœulx,7070,50.50293,4.108731
+Maintenance. Modifications & Operations,Bi ROB Group,Netherlands,AV Terneuzen,NL-4538,51.330729,3.835298
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Bamble,,59.003064,9.741111
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Glamfjord,,66.816633,13.944044
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Holmestrand,,59.489919,10.315035
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Hoyanger,,61.220065,6.075744
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Karmoy,,59.280102,5.307111
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Kristiansand,,58.159912,8.018206
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Helgeland,,65.758058,12.103978
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Odda,,60.067604,6.547328
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Porsgrunn,,59.138557,9.655515
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Rjukan,,59.880082,8.614134
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Sunndalsora,,62.673517,8.566112
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Svelgen,,61.768524,5.29551
+Maintenance. Modifications & Operations,Bi Industrial Services Norway,Norway,Ardal,,61.238625,7.710262
+Maintenance. Modifications & Operations,Bi Industrier Norge/Denmark,Norway,Stavanger,4033,58.969976,5.733107
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Warsaw,03-309,52.229676,21.012229
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Gda?sk,80-718,54.352025,18.646638
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Kostrzyn nad Odr?,66-470,52.587189,14.649447
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Kozienice,26-900,51.585533,21.551177
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,O?arów,27-530,50.88758,21.66654
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Pozna?,61-248,52.406374,16.925168
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Szczecin,70-661,53.428544,14.552812
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Szczecin,70-661,53.428544,14.552812
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Warszawa Siekierki,02-981,52.211615,21.076041
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Warszawa ?era?,03-216,52.312911,20.994834
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Wroc?aw,51-416,51.107885,17.038538
+Maintenance. Modifications & Operations,Bi Industrial Services Polska,Poland,Zielona Góra,65-120,51.935621,15.506186
+Maintenance. Modifications & Operations,Multiserwis,Poland,Krapkowice,47-300,50.474505,17.965139
+Maintenance. Modifications & Operations,Bi Industrial Services Prefal,Portugal,Vila Nova de Gaia,4405-547,41.123876,-8.611785
+Maintenance. Modifications & Operations,Bi Industrial Services Prefal,Portugal,Lisboa,1950-197,38.722252,-9.139337
+Maintenance. Modifications & Operations,Bi Industrial Services Prefal,Portugal,Sines,7520-309,37.957156,-8.860891
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Portugal,Lisboa,1950-197,38.722252,-9.139337
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Portugal,Oporto,,41.157944,-8.629105
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Portugal,Sines,,37.957156,-8.860891
+Maintenance. Modifications & Operations,Babcock Borsig Services Arabia,Saudi Arabia,Al-Khobar,PO Box 4362,26.217191,50.197138
+Maintenance. Modifications & Operations,Bi Slovensko,Slovakia,Rovinka,SK-900 41,48.097734,17.235285
+Maintenance. Modifications & Operations,Bi Slovensko,Slovakia,Štúrovo,SK-943 03,47.799212,18.715285
+Other Operations division,Bi Power Africa,South Africa,Rivonia,2191 Matimba,-26.043166,28.0552
+Other Operations division,Bi Power Africa,South Africa,Duvha,,-25.961364,29.338962
+Other Operations division,Bi Power Africa,South Africa,Komati,,-25.867344,32.723784
+Other Operations division,Bi Power Africa,South Africa,Hendrina,,-26.159897,29.72523
+Other Operations division,Bi Power Africa,South Africa,Arnot,,-25.95,29.8
+Other Operations division,Bi Power Africa,South Africa,Kriel,,-26.255106,29.263398
+Other Operations division,Bi Power Africa,South Africa,Camden,,-26.6,30.083333
+Other Operations division,Bi Power Africa,South Africa,Majuba,,-27.80356,30.066524
+Other Operations division,Bi Power Africa,South Africa,Bethal,,-26.457866,29.466654
+Other Operations division,Bi Power Africa,South Africa,Tutuka,,-26.04339,28.06042
+Other Operations division,Bi Power Africa,South Africa,Matla,,-26.283333,29.133333
+Other Operations division,Bi Power Africa,South Africa,Grootvlei,,-26.802388,28.527266
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Madrid,28806,40.416775,-3.70379
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Narón,15578,43.501289,-8.192374
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Barcelona,8030,41.385064,2.173403
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Constantí,43120,41.153546,1.212596
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Gijón,33211,43.532202,-5.66112
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Mazagón,21130,37.136925,-6.828392
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Puertollano,13500,38.688446,-4.107888
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,San Roque,11360,36.210462,-5.384432
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,El Puerto de Santa María,11500,36.639328,-6.258837
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Zamudio,48170,43.289176,-2.852724
+Maintenance. Modifications & Operations,Bi Industrial Services Spain,Spain,Cartagena,30353,37.625683,-0.996584
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Alvdalen,,61.227306,14.041987
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Kungalv,,57.869754,11.974032
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Avesta,,60.14533,16.17384
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Borlange,,60.484304,15.433969
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Gammelange,,63.141481,16.161572
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Hagfors,,60.03437,13.694508
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Karlstad,,59.402181,13.511498
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Gullspang,,58.985467,14.096623
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Gaddede,,64.502897,14.146112
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Jarpen,,63.34963,13.452908
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Sunne,,59.836557,13.144046
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Torsby,,60.140907,13.010213
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Arvika,,59.654853,12.592136
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Bergvik,,61.258246,16.83415
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Follinge,,63.670506,14.612754
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Sveg,,62.034625,14.359037
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Ostersund,,63.176683,14.636068
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Arbro,,59.275263,15.213411
+Maintenance. Modifications & Operations,Bi Industrial Services Sweden,Sweden,Laforsens,,61.937523,15.506312
+Engineering & Technologies,Bi Industrietechnik Salzburg,Switzerland,Basel,,47.559599,7.588576
+Engineering & Technologies,Bi Industrietechnik Salzburg,Switzerland,Zurich,,47.376887,8.541694
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Switzerland,Pratteln,4133,47.51832,7.691989
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Switzerland,Gebenstorf,5412,47.484227,8.24199
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Switzerland,Zürich,8048,47.376887,8.541694
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Switzerland,Zofingen,4800,47.288845,7.944762
+Maintenance. Modifications & Operations,Bi Industrial Services Schweiz,Switzerland,Evionnaz,1902,46.178223,7.022379
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Groningen,9727,53.219384,6.566502
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Hengelo,559,52.257412,6.792772
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Deventer,7418,52.266075,6.155217
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Velsen-Noord,1950,52.472747,4.639247
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Schiedam,3100,51.91696,4.398819
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,The Hague,16029,52.070498,4.3007
+Engineering & Technologies,Bi Tebodin North West Europe,The Netherlands,Eindhoven,6181,51.441642,5.469722
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Emirates,UAE,Abu Dhabi,PO Box 38821,24.453884,54.377344
+Engineering & Technologies,Bi Tebodin North West Europe,UK,Warrington,,53.390044,-2.59695
+Maintenance. Modifications & Operations,Bi Salamis Group,UK,Aberdeen,AB23 8EU,57.149717,-2.094278
+Maintenance. Modifications & Operations,Bi Salamis Group,UK,Norfolk,NR30 1HZ,52.613969,0.886402
+Maintenance. Modifications & Operations,Bi UK,UK,Runcorn,WA7 1BD,53.342078,-2.729673
+Maintenance. Modifications & Operations,Bi UK,UK,Chesterfield,S41 7TD,53.235048,-1.421629
+Maintenance. Modifications & Operations,Bi UK,UK,Fareham,PO15 5TH,50.854846,-1.186587
+Maintenance. Modifications & Operations,Bi UK,UK,Grangemouth,FK3 8WJ,56.009715,-3.72277
+Maintenance. Modifications & Operations,Bi UK,UK,Haydock,WA11 9UX,53.467616,-2.68496
+Maintenance. Modifications & Operations,Bi UK,UK,Newton-Le-Willows,WA12 0HF,53.452889,-2.63508
+Maintenance. Modifications & Operations,Bi UK,UK,Wokingham,RG41 5TU,51.410457,-0.833861
+Maintenance. Modifications & Operations,Bi UK,UK,Immingham,DN40 2LG,53.614012,-0.215913
+Maintenance. Modifications & Operations,Bi Government Services,US,Ballwin.  MO,63011,38.595053,-90.546234
+Maintenance. Modifications & Operations,Bi Salamis Inc.,US,Broussard. LA,,30.147146,-91.96123
+Maintenance. Modifications & Operations,Bi Salamis Inc.,US,La Porte. TX,,29.665784,-95.019373
+Maintenance. Modifications & Operations,Bi Westcon,US,Bismarck. ND,58503,46.808327,-100.783739
+Maintenance. Modifications & Operations,Bi Industrial Services Inc.,US,Ballwin. MO,63011,38.595053,-90.546234
+Maintenance. Modifications & Operations,Bi Industrial Services Inc.,US,Albany. GA,31705,31.578507,-84.155741
+Maintenance. Modifications & Operations,Bi Industrial Services Inc.,US,Augusta. GA,30901,33.473498,-82.010515
+Maintenance. Modifications & Operations,Bi Industrial Services Inc.,US,Green Bay. WI,54305,44.513319,-88.013296
+Maintenance. Modifications & Operations,Bi Industrial Services Inc.,US,Jacksonville. FL,32207,30.332184,-81.655651
+Engineering & Technologies,Bi Tebodin B.V.,US,Ballwin. MO,63011,38.595053,-90.546234
+Engineering & Technologies,Bi Tebodin B.V.,Bahrain,Manama,2882,26.228516,50.58605
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Bahrain,Manama,2822,26.228516,50.58605
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,Bahrain,Manama,2822,26.228516,50.58605
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Czech Republic,Ostrava,70200,49.820923,18.262524
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Czech Republic,Pardubice,53009,50.034309,15.781199
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Czech Republic,Prague,18600,50.075538,14.4378
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Hungary,Budapest,1518,47.497912,19.040235
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Kuwait,Safat,26401,29.371265,47.973479
+Engineering & Technologies,Bi Tebodin B.V.,Oman,Muscat,130,23.58589,58.405923
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Oman,Muscat,716,23.58589,58.405923
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,Oman,Muscat,716,23.58589,58.405923
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Poland,Cracow,,50.06465,19.94498
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Poland,Gda?sk,,54.352025,18.646638
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Poland,Pozna?,,52.406374,16.925168
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Poland,Warsaw,,52.229676,21.012229
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Poland,Wroc?aw,,51.107885,17.038538
+Engineering & Technologies,Bi Tebodin B.V.,Qatar,Doha,47508,25.285447,51.53104
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Qatar,Doha,47508,25.285447,51.53104
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,Qatar,Doha,47508,25.285447,51.53104
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Romania,Bucharest,77190,44.426767,26.102538
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Romania,Ploiesti,77190,44.936664,26.012862
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Russia,Ekaterinburg,620014,56.838926,60.605703
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Russia,Moscow,105210,55.755826,37.6173
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Russia,Rostov-on-don,344006,47.235714,39.701505
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Russia,St. Petersburg,196191,59.93428,30.335099
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Saudi Arabia,Al Khobar,,26.217191,50.197138
+Engineering & Technologies,Bi Tebodin B.V.,Saudi Arabia,Jeddah,21514,21.285407,39.237551
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,Saudi Arabia,Jeddah,,21.285407,39.237551
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,Saudi Arabia,Jeddah,21514,21.285407,39.237551
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Serbia,Belgrade,11070,44.786568,20.448922
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Slovakia,Bratislava,,48.148597,17.107748
+Engineering & Technologies,Bi Tebodin B.V.,UAE,Abu Dhabi,2652,24.453884,54.377344
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,UAE,Abu Dhabi,,24.453884,54.377344
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,UAE,Abu Dhabi,2652,24.453884,54.377344
+Engineering & Technologies,Bi Tebodin B.V.,UAE,Dubai,8092,25.204849,55.270783
+Maintenance. Modifications & Operations,Bi Deutsche Babcock Middle East,UAE,Dubai,,25.204849,55.270783
+Maintenance. Modifications & Operations,Bi Tebodin Middle East,UAE,Dubai,8092,25.204849,55.270783
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Ukraine,Kiev,4073,50.4501,30.5234
+Engineering & Technologies,Bi Tebodin Central & Eastern Europe,Ukraine,Lviv,79015,49.839683,24.029717
