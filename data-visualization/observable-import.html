@@ -1,5 +1,6 @@
 <html>
 <head>
+  <!--
 <style>
 /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
 .fullwidth {
@@ -12,25 +13,21 @@
 }
 #visual { min-height: 20vw }
 </style>
+-->
 </head>
 <body>
-<!-- 
-<p><a href="http://beta.observablehq.com/@epichef/deterministic-sir-model">Viewing cloned cells from this Observable notebook.<p>
-<p>To get this working, I had to <a href="https://beta.observablehq.com/d/6aca016d75a62fa1">clone the original notebook</a> and grab <hfre="https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340">my own API</a> key: .</p>
-<p>Demo API: https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340]</p>
--->
 
 This example renders vizualizations from <a href="http://beta.observablehq.com/@epichef/deterministic-sir-model">'Deterministic SIR model</a>. The JavaScript used derives originally form <a href="https://beta.observablehq.com/@fil">Philippe Rivière's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix.</a>
 
-<div id="visual"></div>
+<div id="complete"></div>
 
 <script type="module">
 
-  // NOTEBOOK CONFIGURATION
-  import notebook from "https://api.observablehq.com/d/6aca016d75a62fa1.js?key=c8886772defb0340";
+    // NOTEBOOK CONFIGURATION
+  import notebook from "https://api.observablehq.com/@aaronkyle/graphviz.js?key=164e1a8c0a0db54d";
 
   // BOILERPLATE
-  const target = document.querySelector("#visual");
+  const target = document.querySelector("#complete");
   const renders = {
     "viewof p": "p",
     "display": "div.fullwidth",
