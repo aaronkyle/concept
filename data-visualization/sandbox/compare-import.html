@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Bootstrap Core CSS -->
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css">
+
+
+<!--
+<style>
+/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
+.fullwidth {
+  width: 40vw;
+  position: relative;
+  left: 40%;
+  right: 40%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+#cao_institition { min-height: 20vw }
+</style>
+-->
+    
+</head>
+<body>
+
+  <!-- Thanks to <a href="https://beta.observablehq.com/@fil">Philippe Rivière's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix</a> for demonstrating this code. -->
+
+      <!-- Page Content -->
+  <div class="container">
+<div class="row">
+  <div class="col"><div id="cao_institition"></div></div>
+</div>
+  <div class="row">
+       <div id "chart" class="col-sm-8"></div>
+</div>
+  
+  </div>
+  <!-- /.container -->
+    
+<script type="module">
+
+    // NOTEBOOK CONFIGURATION
+  import notebook from "https://api.observablehq.com/@aaronkyle/cao-caseload-budget-2000-2017.js?key=2737a67c8ffce01c";
+
+  // BOILERPLATE
+  const target = document.querySelector("#cao_institition");
+  const renders = {
+    "cao_budget": "div.fullwidth",
+  };
+
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
+  for (let i in renders) {
+    let s = renders[i], a = s.match(/^\w+/);
+    if (a) {
+      renders[i] = document.createElement(a[0]);
+      target.appendChild(renders[i]);
+      if (a = s.match(/\.(\w+)$/))
+        renders[i].className = a[1]; 
+    }
+    else
+      renders[i] = document.querySelector(renders[i]);
+  }
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name]) {
+      return new Inspector(renders[variable.name]);
+    } else {
+      // return true; // uncomment to run hidden cells
+    }
+  });
+</script>
+
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    <script>
+
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+          columns: [
+            ['open cases', 0, 7, 10, 12, 14, 19, 12, 17, 19, 18, 23, 24, 33, 42, 54, 63, 52, 51],
+            ['total budget', 0, 1359300, 1700900, 2248200, 2417400, 2966846, 2966846, 2658700, 3009082, 3919996, 4212200, 4319972, 4882937, 5026751, 5671243, 5059538, 5896239, 6289674]
+          ],
+          axes: {
+            'total budget': 'y2'
+          },
+          types: {
+            'open cases': 'bar' // ADD
+          }
+        },
+        axis: {
+          y: {
+            label: {
+              text: 'open cases',
+              position: 'outer-middle'
+            }
+          },
+          y2: {
+            show: true,
+            label: {
+              text: 'total budget',
+              position: 'outer-middle'
+            }
+          }
+        }
+    });
+
+    </script>
+
+
+  <!-- Bootstrap 4 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+<html>
