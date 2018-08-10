@@ -89,28 +89,54 @@
         bindto: '#chart',
         data: {
           columns: [
-            ['open cases', 0, 7, 10, 12, 14, 19, 12, 17, 19, 18, 23, 24, 33, 42, 54, 63, 52, 51],
-            ['total budget', 0, 1359300, 1700900, 2248200, 2417400, 2966846, 2966846, 2658700, 3009082, 3919996, 4212200, 4319972, 4882937, 5026751, 5671243, 5059538, 5896239, 6289674]
-          ],
-          axes: {
-            'total budget': 'y2'
+      ['x', 'FY00', 'FY01', 'FY02', 'FY03', 'FY04', 'FY05', 'FY06', 'FY07', 'FY08', 'FY09', 'FY10', 'FY11', 'FY12', 'FY13', 'FY14', 'FY15', 'FY16', 'FY17'],
+      //['open cases', 0, 7, 10, 12, 14, 19, 12, 17, 19, 18, 23, 24, 33, 42, 54, 63, 52, 51],//
+      ['new eligible cases', 0, 7, 3, 10, 9, 17, 6, 10, 7, 11, 16, 12, 19, 26, 38, 46, 43, 41],
+      ['carry-over cases', 0, 0, 7, 2, 5, 2, 6, 7, 12, 7, 7, 12, 14, 16, 16, 17, 9, 10],
+      ['complex cases', 0, 6, 7, 7, 8, 11, 6, 3, 6, 8, 11, 15, 24, 33, 38, 46, 43, 45],
+      ['total budget (constant USD)', 0, 1359300, 1700900, 2248200, 2417400, 2966850, 2966850, 2658700, 3009100, 3930000, 4212200, 4320000, 4883000, 5026800, 5671300, 5059600, 5896200, 6289700],
+      ['expensed contingency budget', null, null, null, null, 317500, 451500, 428700, 0, 287700, 613100, 768000, 743600, 706800, 753800, 80000, 732580, 877500, 911800] //VALUES ARE GENERALIZED AND ARE NOT 'OFFICAL' STATISTICS FROM CAO.
+      //In building this visualization I generalized the values based on analysis of the chart.  I provide this for illustrative purposes.
+    ],
+    axes: {
+      'total budget (constant USD)': 'y2',
+      'expensed contingency budget': 'y2'
+    },
+    groups: [
+        ['carry-over cases', 'new eligible cases']
+    ],
+    types: {
+      //'open cases': 'bar',//
+      'carry-over cases': 'bar',
+      'new eligible cases': 'bar', // ADD
+    }
+  },
+  legend: {
+     position: 'inset'
           },
-          types: {
-            'open cases': 'bar' // ADD
-          }
-        },
-        axis: {
-          y: {
-            label: {
-              text: 'open cases',
-              position: 'outer-middle'
-            }
-          },
-          y2: {
-            show: true,
-            label: {
-              text: 'total budget',
-              position: 'outer-middle'
+  axis: {
+    x: {
+    type: 'category',
+        tick: {
+                rotate: -45,
+                multiline: false
+              },
+        height: 40
+      },
+    y: {
+      label: {
+        text: 'open cases',
+        position: 'outer-middle'
+      }
+    },
+    y2: {
+      show: true,
+      max: 12000000,
+      min: 0,
+      padding: {top:0, bottom:0},
+      label: {
+        text: 'total budget',
+        position: 'outer-middle'
             }
           }
         }
