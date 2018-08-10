@@ -10,14 +10,14 @@
   margin-left: -50vw;
   margin-right: -50vw;
 }
-#cao-cases-by-institition { min-height: 20vw }
+#cao_institition { min-height: 20vw }
 </style>
 </head>
 <body>
 
   <!-- Thanks to <a href="https://beta.observablehq.com/@fil">Philippe Rivière's</a> Jekyll port of <a href="https://beta.observablehq.com/@fil/tissots-indicatrix">tissots-indicatrix</a> for demonstrating this code. -->
 
-<div id="cao-cases-by-institition"></div>
+<div id="cao_institition"></div>
 
 <script type="module">
 
@@ -25,9 +25,9 @@
   import notebook from "https://api.observablehq.com/d/67358bd118975b15.js?key=4facfe219bddaccd";
 
   // BOILERPLATE
-  const target = document.querySelector("#cao-cases-by-institition");
+  const target = document.querySelector("#cao_institition");
   const renders = {
-    "institution": "div.fullwidth",
+    "institition": "div.fullwidth",
   };
 
   import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
