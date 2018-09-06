@@ -56,20 +56,10 @@
     .addTo(map);
 
 
-  ///let test_L = L.geoJSON("test.json", {
-    ///weight: 2,
-   /// color: '#100'
-  ///}).addTo(map);
-
-
-
-
-  //let layerGroup = L.geoJSON(watersheds, {
-  // onEachFeature: function (feature, layer) {
-  //layer.bindPopup('</h1><p>name: '+feature.properties.WTSHNAME+'</p>');
-  //	}
-  // }).addTo(map);
-
+  let test_L = L.geoJSON("test.json", {
+    weight: 2,
+    color: '#100'
+  }).addTo(map);
 
   //street layer using mapbox basic
   // Changed to OSM just to avoid the token requirement, for the purpose of demo.
