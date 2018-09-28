@@ -158,3 +158,8 @@ That’s certainly not the implication of this project. Metadata adds another di
 * [Can I create links with 'target=“_blank”' in Markdown?](https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown)
     - Kramdown supports it. It's compatible with standard Markdown syntax, but has many extensions, too. You would use it like this: `[link](url){:target="_blank"}`
 * []()
+
+
+---
+
+[gcushen/hugo-academic](https://github.com/gcushen/hugo-academic/blob/99e0edf9bb63dbdea003a255cb7a3a2ff4f80e1b/layouts/partials/footer.html)
