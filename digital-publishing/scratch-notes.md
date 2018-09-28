@@ -163,3 +163,6 @@ That’s certainly not the implication of this project. Metadata adds another di
 ---
 
 [gcushen/hugo-academic](https://github.com/gcushen/hugo-academic/blob/99e0edf9bb63dbdea003a255cb7a3a2ff4f80e1b/layouts/partials/footer.html)
+
+
+[Good example of scrolling ToC](https://advanced-js.github.io/syllabus/)
