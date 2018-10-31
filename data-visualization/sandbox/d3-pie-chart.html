@@ -1,0 +1,41 @@
+
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="cao-cases-by-institition"></div>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    <script>
+
+//Alternative means of re-formatting donut title
+// per example at http://plnkr.co/edit/6eOJnMh6DE4mZejmPzc2?p=preview
+
+    c3.generate({
+      bindto: '#cao-cases-by-institition',
+      data: {
+        columns: [
+          ["IFC", 86],
+          ["MIGA", 4],
+          ["IFC/MIGA", 10],
+                 ],
+        type: 'donut'
+      },
+      donut: {
+          title: "Cases by Instituion"
+      }
+    });
+
+    var label = d3.select('text.c3-chart-arcs-title');
+
+    label.html(''); // remove existant text
+    label.insert('tspan').text('Cases by Instituion').attr('dy', -10).attr('x', 0);
+    label.insert('tspan').text('FY17').attr('dy', 20).attr('x', 0);
+
+    // More info on <tspan>: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tspan
+
+</script>
+</body>
+</html>
