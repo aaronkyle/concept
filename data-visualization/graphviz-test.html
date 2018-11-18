@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>viz.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+      <script type="text/javascript" src="//mdaines.github.io/viz.js/bower_components/viz.js/viz.js"></script>
+  <style type="text/css">
+    
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+var graphCode = document.getElementById('cluster').innerHTML;
+
+document.getElementById('svg').innerHTML += Viz(graphCode, 'svg');
+
+image = Viz(graphCode, { format: 'png-image-element' });
+document.getElementById('png').appendChild(image);
+
+    }
+
+</script>
+
+</head>
+<body>
+  <h1>Inline SVG</h1>
+<div id="svg"></div>
+<hr/>
+<h1>PNG as "data:image/png" URI</h1>
+<div id="png"></div>
+<script type="text/vnd.graphviz" id="cluster">
+digraph finite_state_machine {
+	rankdir=LR;
+	size="8,5"
+	node [shape = circle];
+	S0 -> S1 [ label = "Lift Nozzle" ]
+	S1 -> S0 [ label = "Replace Nozzle" ]
+	S1 -> S2 [ label = "Authorize Pump" ]
+	S2 -> S0 [ label = "Replace Nozzle" ]
+	S2 -> S3 [ label = "Pull Trigger" ]
+	S3 -> S2 [ label = "Release Trigger" ]
+}
+</script>
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "s22yzbLu"
+      }], "*")
+    }
+  </script>
+</body>
+</html>
