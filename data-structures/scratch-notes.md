@@ -92,3 +92,7 @@ Omitting details in the file name makes more sense when it is possible to downlo
 
 2005 - Schmidt.pdf
  
+
+---
+
+* [Usage of csv.DictReader](https://courses.cs.washington.edu/courses/cse140/13wi/csv-parsing.html)
