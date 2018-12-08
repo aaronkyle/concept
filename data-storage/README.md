@@ -12,3 +12,12 @@ Google Spreadsheets is a free, web-based spreadsheet.  It is 'free' in the sense
 Toward free, open-source alternatives to Google Spreadsheets, a top contenders is [Only Office](#), though noteworthy also are [FengOffice](#).
 
 Most spreasheet software can 'save' or 'export' to file formats of greater or lesser support for styling information.
+
+
+---
+
+
+* [Create directories from textfile](https://askubuntu.com/questions/762945/create-directories-from-textfile)
+
+`xargs -L 1 mkdir < checklog.txt`
+
