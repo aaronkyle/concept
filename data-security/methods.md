@@ -1,0 +1,1 @@
+*[Data Security and Resilience using Secret Shares and Elliptic Curve Methods](https://medium.com/asecuritysite-when-bob-met-alice/data-security-and-resilience-using-secret-shares-and-elliptic-curve-methods-6c6ce6976a5c)
