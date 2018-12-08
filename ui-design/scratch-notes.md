@@ -191,6 +191,19 @@
 * [Normalized Stacked Bar Chart](https://bl.ocks.org/mbostock/3886394)
 * [Timetable](http://jsfiddle.net/rxbaoj1r/)
 * []()
+
+
+
+
+-----
+
+
+* [Reveal Form Fields as Needed with CSS :checked](https://codepen.io/chriscoyier/pen/LEGXOK)
+* [Exposing Additional Form Fields via Checked Radio Buttons](https://css-tricks.com/exposing-form-fields-radio-button-css/)
+* [Bootstrap conditional form field fetch based on drop-down list value?](https://stackoverflow.com/questions/39102243/bootstrap-conditional-form-field-fetch-based-on-drop-down-list-value)
+* [How to Create Conditional Form Fields with jQuery](https://formden.com/blog/conditional-form-field)
+* [Input group](https://getbootstrap.com/docs/4.0/components/input-group/#multiple-inputs)
+* []()
 * []()
 * []()
 * []()
