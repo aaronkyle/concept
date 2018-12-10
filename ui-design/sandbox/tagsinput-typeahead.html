@@ -21,12 +21,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<link rel="shortcut icon" href="https://phppot.com/favicon.ico"
-    type="image/x-icon">
-<link rel="stylesheet" id="solandra-style-css"
-    href="https://phppot.com/wp-content/themes/solandra/style.css"
-    type="text/css" media="all">
-<style>
+
+
 #demo-content {
     padding: 0px 0px 100px 0px;
 }
@@ -79,31 +75,9 @@
 
 </script></head>
 <body>
-<div id="site_header">
-    <div class="content">
-        <a href="https://phppot.com/" title="PhpPot Home"><img
-            src="https://phppot.com/wp-content/themes/solandra/images/phppot-logo.png"
-            id="site-logo"></a>
-        <div class="search-container">
-            <form method="get" action="/" class="search-form">
-                <input name="s" class="search"
-                    placeholder="Search PHP Pot" title="Search PhpPot"
-                    autocomplete="off">
 
-                <button type="submit" title="Search PhpPot"
-                    id="search-button"></button>
-            </form>
-        </div>
-        <div class="header-link-container">
-            <span id="mobile-search-icon" onClick="toggleSearch();">Mobile
-                Search</span> <a class="demo-download-icon"
-                href="https://phppot.com/demo/">Demo</a>
-                <a
-                id="header-contact-navigation"
-                href="https://phppot.com/contact/">Contact</a>
-        </div>
-    </div>
-</div><div class="content">
+</div>
+<div class="content">
 <div id="tutorial-body"><div id="tutorial"><div id="demo-content">
 	<h1>Bootstrap Tags Input with Autocomplete</h1>
 	<div class="bgcolor">
@@ -111,8 +85,8 @@
 	</div>
 
 	<script src="https://phppot.com/demo/bootstrap-tags-input-with-autocomplete/jquery-1.11.2.min.js"></script>
-	<script src="https://phppot.com/demo/bootstrap-tags-input-with-autocomplete/typeahead.css"></script>
-	<script src="https://phppot.com/demo/bootstrap-tags-input-with-autocomplete/bootstrap-tagsinput.css"></script>
+	<script src="https://phppot.com/demo/bootstrap-tags-input-with-autocomplete/typeahead.js"></script>
+	<script src="https://phppot.com/demo/bootstrap-tags-input-with-autocomplete/bootstrap-tagsinput.js"></script>
 
 	<script>
 	var countries = new Bloodhound({
@@ -179,81 +153,12 @@
         </div>
         <div></div>
     </div>
-    <div id="recommended">
-        <div class="heading">Trending Code</div>
-        <ul>
-            <li><a
-                href="https://phppot.com/php/simple-php-shopping-cart/">Simple
-                    PHP Shopping Cart</a></li>
-            <li><a
-                href="https://phppot.com/php/skills-every-php-freelancer-must-have/">Skills
-                    Every PHP Freelancer Must Have</a></li>
-            <li><a
-                href="https://phppot.com/php/php-restful-web-service/">PHP
-                    RESTful Web Service</a></li>
-            <li><a
-                href="https://phppot.com/jquery/php-contact-form-with-jquery-ajax/">PHP
-                    Contact Form with jQuery AJAX</a></li>
-            <li><a
-                href="https://phppot.com/jquery/jquery-ajax-inline-crud-with-php/">jQuery
-                    AJAX Inline CRUD with PHP</a></li>
-            <li><a
-                href="https://phppot.com/php/how-to-become-a-full-time-freelance-php-developer-and-consultant/">How
-                    to Become a Full Time Freelance PHP Developer and
-                    Consultant</a></li>
-        </ul>
-    </div>
+    
 
 </div>
 </div>
-<div id="footer-contact-note">
-    <div class="content">
-        <h2>Looking for an expert PHP freelancer?</h2>
-        <p class="footer-contact-banner-title">Do you want to develop
-            a modern, lightweight, responsive application and launch quickly?</p>
-        <p>
-            <a id="footer-contact-navigation" href="/contact/">Contact
-                Me</a>
-        </p>
-    </div>
-</div>
-<div id="footer">
-    <div class="content">
-    <div class="follow">
-        <a class="linkedin" href="https://www.linkedin.com/in/vincya/
-"
-            title="LinkedIn" target="_blank"><span class="linkedin-img"></span></a><a
-            class="facebook"
-            href="https://www.facebook.com/pages/phppotcom/1428212654057945"
-            title="Facebook" target="_blank"><span class="facebook-img"></span></a><a
-            class="twitter" href="https://twitter.com/phppot"
-            title="Twitter" target="_blank"><span class="twitter-img"></span></a>
-        <a href="https://plus.google.com/100835954832081019478/posts"
-            title="Google Plus"><span class="google-plus-img"></span></a>
 
-    </div>
-    <ul id="footer-menu">
-        <li class="cat-item cat-item-2"><a
-            href="https://phppot.com/category/php/">PHP</a></li>
-        <li class="cat-item cat-item-8"><a
-            href="https://phppot.com/category/jquery/">jQuery</a></li>
-        <li class="cat-item cat-item-4"><a
-            href="https://phppot.com/category/mysql/">MySQL</a></li>
-        <li class="cat-item cat-item-3"><a
-            href="https://phppot.com/category/wordpress/">Wordpress</a></li>
-        <li class="cat-item cat-item-10"><a
-            href="https://phppot.com/category/css/">CSS</a></li>
-    </ul>
-    <div id="footer-bottom">
-        <p>
-            &copy; 2017 <a href="https://phppot.com/"
-                title="PhpPot Home">phppot.com</a>. The design and
-            content are copyrighted to Vincy and may not be reproduced
-            in any form.
-        </p>
-    </div>
-    </div>
-</div>
+
 <script>
     window.addEventListener('click', function(e){
         var element = document.getElementsByClassName("search-container")[0];
