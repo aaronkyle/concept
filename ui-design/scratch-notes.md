@@ -207,3 +207,22 @@
 * []()
 * []()
 * []()
+
+
+
+
+-----
+
+### Telephone Numbering Plan
+
+[Telephone Numbering Plan](https://en.wikipedia.org/wiki/Telephone_numbering_plan)
+
+The International Telecommunication Union (ITU) has established a comprehensive numbering plan, designated E.164, for uniform interoperability of the networks of its member state or regional administrations. It is an open numbering plan, however, imposing a maximum length of 15 digits to telephone numbers. The standard defines a country calling code (country code) for each state or region which is prefixed to each national numbering plan telephone number for international destination routing.
+
+Private numbering plans exist in telephone networks that are privately operated in an enterprise or organizational campus. Such systems may be supported by a private branch exchange (PBX), which provides a central access point to the PSTN and also controls internal calls between between telephone extensions.
+
+In contrast to numbering plans, which determine telephone numbers assigned to subscriber stations, dialing plans establish the customer dialing procedures, i.e. the sequence of digits required to reach a destination. Even in closed numbering plans, it is not always necessary to dial all digits of a number. For example, an area code may often be omitted when the destination is in the same area as the calling station.
+
+Within the national numbering plan, a complete destination telephone number is composed of an area code and a subscriber telephone number. The subscriber number is the number assigned to a line connected to customer equipment. It must be dialed in its entirety.[citation needed] The first few digits of the subscriber number typically indicate smaller geographical areas or individual telephone exchanges. In mobile networks they may indicate the network provider. Callers in a given area or country usually do not need to include the particular area prefixes when dialing within the same area. Devices that dial telephone numbers automatically may include the full number with area and access codes.
+
+
