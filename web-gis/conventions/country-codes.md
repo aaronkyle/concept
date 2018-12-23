@@ -1,3 +1,27 @@
+Resources:
+
+
+[Independent States in the World](https://www.state.gov/s/inr/rls/4250.htm)
+
+US Department of State <br/>
+BUREAU OF INTELLIGENCE AND RESEARCH <br/>
+Washington, DC <br/>
+May 30, 2018
+
+Wikipedia. [This is a featured list. Click here for more information.
+Member states of the United Nations](https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations)
+
+
+Wikipedia. [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)
+
+
+Wikipedia. [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)
+
+
+Wikipedia. [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
+
+
+---
 
 <table>
 <tr>	<th>		</th>	<th>	FIPS 10	</th>	<th>	ISO 3166 digraph	</th>	<th>	ISO 3166 trigraph	</th>	<th>	ISO 3166 numeric	</th>	<th>	TLD	</th>	<th>	IOC	</th>	<th>	SOVEREIGNTY	</th>	<th>	NOTES	</th>	</tr>
