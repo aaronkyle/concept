@@ -2,15 +2,12 @@
 <html lang="en">
     <head>
         <script type="text/javascript">
-            var person = { name: 'Joe Blow' };
-            function myfunction() {
-               document.write(person.name);
-            }
+            ${case_data[0]['case_name']
         </script>
     </head>
     <body>
         <script type="text/javascript">
-            myfunction();
+            case_data(d3.csv(`https://s3.amazonaws.com/cao-compliance/case_data_complete_2018-dec-22.csv`));
         </script>
     </body>
 </html>
