@@ -2,12 +2,13 @@
 <html lang="en">
     <head>
         <script type="text/javascript">
-            ${case_data[0]['case_name']
+                    case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/case_data_complete_2018-dec-22.csv`);
+
         </script>
     </head>
     <body>
         <script type="text/javascript">
-            case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/case_data_complete_2018-dec-22.csv`);
+            ${case_data[0]['case_name']}
         </script>
     </body>
 </html>
