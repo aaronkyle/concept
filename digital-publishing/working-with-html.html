@@ -2,13 +2,12 @@
 <html lang="en">
     <head>
         <script type="text/javascript">
-                    case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/case_data_complete_2018-dec-22.csv`);
-
+                    d3.csv("https://gist.githubusercontent.com/d3noob/fa0f16e271cb191ae85f/raw/bf896176236341f56a55b36c8fc40e32c73051ad/treedata.csv", function(data){
+    console.log(data);
+});
         </script>
     </head>
     <body>
-        <script type="text/javascript">
-            ${case_data[0]['case_name']}
-        </script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
     </body>
 </html>
