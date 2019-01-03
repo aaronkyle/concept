@@ -1,4 +1,5 @@
 
+<script type='text/javascript' src='http://dataviz.worldbank.org/javascripts/api/viz_v1.js'></script>
 
 * [Best of the Tableau Web... July 2013
 Read more at https://www.tableau.com/about/blog/2013/7/best-tableau-web-july-2013-24357#CuhJhxYGEeKowCY8.99](https://www.tableau.com/about/blog/2013/7/best-tableau-web-july-2013-24357)
