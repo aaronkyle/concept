@@ -184,3 +184,45 @@
 [The World According to China](https://www.nytimes.com/interactive/2015/07/24/business/international/the-world-according-to-china-investment-maps.html)
 
 [Shaking Up the Banking Establishment](https://www.nytimes.com/interactive/2015/12/04/business/international/china-factor-banks.html)
+
+
+
+
+* [How to check if a value is a number](http://javascript.boxsheep.com/how-to-javascript/How-to-check-if-a-value-is-a-number/)
+* [Validate decimal numbers in JavaScript - IsNumeric()](https://stackoverflow.com/questions/18082/validate-decimal-numbers-in-javascript-isnumeric)
+* [how-to-use-the-isnumber-function/](https://www.get-digital-help.com/2018/01/17/how-to-use-the-isnumber-function/)
+* [$.isNumeric is not a function?](https://stackoverflow.com/questions/12985989/isnumeric-is-not-a-function)
+* [jQuery.isNumeric()](https://api.jquery.com/jQuery.isNumeric/)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
+
+
+
+
+
+
+* [client.js - D3.js JSON and TopoJSON](https://gist.github.com/nkhine/3150901)
+
+
+#D3.js JSON and TopoJSON
+
+To download the .shp files use http://www.gadm.org/download
+
+use ogr2ogr to convert shape files to .json
+
+☺ ogr2ogr -f "GeoJSON" /tmp/world.json ~/Downloads/world_borders.shp world_borders
+Use the TopoJSON to reduce the size of these, see https://github.com/mbostock/topojson/
+
+Command to convert to a topojson format, preserving Name and Type and are also simplified with the -s 10e-9 precision threshold for Visvalingam simplification, in steradians setting.
+
+☺  topojson -o public/topo/USA_adm1.json -p NAME_1=country -p TYPE_1 -s 10e-9 /tmp/USA_adm1.json
+
+
