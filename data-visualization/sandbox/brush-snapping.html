@@ -26,7 +26,7 @@ var margin = {top: 200, right: 40, bottom: 200, left: 40},
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.scaleTime()
-    .domain([new Date(2013, 7, 1), new Date(2013, 7, 15) - 1])
+    .domain([new Date(1970, 7, 1), new Date(2013, 7, 15) - 1])
     .rangeRound([0, width]);
 
 var svg = d3.select("body").append("svg")
