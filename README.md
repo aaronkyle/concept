@@ -8,7 +8,7 @@ The repository seeks to define a system for open digital communication toward ai
 
 Parameters for development toward a 'common public good':
 
-1. **Systems should be free.**<br />[  The aim is for learning and performing social analysis should be constrained by 'entry costs' such as the need to purchase software licenses. Toward equal treatment and respect for all, and in an effort to alleviate poverty, the tools that we develop to for our work should be freely available for all others.
+1. **Systems should be free and, as much as possible, Open Source.**<br />  The aim is for learning and performing social analysis should be constrained by 'entry costs' such as the need to purchase software licenses. Toward equal treatment and respect for all, and in an effort to alleviate poverty, the tools that we develop to for our work should be freely available for all others. [Check out [now](https://zeit.co/blog/universal-now)!]
 
 1. **System must help to manage collaborative research via revision control.** <br />[Revision control](http://en.wikipedia.org/wiki/Revision_control), also known as version control, is the management of changes to files, such documents, computer code, and other collections of information. Version control systems allow managers of collaborative projects to track when changes have been made to particular files, and--if necessary--to revert changes to a previous state.
 
