@@ -8,15 +8,15 @@ The repository seeks to define a system for open digital communication toward ai
 
 Parameters for development toward a 'common public good':
 
-1. Systems should be free.  The aim is for learning and performing social analysis should be constrained by 'entry costs' such as the need to purchase software licenses. Toward equal treatment and respect for all, and in an effort to alleviate poverty, the tools that we develop to for our work should be freely available for all others.
+1. **Systems should be free.**<br />[  The aim is for learning and performing social analysis should be constrained by 'entry costs' such as the need to purchase software licenses. Toward equal treatment and respect for all, and in an effort to alleviate poverty, the tools that we develop to for our work should be freely available for all others.
 
 1. **System must help to manage collaborative research via revision control.** <br />[Revision control](http://en.wikipedia.org/wiki/Revision_control), also known as version control, is the management of changes to files, such documents, computer code, and other collections of information. Version control systems allow managers of collaborative projects to track when changes have been made to particular files, and--if necessary--to revert changes to a previous state.
 
 1. **The system encourages use of 'text' files.** <br />To ensure that data can be accessed (and written to) by the greatest possible range of applications. , we try to to utilize file types that store data as 'text'--typically encoded either in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) or [ASCII](http://en.wikipedia.org/wiki/ASCII). Files encoded in this way are considered ['human readable'](http://en.wikipedia.org/wiki/Human-readable_medium) in the sense that the presentation of information within the file can be opened by any basic text editor in a format that can be naturally read by humans. This differs from the way 'binary' files (such as MS Office *.doc, *.docx, and *.xml) save data, which is done as a sequence of bytes (binary digits (bits) grouped in eights) that require specific software applications to read, interpret, and re-present data in a human-readable format.
 
-1. **The system should--to the greatest extent possible--encourage authors to utilize a single formatting language (HTML).** Social development involves interaction between advisory papers, research reports, and other types of textual data. Traditionally approaches (writing here in the early years of the twenty-first-century), common offices approaches to collaborative editing tend to involve irculate document files via email, and to edit these files with mainstream word processing software--most prominently [Microsoft Word](http://en.wikipedia.org/wiki/Microsoft_Word) (a [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editing platform). A common challenge in these environments is that [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) word processors, powerful as they are in allowing users to define custom formatting to help express themselves, tend introduce numerous formatting inconsistencies in collaborative authorship contexts.
+1. **The system should&mdash;to the greatest extent possible&mdash;encourage authors to utilize a single formatting language (HTML).** Social development involves interaction between advisory papers, research reports, and other types of textual data. In these (still) early years of the twenty-first century, a common office approaches to collaborative editing involves the circulation of document files via email (shared drives within an institution), and editing of these files with mainstream word processing software. The most prominent editing platform is [Microsoft Word](http://en.wikipedia.org/wiki/Microsoft_Word). Web- /browser environments (applications) tend to hvae some form of [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) text editors, which render HTML previews of how text will appear as 'printed'. Powerful as these software and text manipulation software are in allowing users to define custom formatting to help express themselves, their interoperability is imperfect--introducing (often hidden) formatting inconsistencies in for documents managed in 'traditional' collaborative authorship contexts. 
 
-As research teams began to grow in size, and as offices working with people using different operating systems to run word-processing software applications, one will inevitably encounter bugs and conflicts in how formatting data is stored in document files and presented via word-processing applications. For example, in spite of work being carried out exclusively in Microsoft Word, formatting corruption often occur in large files that are collaboratively edited between computers running Windows OS and Mac OSX.[[note1](# "[problems arise from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version.")] To avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
+As research teams grow and offices work with people using different operating systems, one inevitably encounters bugs and conflicts in how formatting data is stored in document files and presented via word-processing applications. For example, even where work is carried out exclusively in Microsoft Word, formatting corruption seems to frequently occur on large files that are collaboratively edited between computers running Windows OS and Mac OSX.[[note1](# "[problems arise from different ways of writing and storing formatting information between the Windows version of MS Word and the Mac OSX version; docs above 40 pages.")] To avoid the hours of extra work cost by inconsistent formatting is a large part of our decisions to utilize only 'text' files (as defined above). To facilitate the printing our work and research stored in text files to different presentation formating (e.g., web, PDF, and even *.docx), we need a single formatting language.
 
 
 ## system components
@@ -70,6 +70,15 @@ As research teams began to grow in size, and as offices working with people usin
 
 
 ### GIS integration
+
+
+Leaflet
+
+Open Street Maps
+
+
+
+
 
 greater distinction between: results publication (capable of user interaction) & fuctional for analytics
     * solution: workflow
