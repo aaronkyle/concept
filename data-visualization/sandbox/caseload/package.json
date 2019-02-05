@@ -1,0 +1,9 @@
+{
+  "name": "cao-caseload-growth-by-year",
+  "main": "cao-caseload-growth-by-year.js",
+  "version": "344.0.0",
+  "author": {
+    "name": "Aaron Kyle Dennis",
+    "url": "https://beta.observablehq.com/@aaronkyle"
+  }
+}
