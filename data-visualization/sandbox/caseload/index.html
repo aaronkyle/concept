@@ -8,6 +8,14 @@
 import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
 import notebook from "./cao-caseload-growth-by-year.js";
 
-Runtime.load(notebook, Inspector.into(document.body));
+Runtime.load(notebook, (cell) => {
+  if (cell.name === "chart") {
+    return {
+      fulfilled: (value) => {
+        document.getElementById("chart").appendChild(value);
+      }
+    };
+  }
+});
 
 </script>
