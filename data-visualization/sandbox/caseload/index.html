@@ -4,23 +4,25 @@
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
 <body>
  
-    <div id="caseload"></div>
+<div id="year"></div>
+<div id="chart"></div>
 <script type="module">
 
   // NOTEBOOK CONFIGURATION
 import notebook from "./cao-caseload-growth-by-year.js";  
 import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
 
-  Runtime.load(notebook, (variable) => {
-  if (variable.name === "year") return {
-    fulfilled: (value) => document.body.innerHTML = value
-  };        
-});
- 
- Runtime.load(notebook, (variable) => {
-  if (variable.name === "chart") return {
-    fulfilled: (value) => document.body.innerHTML = value
-  };        
-});
+const renders = {
+        "viewof year": "#year",
+        "chart": "#chart",
+      };
+      Runtime.load(notebook, (variable) => {
+        const selector = renders[variable.name];
+        if (selector) {
+          return new Inspector(document.querySelector(selector));
+        } else {
+          return true;
+        }
+      });
  
 </script>
