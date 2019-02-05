@@ -3,21 +3,37 @@
 <title>CAO Caseload Growth by Year</title>
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
 <body>
-<script type="module">
  
-    const renders = {
-    "viewof year": "#viewof-year",
-     "chart": "#chart",
+    <div id="caseload"></div>
+<script type="module">
+
+  // NOTEBOOK CONFIGURATION
+import notebook from "./cao-caseload-growth-by-year.js";  
+
+  // BOILERPLATE
+  const target = document.querySelector("#caseload");
+  const renders = {
+    "viewof year": "year",
+    "chart": "div.fullwidth",
   };
 
-  import notebook from "./cao-caseload-growth-by-year.js";  
-import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
-for (let i in renders)
-    renders[i] = document.querySelector(renders[i]);
-
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
+  for (let i in renders) {
+    let s = renders[i], a = s.match(/^\w+/);
+    if (a) {
+      renders[i] = document.createElement(a[0]);
+      target.appendChild(renders[i]);
+      if (a = s.match(/\.(\w+)$/))
+        renders[i].className = a[1]; 
+    }
+    else
+      renders[i] = document.querySelector(renders[i]);
+  }
   Runtime.load(notebook, (variable) => {
-    if (renders[variable.name])
+    if (renders[variable.name]) {
       return new Inspector(renders[variable.name]);
+    } else {
+      // return true; // uncomment to run hidden cells
+    }
   });
-
 </script>
