@@ -1,0 +1,9 @@
+{
+  "name": "cao-case-handling-tree-o-matic",
+  "main": "cao-case-handling-tree-o-matic.js",
+  "version": "401.0.0",
+  "author": {
+    "name": "Aaron Kyle Dennis",
+    "url": "https://beta.observablehq.com/@aaronkyle"
+  }
+}
