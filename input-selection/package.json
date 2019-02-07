@@ -1,0 +1,9 @@
+{
+  "name": "selectize-js",
+  "main": "selectize-js.js",
+  "version": "115.0.0",
+  "author": {
+    "name": "Aaron Kyle Dennis",
+    "url": "https://beta.observablehq.com/@aaronkyle"
+  }
+}
