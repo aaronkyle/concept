@@ -1,0 +1,9 @@
+{
+  "name": "svg-faucet-with-d3-v4",
+  "main": "svg-faucet-with-d3-v4.js",
+  "version": "31.0.0",
+  "author": {
+    "name": "Aaron Kyle Dennis",
+    "url": "https://beta.observablehq.com/@aaronkyle"
+  }
+}
