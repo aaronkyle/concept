@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>CAO Caseload & Budget, 2000 - 2017 <br/> as C3.js Dual-Axis Bar and Line Chart</title>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
+<body>
+<script type="module">
+
+import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
+import notebook from "./cao-caseload-budget-2000-2017.js";
+
+Runtime.load(notebook, Inspector.into(document.body));
+
+</script>
