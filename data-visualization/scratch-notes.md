@@ -286,3 +286,7 @@ Command to convert to a topojson format, preserving Name and Type and are also s
 * [Arc Diagram](http://bl.ocks.org/mayblue9/dcc49ef6e3888f37f755177c4a248f2c)
     - [Arc diagram](https://www.d3-graph-gallery.com/arc.html)
 * [Most basic arc diagram in d3.js](https://www.d3-graph-gallery.com/graph/arc_basic.html)
+
+* [Storytelling with Chord Diagram](http://bl.ocks.org/nbremer/94db779237655907b907)
+* [Arc diagram](https://www.d3-graph-gallery.com/arc.html)
+* [Clean arc diagram template for d3.js](https://www.d3-graph-gallery.com/graph/arc_template.html)
