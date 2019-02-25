@@ -43,6 +43,14 @@ var circle = svgContainer.append("line")
 
 ---
 
+
+<svg width="50" height="50">
+  <polygon fill="yellow" stroke="blue" stroke-width="2"
+   points="05,30
+           15,10
+           25,30" />
+</svg>
+
 * [TAP & Tape, the awesome way to test JavaScript](https://macwright.org/2014/03/11/tape-is-cool.html)
 
 
