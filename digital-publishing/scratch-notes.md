@@ -166,3 +166,13 @@ That’s certainly not the implication of this project. Metadata adds another di
 
 
 [Good example of scrolling ToC](https://advanced-js.github.io/syllabus/)
+
+
+---
+
+### Slides & Presentations
+
+* [reveal.js/](https://github.com/hakimel/reveal.js/)
+* [d3-presentation](https://github.com/toonketels/d3-presentation)
+* [decktape](https://github.com/astefanutti/decktape)
+* [Export Slides to PDF](https://github.com/yihui/xaringan/wiki/Export-Slides-to-PDF)
