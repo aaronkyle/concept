@@ -285,5 +285,4 @@ Command to convert to a topojson format, preserving Name and Type and are also s
 
 * [Arc Diagram](http://bl.ocks.org/mayblue9/dcc49ef6e3888f37f755177c4a248f2c)
     - [Arc diagram](https://www.d3-graph-gallery.com/arc.html)
-* [Arc diagram](https://bl.ocks.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c)
 * [Most basic arc diagram in d3.js](https://www.d3-graph-gallery.com/graph/arc_basic.html)
