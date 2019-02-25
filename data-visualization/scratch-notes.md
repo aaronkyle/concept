@@ -1,4 +1,47 @@
+## SVG
 
+* [SVG Basic Shapes and D3.js](https://www.dashingd3js.com/svg-basic-shapes-and-d3js)
+
+<svg width="50" height="50">
+<circle cx="25" cy="25" r="25" fill="purple" />
+</svg>
+
+<script>
+//Make an SVG Container
+ var svgContainer = d3.select("body").append("svg")
+                                     .attr("width", 200)
+                                     .attr("height", 200);
+ 
+ //Draw the Circle
+ var circle = svgContainer.append("circle")
+                          .attr("cx", 30)
+                          .attr("cy", 30)
+                        .attr("r", 20);
+
+</script>
+
+<svg width="50" height="50">
+  <line x1="5" y1="5" x2="40" y2="40" stroke="gray" stroke-width="5"  />
+</svg>
+
+
+<script>
+//Make an SVG Container
+var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 200)
+                                    .attr("height", 200);
+
+//Draw the line
+var circle = svgContainer.append("line")
+                         .attr("x1", 5)
+                         .attr("y1", 5)
+                         .attr("x2", 50)
+                         .attr("y2", 50)
+                         .attr("stroke-width", 2)
+                         .attr("stroke", "black");
+</script>
+
+---
 
 * [TAP & Tape, the awesome way to test JavaScript](https://macwright.org/2014/03/11/tape-is-cool.html)
 
