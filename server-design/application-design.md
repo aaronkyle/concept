@@ -73,6 +73,17 @@ We plan to make a first full release of django CMS Rest API alongside django CMS
 
 * [Drupal Tutorials: What is Headless Drupal?](https://www.ostraining.com/blog/drupal/what-is-headless-drupal/)
 
+* [Drupal: public function Auth::authenticate](https://api.drupal.org/api/drupal/core%21modules%21locale%21tests%21modules%21early_translation_test%21src%21Auth.php/function/Auth%3A%3Aauthenticate/8.6.x)
+
+* [Joomla! JDispatcher/trigger](https://docs.joomla.org/API16:JDispatcher/trigger)
+
+---
+
+
+[Ghost: Webhooks](https://docs.ghost.org/api/webhooks/)
+
+* [Using Django: Google APIs Client Library for Python](https://developers.google.com/api-client-library/python/guide/django)
+
 
 
 ## User Permissions
