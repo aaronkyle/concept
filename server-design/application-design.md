@@ -77,14 +77,23 @@ We plan to make a first full release of django CMS Rest API alongside django CMS
 
 * [Joomla! JDispatcher/trigger](https://docs.joomla.org/API16:JDispatcher/trigger)
 
+
+* [Using Django: Google APIs Client Library for Python](https://developers.google.com/api-client-library/python/guide/django)
+* [Using the Django authentication system¶](https://docs.djangoproject.com/en/2.1/topics/auth/default/)
+
+* [Customizing authentication in Django](https://docs.djangoproject.com/en/2.1/topics/auth/customizing/)
+
+
 ---
 
 
 [Ghost: Webhooks](https://docs.ghost.org/api/webhooks/)
 
-* [Using Django: Google APIs Client Library for Python](https://developers.google.com/api-client-library/python/guide/django)
+[Ghost: Overview - Get started querying the Ghost API.](https://api.ghost.org/v0.1/docs)
 
+[API Reference](https://docs.ghost.org/api/)
 
+[User Authentication](https://api.ghost.org/docs/user-authentication)
 
 ## User Permissions
 
