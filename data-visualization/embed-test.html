@@ -20,14 +20,15 @@
         "viewof value": "#labels",
         "output": "#output",
       };
-      Runtime.load(notebook, (variable) => {
-        const selector = renders[variable.name];
-        if (selector) {
-          return new Inspector(document.querySelector(selector));
-        } else {
-          return true;
-        }
-      });
+  
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
     </script>
   </body>
 </html>
