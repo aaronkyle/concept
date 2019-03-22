@@ -14,14 +14,13 @@
     </div>
 
     <script type="module">
-      import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.0.1?module";
+      import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
       import notebook from "https://observablehq.com/d/87de48220ae3faec.js";
       const renders = {
         "viewof value": "#labels",
         "output": "#output",
       };
   
-  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
   for (let i in renders)
     renders[i] = document.querySelector(renders[i]);
 
