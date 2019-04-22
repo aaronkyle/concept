@@ -1,0 +1,48 @@
+
+<html>
+    <body></body>
+<script type="module">
+  // Load the Observable runtime and inspector.
+    import {Runtime, Inspector} from "https://unpkg.com/@observablehq/notebook-runtime?module";
+
+  // Your notebook, compiled as an ES module.
+    import notebook from "https://api.observablehq.com/@greencracker/treemap.js";
+
+
+  // Load the notebook, observing its cells with a default Inspector
+  // that simply renders the value of each cell into the provided DOM node.
+    Runtime.load(notebook, Inspector.into(document.body));
+
+
+    Runtime.load(notebook, (cell) => {
+      return {
+        pending: () => console.log(`${cell.name} is running...`),
+        fulfilled: (value) => console.log(cell.name, value),
+        rejected: (error) => console.error(error)
+      };
+    });
+
+    Runtime.load(notebook, (cell) => {
+      if (cell.name === "canvas") {
+        return {fulfilled: (value) => $("#canvas").append(value)};
+      } else {
+        // Force evaluation of all the other cells in the notebook.
+        return true;
+      }
+    });
+
+    Runtime.load(notebook, (cell) => {
+      var div = document.createElement("div");
+      document.body.appendChild(div);
+      return new Inspector(div);
+    });
+
+
+
+
+
+
+</script>
+
+
+</html>
