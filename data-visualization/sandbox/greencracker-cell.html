@@ -1,0 +1,32 @@
+<html>
+    <body>
+    
+    <div class="wrapper">
+      <div class="title">TEST</div>
+      <div id="output"></div>
+    </div>
+   
+    </body>
+    
+    <script type="module">
+       // Load the Observable runtime and inspector
+      import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
+          //  Load your notebook, compiled as an ES module.
+      import notebook from "https://api.observablehq.com/@greencracker/treemap.js";
+      const renders = {
+        "chart": "#output",
+      };
+  
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+    </script>
+    
+   
+
+
+</html>
