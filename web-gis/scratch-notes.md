@@ -110,3 +110,7 @@ use ogr2ogr to convert shape files to .json
 Command to convert to a topojson format, preserving Name and Type and are also simplified with the -s 10e-9 precision threshold for Visvalingam simplification, in steradians setting.
 
 ☺ topojson -o public/topo/USA_adm1.json -p NAME_1=country -p TYPE_1 -s 10e-9 /tmp/USA_adm1.json
+
+
+* [GeoPython](https://github.com/bentrm/geopython/tree/8e52062d9545f4b7c1f04a3516354a5a9155e31f)
+* []()
