@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Embedded Observable notebook</title>
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">TEST</div>
+      <div id="labels"></div>
+    </div>
+
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from "https://api.observablehq.com/d/d1345cfb039d5b19.js";
+      const renders = {
+        "viewof value": "#labels",
+      };
+  
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+    </script>
+  </body>
+</html>
