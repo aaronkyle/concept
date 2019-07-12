@@ -15,17 +15,12 @@
     <script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
       import notebook from "https://api.observablehq.com/d/d1345cfb039d5b19.js?v=3";
-      const renders = {
-        "viewof value": "#labels",
-      };
-  
-  for (let i in renders)
-    renders[i] = document.querySelector(renders[i]);
-
-  Runtime.load(notebook, (variable) => {
-    if (renders[variable.name])
-      return new Inspector(renders[variable.name]);
-  });
+      
+      new Runtime().module(notebook, name => {
+  if (name === "viewof value") {
+    return new Inspector(document.querySelector("#labels"));
+  }
+});
     </script>
   </body>
 </html>
