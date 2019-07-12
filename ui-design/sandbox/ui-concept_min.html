@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+       <div id="labels-input"></div>
+
+<div class = "container-fluid">
+
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-render-tab" data-toggle="tab" href="#nav-render" role="tab" aria-controls="nav-render" aria-selected="true">render</a>
+        <a class="nav-item nav-link" id="nav-edit-tab" data-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-edit" aria-selected="false">edit</a>
+      </div>
+
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-render" role="tabpanel" aria-labelledby="nav-render-tab">...
+      <div class="row">
+        <div class="col-6"><div id="case-name"></div></div>
+        <div class="col-6"><div id="project-number-cao"></div></div>
+        <div class="col-6"><div id="complaint-received"></div></div>
+        <div class="col-6"><div id="complaint-received-fy"></div></div>
+      </div>
+      </div>
+      <div class="tab-pane fade" id="nav-edit" role="tabpanel" aria-labelledby="nav-edit-tab">
+        ...
+        <div class="row">
+          <div class="col-6"><div id="case-name-input"></div></div>
+          <div class="col-6"><div id="project-number-cao-input"></div></div>
+          <div class="col-6"><div id="complaint-received-input"></div></div>
+          <div class="col-6"><div id="complaint-received-fy-input"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import notebook from "https://api.observablehq.com/d/d1345cfb039d5b19.js?v=3";
+    const renders = {
+      "viewof value": "#labels-input",
+
+      "viewof case_name": "#case-name-input",
+      "viewof project_number_cao": "#project-number-cao-input",
+      "viewof complaint_received": "#complaint-received-input",
+      "viewof complaint_received_fy": "#complaint-received-fy-input",
+      "viewof complaint_security_confidentiality": "#confidential-case-input",
+
+      "case_name_rendered": "#case-name",
+      "project_number_cao_rendered": "#project-number-cao",
+      "complaint_received_rendered": "#complaint-received",
+      "complaint_received_fy_rendered": "#complaint-received-fy",
+      "complaint_security_confidentiality_rendered": "#confidential-case",
+
+    };
+
+    for (let i in renders)
+      renders[i] = document.querySelector(renders[i]);
+
+    const runtime = new Runtime();
+    const main = runtime.module(notebook, name => {
+      if (renders[name]) {
+        return new Inspector(renders[name]);
+      }
+    });
+
+    </script>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
