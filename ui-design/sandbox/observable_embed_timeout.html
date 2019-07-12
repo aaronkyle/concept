@@ -14,18 +14,20 @@
 
     <script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-      import notebook from "https://api.observablehq.com/d/d1345cfb039d5b19.js?v=3";
-      const renders = {
-        "viewof value": "#labels",
-      };
-  
-  for (let i in renders)
-    renders[i] = document.querySelector(renders[i]);
+import notebook from "https://api.observablehq.com/d/d1345cfb039d5b19.js?v=3";
+const renders = {
+  "viewof value": "#labels",
+};
 
-  Runtime.load(notebook, (variable) => {
-    if (renders[variable.name])
-      return new Inspector(renders[variable.name]);
-  });
+for (let i in renders)
+  renders[i] = document.querySelector(renders[i]);
+
+const runtime = new Runtime();
+const main = runtime.module(define, name => {
+  if (renders[name]) {
+    return new Inspector(renders[name]);
+  }
+});
     </script>
   </body>
 </html>
