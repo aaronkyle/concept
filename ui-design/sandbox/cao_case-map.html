@@ -398,8 +398,8 @@ h1 {
     </div>
 
     <script type="module">
-      import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
-      import notebook from "https://apiobservablehq.com/d/cao-caseload-growth-by-year.js";
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from "https://api.observablehq.com/d/cao-caseload-growth-by-year.js?v=3";
       const renders = {
         "viewof year": "#labels",
         "chart": "#output",
