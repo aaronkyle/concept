@@ -1,0 +1,1225 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+  <title>CAO</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- Include Bootstrap Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- DataTables CSS-->
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+
+
+  <!-- D3.js -->
+  <script src='https://d3js.org/d3.v5.min.js'></script>
+
+  <!-- Custom styles for this template -->
+  <style>
+    /* Move down content because we have a fixed navbar that is 3.5rem tall */
+
+    body {
+      padding-top: 3.5rem;
+    }
+  </style>
+
+  <style>
+    /* Gothamy font stack, rendering Gothan in all browsers, */
+
+    @font-face {
+      font-family: 'Gothamy';
+      src: local('Gotham Book'), local('Gotham-Book');
+      font-weight: normal;
+      font-style: normal;
+      font-variant: normal;
+    }
+
+    @font-face {
+      font-family: 'Gothamy';
+      src: local('Gotham Bold'), local('Gotham-Bold');
+      font-weight: bold;
+      font-style: normal;
+      font-variant: normal;
+    }
+
+    @font-face {
+      font-family: 'Gothamy';
+      src: local('Gotham Book Italic'), local('Gotham-BookItalic');
+      font-weight: normal;
+      font-style: italic;
+      font-variant: normal;
+    }
+
+    @font-face {
+      font-family: 'Gothamy';
+      src: local('Gotham Bold Italic'), local('Gotham-BoldItalic');
+      font-weight: bold;
+      font-style: italic;
+      font-variant: normal;
+    }
+
+    body {
+      font-family: Gothamy, Gotham-Book, Arial, sans-serif;
+    }
+  </style>
+  <style>
+    /* logo offsets */
+
+    .logo {
+      max-width: 120px;
+      margin-left: 2px; /* -8px */
+      margin-right: 20px;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-family: 'Lato', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+
+  <!--
+<style>
+@font-face {
+  font-family: GothamBold;
+  src: url('../fonts/Gotham/GothamHTF-Bold.otf');
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url('../fonts/Gotham/GothamHTF-Book.otf');
+}
+
+@font-face {
+  font-family: Gotham-HTF-Thin;
+  src: url('../fonts/Gotham/GothamHTF-ThinItalic.otf');
+}
+
+@font-face {
+  font-family: Gotham-Book-Italic;
+  src: url('../fonts/Gotham/GothamHTF-BookItalic.otf');
+}
+
+@font-face {
+  font-family: Gotham-Light-Italic;
+  src: url('../fonts/Gotham/GothamHTF-LightItalic.otf');
+}
+
+@font-face {
+  font-family: Gotham-Book;
+  src: url('../fonts/Gotham/GothamHTF-Book.otf');
+}
+
+@font-face {
+  font-family: Gotham-Med-Italic;
+  src: url('../fonts/Gotham/GothaHTFMedIta');
+}
+
+@font-face {
+  font-family: Gotham-Bold-Italic;
+  src: url('../fonts/Gotham/GothamHTF-BoldItalic.otf');
+}
+    </style>
+
+<style>
+body {
+  font-family: Gotham;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 27px;
+  color: #231F20;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Gotham;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 108px;
+  margin: 90px 0 28px 0;
+  line-height: 0.9;
+  text-align: center;
+  color: #658FCA;
+}
+
+@media only screen and (max-width:600px) {
+  h1 {
+    font-size: 50px;
+    margin: 70px 0 10px 0;
+    line-height: 0.9;
+    text-align: center;
+    color: #658FCA;
+  }
+    </style>
+-->
+
+  <style>
+    .navbar-green .navbar-brand {
+      color: rgba(40, 167, 69, 1.0)
+    }
+
+    .navbar-green .navbar-brand:focus,
+    .navbar-light .navbar-brand:hover {
+      color: rgba(40, 167, 69, 1.0)
+    }
+
+    .navbar-green .navbar-nav .nav-link {
+      color: rgba(40, 167, 69, 0.6)
+    }
+
+    .navbar-green .navbar-nav .nav-link:focus,
+    .navbar-green .navbar-nav .nav-link:hover {
+      color: rgba(40, 167, 69, 0.8)
+    }
+
+    .navbar-green .navbar-nav .nav-link.disabled {
+      color: rgba(40, 167, 69, 0.4)
+    }
+
+    .navbar-green .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-green .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+      color: rgba(40, 167, 69, 1.0)
+    }
+
+    .navbar-green .navbar-toggler {
+      color: rgba(40, 167, 69, 0.6);
+      border-color: rgba(40, 167, 69, 0.2)
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(40, 167, 69, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+    }
+
+    .navbar-green .navbar-text {
+      color: rgba(40, 167, 69, 0.6)
+    }
+
+    .navbar-green .navbar-text a {
+      color: rgba(40, 167, 69, 1.0)
+    }
+
+    .navbar-green .navbar-text a:focus,
+    .navbar-green .navbar-text a:hover {
+      color: rgba(0, 114, 17, 1.0)
+    }
+  </style>
+
+  <style>
+    /* centered jumbotron with transparent overlay*/
+
+    #centered-jumbotron {
+      display: flex;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://cao-ghost.categori.se/content/images/size/w1000/2019/01/test-banner-cameroon.accb8271.jpg');
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+  </style>
+
+  <style>
+    /* centered jumbotron with transparent overlay*/
+
+    #new-jumbotron {
+      display: flex;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://dev.cao-ombudsman.org/static/media/hpg_hww.5d3b3447.jpg');
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+  </style>
+
+  <style>
+    /* jumbotron text color*/
+
+    .jumbotron h1 {
+      color: #fff;
+      font-size: 3em;
+    }
+
+    .jumbotron p {
+      color: #fff;
+    }
+  </style>
+
+  <style>
+    /* margin on button */
+
+    .btn-space {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <style>
+    /* green button*/
+
+    .btn-green {
+      color: #fff;
+      background-color: #28A745;
+      border-color: #28A745
+    }
+
+    .btn-green:hover {
+      color: #fff;
+      background-color: #007211;
+      border-color: #007211
+    }
+
+    .btn-green.focus,
+    .btn-primary:focus {
+      box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    }
+
+    .btn-green.disabled,
+    .btn-primary:disabled {
+      color: #fff;
+      background-color: #28A745;
+      border-color: #28A745
+    }
+
+    .btn-green:not(:disabled):not(.disabled).active,
+    .btn-green:not(:disabled):not(.disabled):active,
+    .show>.btn-green.dropdown-toggle {
+      color: #fff;
+      background-color: #0062cc;
+      border-color: #005cbf
+    }
+
+    .btn-green:not(:disabled):not(.disabled).active:focus,
+    .btn-green:not(:disabled):not(.disabled):active:focus,
+    .show>.btn-green.dropdown-toggle:focus {
+      box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    }
+  </style>
+  <style>
+    /* h2 padding*/
+
+    h2 {
+      padding-top: 20px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a href="case-overview.html"><img class="logo" src="https://cao-ar17.org/img/cao-logo-300.png" alt="CAO-CMS" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="case-overview" id="cases" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Case Processing</a>
+          <div class="dropdown-menu" aria-labelledby="Case Processing Options">
+            <a class="dropdown-item" href="intake-dashboard.html">Intake</a>
+            <a class="dropdown-item" href="eligibility-dashboard.html">Eligibility</a>
+            <a class="dropdown-item" href="assessment-dashboard.html">Assessment</a>
+            <a class="dropdown-item" href="ombudsman-dashboard.html">Dispute Resolution</a>
+            <a class="dropdown-item" href="compliance-dashboard.html">Compliance</a>
+            <a class="dropdown-item" href="closure-dashboard.html">Closed Cases</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="data-reports.html" id="cases" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data & Reporting</a>
+          <div class="dropdown-menu" aria-labelledby="Data & Reporting">
+            <a class="dropdown-item" href="data.html"><i class="far fa-save"></i> Data</a>
+            <a class="dropdown-item" href="analytics.html"><i class="fas fa-chart-pie"></i></i><i class="far fa-analytics"></i> Analytics</a>
+            <a class="dropdown-item" href="reports.html"><i class="fas fa-print"></i> Reports</a>
+          </div>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" placeholder="Enter search terms..." aria-label="search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+      </form>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-globe"></i> </button>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-bars"></i></button>
+
+
+    </div>
+  </nav>
+    
+        
+    <div class="container">
+
+    <p>&nbsp;</p>
+
+<h2>CAO Reports</h2>
+
+<p>CODE REPORT</p>
+
+    <div class="wrapper">
+      <div class="title">TEST</div>
+      <div id="labels"></div>
+      <div id="output"></div>
+    </div>
+
+    <script type="module">
+      import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
+      import notebook from "https://apiobservablehq.com/d/cao-caseload-growth-by-year.js";
+      const renders = {
+        "viewof year": "#labels",
+        "chart": "#output",
+      };
+  
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+    </script>
+    
+       
+        
+        </div class="container">
+
+
+  <!-- Bootstrap core JavaScript
+
+
+<!-- Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <!-- DataTables js -->
+
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    
+    
+  <!-- JQuery to make parent navigation links clickable
+    https://codepen.io/bsngr/pen/frDqh
+    ==================================================
+  -->
+
+  <script>
+    $('.navbar .dropdown > a').click(function() {
+      if (!$(this).hasClass("parent-clicked")) {
+        $(this).addClass("parent-clicked");
+      } else {
+        location.href = this.href;
+      }
+    });
+  </script>
+
+    
+    
+  <script>
+{
+  var current_date = new Date().toLocaleString(undefined, {timeZone: "utc", month: "long", day: "numeric", year: "numeric"});
+  
+  document.getElementById("current_date").innerHTML = current_date;
+  
+}
+  </script>
+
+
+
+<script>
+{
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var appraisals_active = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_status == "Active"});
+document.getElementById("appraisals_active").innerHTML = appraisals_active.length;
+      
+var appraisals_open_average = d3.mean(appraisals_active, function(d) { return d.compliance_appraisal_duration; });
+    document.getElementById("appraisals_open_average").innerHTML = Math.round(appraisals_open_average*100)/100;
+    
+var investigations_active = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_status == "Active"});
+document.getElementById("investigations_active").innerHTML = investigations_active.length;
+
+var investigations_open_average = d3.mean(investigations_active, function(d) { return d.compliance_investigation_duration; });
+    document.getElementById("investigations_open_average").innerHTML = Math.round(investigations_open_average*100)/100;
+    
+var monitoring_active = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_status == "Active"});
+document.getElementById("monitoring_active").innerHTML = monitoring_active.length;
+    
+var monitoring_open_average = d3.mean(monitoring_active, function(d) { return d.compliance_monitoring_duration; });
+    document.getElementById("monitoring_open_average").innerHTML = Math.round(monitoring_open_average*100)/100;
+}
+);
+}
+</script>
+
+    
+    <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var appraisals_active = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_status == "Active"})
+    
+var appraisals_active_table = appraisals_active.map(({project_number, client_cao, cao_short_name, project_location_cao, complaint_received, compliance_entry, compliance_appraisal_duration, compliance_appraisal_due_modification, specialist_compliance_appraisal, compliance_status_notes_internal, compliance_budget_code}) => ({
+  "Project ID" : project_number,
+  "Client Name" : client_cao,
+  "Complaint Name" : cao_short_name,
+  "Location" : project_location_cao,
+  "Date Filed with CAO" : complaint_received,
+  "Date Transferred to Compliance" : compliance_entry,
+  "Days at Compliance Stage" : compliance_appraisal_duration,
+  "Target Completion Date" : compliance_appraisal_due_modification,
+  "Assigned" : specialist_compliance_appraisal,
+  "Comments" : compliance_status_notes_internal,
+  "WBS elements(TRS, Travel, STCs)" : compliance_budget_code,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("active_appraisals");
+   	var headerNames = Object.getOwnPropertyNames(appraisals_active_table[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < appraisals_active_table.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in appraisals_active_table[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = appraisals_active_table[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("active_appraisals");
+    
+});
+
+
+</script>
+    
+
+<script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var investigations_active = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_status == "Active"})
+
+var investigations_active_table = investigations_active.map(({project_number, client_cao, cao_short_name, project_country_cao, complaint_received, compliance_entry, compliance_investigation_duration, compliance_investigation_due_modification, specialist_compliance_investigation, compliance_status_notes_internal, compliance_budget_code}) => ({
+  "Project ID" : project_number,
+  "Client Name" : client_cao,
+  "Complaint Name" : cao_short_name,
+  "Location" : project_country_cao,
+  "Date Filed with CAO" : complaint_received,
+  "Date Transferred to Compliance" : compliance_entry,
+  "Days at Compliance Stage" : compliance_investigation_duration,
+  "Target Completion Date" : compliance_investigation_due_modification,
+  "Assigned" : specialist_compliance_investigation,
+  "Comments" : compliance_status_notes_internal,
+  "WBS elements(TRS, Travel, STCs)" : compliance_budget_code,
+}))
+
+function drawTable(tbody) {
+    var tbody = document.getElementById("active_investigations");
+   	var headerNames = Object.getOwnPropertyNames(investigations_active_table[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < investigations_active_table.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in investigations_active_table[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = investigations_active_table[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("active_investigations");
+
+});
+
+
+</script>
+
+    <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var monitoring_active = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_status == "Active"})
+    
+var monitoring_active_table = monitoring_active.map(({project_number, client_cao, cao_short_name, project_location_cao, complaint_received, compliance_entry, compliance_monitoring_duration, compliance_monitoring_current_due_modification, specialist_compliance_monitoring, compliance_status_notes_internal, compliance_budget_code}) => ({
+  "Project ID" : project_number,
+  "Client Name" : client_cao,
+  "Complaint Name" : cao_short_name,
+  "Location" : project_location_cao,
+  "Date Filed with CAO" : complaint_received,
+  "Date Transferred to Compliance" : compliance_entry,
+  "Days at Compliance Stage" : compliance_monitoring_duration,
+  "Target Completion Date" : compliance_monitoring_current_due_modification,
+  "Assigned" : specialist_compliance_monitoring,
+  "Comments" : compliance_status_notes_internal,
+  "WBS elements(TRS, Travel, STCs)" : compliance_budget_code,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("active_monitoring");
+   	var headerNames = Object.getOwnPropertyNames(monitoring_active_table[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < monitoring_active_table.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in monitoring_active_table[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = monitoring_active_table[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("active_monitoring");
+    
+});
+
+
+</script>
+
+    
+        <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var compliance_closed = case_data.filter(function(case_data) {
+  return case_data.compliance_status == "Closed at Appraisal" ||
+         case_data.compliance_status == "Closed at Investigation" ||
+         case_data.compliance_status == "Closed at Monitoring"
+
+})
+    
+
+var compliance_closed_fy19 = compliance_closed.filter(function(compliance_closed) {
+  return compliance_closed.compliance_closure_fy == "FY19"
+})
+    
+var compliance_closed_fy19_table = compliance_closed_fy19.map(({project_number, client_cao, cao_short_name, project_location_cao, complaint_received, compliance_entry, compliance_duration, compliance_closure, specialist_compliance_terminal, compliance_status_notes_internal}) => ({
+  "Project ID" : project_number,
+  "Client Name" : client_cao,
+  "Complaint Name" : cao_short_name,
+  "Location" : project_location_cao,
+  "Date Filed with CAO" : complaint_received,
+  "Date Transferred to Compliance" : compliance_entry,
+  "Days in Compliance" : compliance_duration,
+  "Date Closed" : compliance_closure,
+  "Specialist" : specialist_compliance_terminal,
+  "Comments" : compliance_status_notes_internal,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("compliance_closed_fy19");
+   	var headerNames = Object.getOwnPropertyNames(compliance_closed_fy19_table[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < compliance_closed_fy19_table.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in compliance_closed_fy19_table[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = compliance_closed_fy19_table[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("compliance_closed_fy19");
+    
+});
+
+
+</script>
+    
+    
+       <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var appraisals_active = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_status == "Active"})
+
+var appraisals_active_due = appraisals_active.map(function(item)
+{
+    item.compliance_appraisal_overdue = item['compliance_appraisal_duration']>=45?"YES":"NO";
+
+    return item;
+})
+var appraisals_due = appraisals_active_due.filter(function(appraisals_active_due) {
+  return appraisals_active_due.compliance_appraisal_overdue == "YES"})
+
+var appraisals_due_table_data = appraisals_due.map(({cao_short_name, compliance_appraisal_duration, specialist_compliance_appraisal, compliance_status_notes_internal}) => ({
+  "Appraisals Open > Long Term Ave. (45d.)" : cao_short_name,
+  "Days Under Appraisal" : compliance_appraisal_duration,
+  "Assigned" : specialist_compliance_appraisal,
+  "Comments" : compliance_status_notes_internal,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("appraisals_due");
+   	var headerNames = Object.getOwnPropertyNames(appraisals_due_table_data[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < appraisals_due_table_data.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in appraisals_due_table_data[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = appraisals_due_table_data[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("appraisals_due");
+    
+});
+
+
+</script>
+
+    
+    <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var investigations_active = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_status == "Active"})
+
+var investigations_active_due = investigations_active.map(function(item)
+{
+    item.compliance_investigation_overdue = item['compliance_investigation_duration']>=350?"YES":"NO";
+
+    return item;
+})
+var investigations_due = investigations_active_due.filter(function(investigations_active_due) {
+  return investigations_active_due.compliance_investigation_overdue == "YES"})
+
+var investigations_due_table_data = investigations_due.map(({cao_short_name, compliance_investigation_duration, specialist_compliance_investigation, compliance_status_notes_internal}) => ({
+  "Investigations Open > Long Term Ave. (350d.)" : cao_short_name,
+  "Days Under Investigation" : compliance_investigation_duration,
+  "Assigned" : specialist_compliance_investigation,
+  "Comments" : compliance_status_notes_internal,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("investigations_due");
+   	var headerNames = Object.getOwnPropertyNames(investigations_due_table_data[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < investigations_due_table_data.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in investigations_due_table_data[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = investigations_due_table_data[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("investigations_due");
+    
+});
+
+
+</script>
+    
+    
+   <script>
+
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var monitoring_active = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_status == "Active"})
+
+var monitoring_active_due = monitoring_active.map(function(item)
+{
+    item.compliance_monitoring_overdue = item['compliance_monitoring_cycle_current_duration']>=350?"YES":"NO";
+
+    return item;
+})
+var monitoring_due = monitoring_active_due.filter(function(monitoring_active_due) {
+  return monitoring_active_due.compliance_monitoring_overdue == "YES"})
+
+var monitoring_due_table_data = monitoring_due.map(({cao_short_name, compliance_monitoring_current_due, specialist_compliance_monitoring, compliance_status_notes_internal}) => ({
+  "Monitoring report due next 60 days" : cao_short_name,
+  "Date Due" : compliance_monitoring_current_due,
+  "Assigned" : specialist_compliance_monitoring,
+  "Comments" : compliance_status_notes_internal,
+}))
+    
+function drawTable(tbody) {
+    var tbody = document.getElementById("monitoring_due");
+   	var headerNames = Object.getOwnPropertyNames(monitoring_due_table_data[0]);
+    var columnCount = headerNames.length;
+    //Add the header row.
+    var row = tbody.insertRow(-1);
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement("th");
+        headerCell.innerHTML = headerNames[i];
+        row.appendChild(headerCell);
+    }
+
+
+    // loop through data source
+    for (var i = 0; i < monitoring_due_table_data.length; i++) {
+        var tr = document.createElement("tr");
+        for(var colName in monitoring_due_table_data[i]) {
+            var td = document.createElement("td");
+            td.innerHTML = monitoring_due_table_data[i][colName];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
+drawTable("monitoring_due");
+    
+});
+
+
+</script>
+    
+
+<script>
+{
+var case_data = d3.csv(`https://s3.amazonaws.com/cao-compliance/CAO-data_master_print_2019_Feb-27.csv`).then(function(case_data) {
+
+var fy19_appraisals = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_complete_fy == "FY19"});
+document.getElementById("fy19_appraisal_count").innerHTML = Object.keys(fy19_appraisals).length;
+    
+var fy18_appraisals = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_complete_fy == "FY18"});
+document.getElementById("fy18_appraisal_count").innerHTML = Object.keys(fy18_appraisals).length;
+    
+var fy17_appraisals = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_complete_fy == "FY17"});
+document.getElementById("fy17_appraisal_count").innerHTML = Object.keys(fy17_appraisals).length;
+    
+var fy16_appraisals = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_complete_fy == "FY16"});
+document.getElementById("fy16_appraisal_count").innerHTML = Object.keys(fy16_appraisals).length;
+    
+var fy15_appraisals = case_data.filter(function(case_data) {
+  return case_data.compliance_appraisal_complete_fy == "FY15"});
+document.getElementById("fy15_appraisal_count").innerHTML = Object.keys(fy15_appraisals).length;
+
+    
+var fy19_appraisal_duration_average = d3.mean(fy19_appraisals, function(d) { return d.compliance_appraisal_duration; });
+  document.getElementById("fy19_appraisal_duration_average").innerHTML = Math.round(fy19_appraisal_duration_average);
+    
+var fy18_appraisal_duration_average = d3.mean(fy18_appraisals, function(d) { return d.compliance_appraisal_duration; });
+  document.getElementById("fy18_appraisal_duration_average").innerHTML = Math.round(fy18_appraisal_duration_average);
+
+var fy17_appraisal_duration_average = d3.mean(fy17_appraisals, function(d) { return d.compliance_appraisal_duration; });
+  document.getElementById("fy17_appraisal_duration_average").innerHTML = Math.round(fy17_appraisal_duration_average);
+
+var fy16_appraisal_duration_average = d3.mean(fy16_appraisals, function(d) { return d.compliance_appraisal_duration; });
+  document.getElementById("fy16_appraisal_duration_average").innerHTML = Math.round(fy16_appraisal_duration_average);
+
+var fy15_appraisal_duration_average = d3.mean(fy15_appraisals, function(d) { return d.compliance_appraisal_duration; });
+  document.getElementById("fy15_appraisal_duration_average").innerHTML = Math.round(fy15_appraisal_duration_average);
+
+
+    // NOTE: This is currently calculated from a value in the original Excel spreadsheet.  It should be converted to a value within JS.
+var fy19_appraisals_45_day = case_data.filter(function(case_data) {
+  return case_data.appraisal_completion_timing == "YesFY19"})
+    
+var fy18_appraisals_45_day = case_data.filter(function(case_data) {
+  return case_data.appraisal_completion_timing == "YesFY18"})
+
+var fy17_appraisals_45_day = case_data.filter(function(case_data) {
+  return case_data.appraisal_completion_timing == "YesFY17"})
+
+var fy16_appraisals_45_day = case_data.filter(function(case_data) {
+  return case_data.appraisal_completion_timing == "YesFY16"})
+
+var fy15_appraisals_45_day = case_data.filter(function(case_data) {
+  return case_data.appraisal_completion_timing == "YesFY15"})
+
+var fy19_appraisals_45_day_percent =  Object.keys(fy19_appraisals_45_day).length/Object.keys(fy19_appraisals).length;
+document.getElementById("fy19_appraisals_45_day_percent").innerHTML = Math.round(fy19_appraisals_45_day_percent*100*100)/100;
+
+var fy18_appraisals_45_day_percent =  Object.keys(fy18_appraisals_45_day).length/Object.keys(fy18_appraisals).length;
+document.getElementById("fy18_appraisals_45_day_percent").innerHTML = Math.round(fy18_appraisals_45_day_percent*100*100)/100;
+    
+var fy17_appraisals_45_day_percent =  Object.keys(fy17_appraisals_45_day).length/Object.keys(fy17_appraisals).length;
+document.getElementById("fy17_appraisals_45_day_percent").innerHTML = Math.round(fy17_appraisals_45_day_percent*100*100)/100;
+    
+var fy16_appraisals_45_day_percent =  Object.keys(fy16_appraisals_45_day).length/Object.keys(fy16_appraisals).length;
+document.getElementById("fy16_appraisals_45_day_percent").innerHTML = Math.round(fy16_appraisals_45_day_percent*100*100)/100;
+    
+var fy15_appraisals_45_day_percent =  Object.keys(fy15_appraisals_45_day).length/Object.keys(fy15_appraisals).length;
+document.getElementById("fy15_appraisals_45_day_percent").innerHTML = Math.round(fy15_appraisals_45_day_percent*100*100)/100;
+
+var fy19_appraisals_to_investigation = fy19_appraisals.filter(function(fy19_appraisals){ return fy19_appraisals.trigger_compliance_appraisal_to_investigation === "1" });
+var fy19_appraisals_to_investigation_percent = (Object.keys(fy19_appraisals_to_investigation).length)/Object.keys(fy19_appraisals).length;
+    document.getElementById("fy19_appraisals_to_investigation_percent").innerHTML = Math.round(fy19_appraisals_to_investigation_percent*100*100)/100;
+
+var fy19_appraisals_to_monitoring = fy19_appraisals.filter(function(fy18_appraisals){ return fy19_appraisals.trigger_compliance_appraisal_to_monitoring === "1" });
+var fy19_appraisals_to_monitoring_percent = (Object.keys(fy19_appraisals_to_monitoring).length)/Object.keys(fy19_appraisals).length;    document.getElementById("fy19_appraisals_to_monitoring_percent").innerHTML = Math.round(fy19_appraisals_to_monitoring_percent*100*100)/100;
+    
+var fy18_appraisals_to_investigation = fy18_appraisals.filter(function(fy18_appraisals){ return fy18_appraisals.trigger_compliance_appraisal_to_investigation === "1" });
+var fy18_appraisals_to_investigation_percent = (Object.keys(fy18_appraisals_to_investigation).length)/Object.keys(fy18_appraisals).length;
+    document.getElementById("fy18_appraisals_to_investigation_percent").innerHTML = Math.round(fy18_appraisals_to_investigation_percent*100*100)/100;
+
+var fy18_appraisals_to_monitoring = fy18_appraisals.filter(function(fy18_appraisals){ return fy18_appraisals.trigger_compliance_appraisal_to_monitoring === "1" });
+var fy18_appraisals_to_monitoring_percent = (Object.keys(fy18_appraisals_to_monitoring).length)/Object.keys(fy18_appraisals).length;    document.getElementById("fy18_appraisals_to_monitoring_percent").innerHTML = Math.round(fy18_appraisals_to_monitoring_percent*100*100)/100;
+    
+var fy17_appraisals_to_investigation = fy17_appraisals.filter(function(fy17_appraisals){ return fy17_appraisals.trigger_compliance_appraisal_to_investigation === "1" });
+var fy17_appraisals_to_investigation_percent = (Object.keys(fy17_appraisals_to_investigation).length)/Object.keys(fy17_appraisals).length;
+    document.getElementById("fy17_appraisals_to_investigation_percent").innerHTML = Math.round(fy17_appraisals_to_investigation_percent*100*100)/100;
+
+var fy17_appraisals_to_monitoring = fy17_appraisals.filter(function(fy17_appraisals){ return fy17_appraisals.trigger_compliance_appraisal_to_monitoring === "1" });
+var fy17_appraisals_to_monitoring_percent = (Object.keys(fy17_appraisals_to_monitoring).length)/Object.keys(fy17_appraisals).length;    document.getElementById("fy17_appraisals_to_monitoring_percent").innerHTML = Math.round(fy17_appraisals_to_monitoring_percent*100*100)/100;
+    
+var fy16_appraisals_to_investigation = fy16_appraisals.filter(function(fy16_appraisals){ return fy16_appraisals.trigger_compliance_appraisal_to_investigation === "1" });
+var fy16_appraisals_to_investigation_percent = (Object.keys(fy16_appraisals_to_investigation).length)/Object.keys(fy16_appraisals).length;
+    document.getElementById("fy16_appraisals_to_investigation_percent").innerHTML = Math.round(fy16_appraisals_to_investigation_percent*100*100)/100;
+
+var fy16_appraisals_to_monitoring = fy16_appraisals.filter(function(fy16_appraisals){ return fy16_appraisals.trigger_compliance_appraisal_to_monitoring === "1" });
+var fy16_appraisals_to_monitoring_percent = (Object.keys(fy16_appraisals_to_monitoring).length)/Object.keys(fy16_appraisals).length;    document.getElementById("fy16_appraisals_to_monitoring_percent").innerHTML = Math.round(fy16_appraisals_to_monitoring_percent*100*100)/100;
+    
+var fy15_appraisals_to_investigation = fy15_appraisals.filter(function(fy15_appraisals){ return fy15_appraisals.trigger_compliance_appraisal_to_investigation === "1" });
+var fy15_appraisals_to_investigation_percent = (Object.keys(fy15_appraisals_to_investigation).length)/Object.keys(fy15_appraisals).length;
+    document.getElementById("fy15_appraisals_to_investigation_percent").innerHTML = Math.round(fy15_appraisals_to_investigation_percent*100*100)/100;
+
+var fy15_appraisals_to_monitoring = fy15_appraisals.filter(function(fy15_appraisals){ return fy15_appraisals.trigger_compliance_appraisal_to_monitoring === "1" });
+  var fy15_appraisals_to_monitoring_percent = (Object.keys(fy15_appraisals_to_monitoring).length)/Object.keys(fy15_appraisals).length;  document.getElementById("fy15_appraisals_to_monitoring_percent").innerHTML = Math.round(fy15_appraisals_to_monitoring_percent*100*100)/100;
+      
+ var fy19_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY19"});
+// document.getElementById("fy19_investigation_count").innerHTML = Object.keys(fy19_investigations).length;
+ 
+var fy18_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY18"});
+// document.getElementById("fy18_investigation_count").innerHTML = Object.keys(fy18_investigations).length;
+
+var fy17_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY17"});
+// document.getElementById("fy17_investigation_count").innerHTML = Object.keys(fy17_investigations).length;
+    
+var fy16_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY16"});
+// document.getElementById("fy16_investigation_count").innerHTML = Object.keys(fy16_investigations).length;
+    
+var fy15_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY15"});
+// document.getElementById("fy15_investigation_count").innerHTML = Object.keys(fy15_investigations).length;
+    
+var fy14_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY14"});
+// document.getElementById("fy14_investigation_count").innerHTML = Object.keys(fy14_investigations).length;
+    
+var fy13_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY13"});
+// document.getElementById("fy13_investigation_count").innerHTML = Object.keys(fy13_investigations).length;
+
+var fy12_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY12"});
+// document.getElementById("fy12_investigation_count").innerHTML = Object.keys(fy12_investigations).length;
+    
+var fy11_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY11"});
+// document.getElementById("fy11_investigation_count").innerHTML = Object.keys(fy11_investigations).length;
+    
+var fy10_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY10"});
+// document.getElementById("fy10_investigation_count").innerHTML = Object.keys(fy10_investigations).length;
+    
+var fy09_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY09"});
+// document.getElementById("fy09_investigation_count").innerHTML = Object.keys(fy09_investigations).length;
+    
+var fy08_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY08"});
+// document.getElementById("fy08_investigation_count").innerHTML = Object.keys(fy08_investigations).length;
+    
+var fy07_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY07"});
+// document.getElementById("fy07_investigation_count").innerHTML = Object.keys(fy07_investigations).length;
+    
+var fy06_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY06"});
+// document.getElementById("fy06_investigation_count").innerHTML = Object.keys(fy06_investigations).length;
+    
+var fy05_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY05"});
+// document.getElementById("fy05_investigation_count").innerHTML = Object.keys(fy05_investigations).length;
+    
+var fy04_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY04"});
+// document.getElementById("fy04_investigation_count").innerHTML = Object.keys(fy04_investigations).length;
+
+var fy03_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY03"});
+// document.getElementById("fy03_investigation_count").innerHTML = Object.keys(fy03_investigations).length;
+    
+var fy02_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY02"});
+// document.getElementById("fy02_investigation_count").innerHTML = Object.keys(fy02_investigations).length;
+    
+var fy01_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY01"});
+// document.getElementById("fy01_investigation_count").innerHTML = Object.keys(fy01_investigations).length;
+    
+var fy00_investigations = case_data.filter(function(case_data) {
+  return case_data.compliance_investigation_public_fy == "FY00"});
+// document.getElementById("fy00_investigation_count").innerHTML = Object.keys(fy00_investigations).length;
+    
+  
+var fy19_investigation_reports = fy19_investigations.filter(function(fy19_investigations){
+    return fy19_investigations.merge_compliance_investigation === "Merged Lead" || fy19_investigations.merge_compliance_investigation === "Stand-Alone" });
+document.getElementById("fy19_investigation_reports_count").innerHTML = Object.keys(fy19_investigation_reports).length;
+    
+var fy18_investigation_reports = fy18_investigations.filter(function(fy18_investigations){
+    return fy18_investigations.merge_compliance_investigation === "Merged Lead" || fy18_investigations.merge_compliance_investigation === "Stand-Alone" });
+document.getElementById("fy18_investigation_reports_count").innerHTML = Object.keys(fy18_investigation_reports).length;
+
+var fy17_investigation_reports = fy17_investigations.filter(function(fy17_investigations){
+    return fy17_investigations.merge_compliance_investigation === "Merged Lead" || fy17_investigations.merge_compliance_investigation === "Stand-Alone" });
+document.getElementById("fy17_investigation_reports_count").innerHTML = Object.keys(fy17_investigation_reports).length;
+    
+var fy16_investigation_reports = fy16_investigations.filter(function(fy16_investigations){
+    return fy16_investigations.merge_compliance_investigation === "Merged Lead" || fy16_investigations.merge_compliance_investigation === "Stand-Alone" });
+document.getElementById("fy16_investigation_reports_count").innerHTML = Object.keys(fy16_investigation_reports).length;
+    
+var fy15_investigation_reports = fy15_investigations.filter(function(fy15_investigations){
+    return fy15_investigations.merge_compliance_investigation === "Merged Lead" || fy15_investigations.merge_compliance_investigation === "Stand-Alone" });
+document.getElementById("fy15_investigation_reports_count").innerHTML = Object.keys(fy15_investigation_reports).length;
+    
+    
+    
+    
+var fy19_monitoring = case_data.filter(function(case_data){
+    return case_data.compliance_monitoring_cycle_1_complete_fy === "FY19" || case_data.compliance_monitoring_cycle_2_complete_fy === "FY19"  || case_data.compliance_monitoring_cycle_3_complete_fy === "FY19"  || case_data.compliance_monitoring_cycle_4_complete_fy === "FY19"  || case_data.compliance_monitoring_cycle_5_complete_fy === "FY19" });
+// document.getElementById("fy19_monitoring_count").innerHTML = Object.keys(fy19_monitoring).length;
+ 
+var fy18_monitoring = case_data.filter(function(case_data){
+    return case_data.compliance_monitoring_cycle_1_complete_fy === "FY18" || case_data.compliance_monitoring_cycle_2_complete_fy === "FY18"  || case_data.compliance_monitoring_cycle_3_complete_fy === "FY18"  || case_data.compliance_monitoring_cycle_4_complete_fy === "FY18"  || case_data.compliance_monitoring_cycle_5_complete_fy === "FY18" });
+// document.getElementById("fy18_monitoring_count").innerHTML = Object.keys(fy18_monitoring).length;
+
+var fy17_monitoring = case_data.filter(function(case_data){
+    return case_data.compliance_monitoring_cycle_1_complete_fy === "FY17" || case_data.compliance_monitoring_cycle_2_complete_fy === "FY17"  || case_data.compliance_monitoring_cycle_3_complete_fy === "FY17"  || case_data.compliance_monitoring_cycle_4_complete_fy === "FY17"  || case_data.compliance_monitoring_cycle_5_complete_fy === "FY17" });
+// document.getElementById("fy17_monitoring_count").innerHTML = Object.keys(fy17_monitoring).length;
+    
+var fy16_monitoring = case_data.filter(function(case_data){
+    return case_data.compliance_monitoring_cycle_1_complete_fy === "FY16" || case_data.compliance_monitoring_cycle_2_complete_fy === "FY16"  || case_data.compliance_monitoring_cycle_3_complete_fy === "FY16"  || case_data.compliance_monitoring_cycle_4_complete_fy === "FY16"  || case_data.compliance_monitoring_cycle_5_complete_fy === "FY16" });
+// document.getElementById("fy16_monitoring_count").innerHTML = Object.keys(fy16_monitoring).length;
+    
+var fy15_monitoring = case_data.filter(function(case_data){
+    return case_data.compliance_monitoring_cycle_1_complete_fy === "FY15" || case_data.compliance_monitoring_cycle_2_complete_fy === "FY15"  || case_data.compliance_monitoring_cycle_3_complete_fy === "FY15"  || case_data.compliance_monitoring_cycle_4_complete_fy === "FY15"  || case_data.compliance_monitoring_cycle_5_complete_fy === "FY15" });
+// document.getElementById("fy15_monitoring_count").innerHTML = Object.keys(fy15_monitoring).length;
+    
+var fy14_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY14"});
+// document.getElementById("fy14_monitoring_count").innerHTML = Object.keys(fy14_monitoring).length;
+    
+var fy13_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY13"});
+// document.getElementById("fy13_monitoring_count").innerHTML = Object.keys(fy13_monitoring).length;
+
+var fy12_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY12"});
+// document.getElementById("fy12_monitoring_count").innerHTML = Object.keys(fy12_monitoring).length;
+    
+var fy11_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY11"});
+// document.getElementById("fy11_monitoring_count").innerHTML = Object.keys(fy11_monitoring).length;
+    
+var fy10_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY10"});
+// document.getElementById("fy10_monitoring_count").innerHTML = Object.keys(fy10_monitoring).length;
+    
+var fy09_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY09"});
+// document.getElementById("fy09_monitoring_count").innerHTML = Object.keys(fy09_monitoring).length;
+    
+var fy08_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY08"});
+// document.getElementById("fy08_monitoring_count").innerHTML = Object.keys(fy08_monitoring).length;
+    
+var fy07_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY07"});
+// document.getElementById("fy07_monitoring_count").innerHTML = Object.keys(fy07_monitoring).length;
+    
+var fy06_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY06"});
+// document.getElementById("fy06_monitoring_count").innerHTML = Object.keys(fy06_monitoring).length;
+    
+var fy05_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY05"});
+// document.getElementById("fy05_monitoring_count").innerHTML = Object.keys(fy05_monitoring).length;
+    
+var fy04_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY04"});
+// document.getElementById("fy04_monitoring_count").innerHTML = Object.keys(fy04_monitoring).length;
+
+var fy03_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY03"});
+// document.getElementById("fy03_monitoring_count").innerHTML = Object.keys(fy03_monitoring).length;
+    
+var fy02_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY02"});
+// document.getElementById("fy02_monitoring_count").innerHTML = Object.keys(fy02_monitoring).length;
+    
+var fy01_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY01"});
+// document.getElementById("fy01_monitoring_count").innerHTML = Object.keys(fy01_monitoring).length;
+    
+var fy00_monitoring = case_data.filter(function(case_data) {
+  return case_data.compliance_monitoring_complete_fy == "FY00"});
+// document.getElementById("fy00_monitoring_count").innerHTML = Object.keys(fy00_monitoring).length;
+    
+
+var fy19_monitoring_reports = fy19_monitoring.filter(function(fy19_monitoring){
+    return fy19_monitoring.merge_compliance_monitoring === "Merged Lead" || fy19_monitoring.merge_compliance_monitoring === "Stand-Alone" });
+document.getElementById("fy19_monitoring_reports_count").innerHTML = Object.keys(fy19_monitoring_reports).length;
+    
+var fy18_monitoring_reports = fy18_monitoring.filter(function(fy18_monitoring){
+    return fy18_monitoring.merge_compliance_monitoring === "Merged Lead" || fy18_monitoring.merge_compliance_monitoring === "Stand-Alone" });
+document.getElementById("fy18_monitoring_reports_count").innerHTML = Object.keys(fy18_monitoring_reports).length;
+
+var fy17_monitoring_reports = fy17_monitoring.filter(function(fy17_monitoring){
+    return fy17_monitoring.merge_compliance_monitoring === "Merged Lead" || fy17_monitoring.merge_compliance_monitoring === "Stand-Alone" });
+document.getElementById("fy17_monitoring_reports_count").innerHTML = Object.keys(fy17_monitoring_reports).length;
+    
+var fy16_monitoring_reports = fy16_monitoring.filter(function(fy16_monitoring){
+    return fy16_monitoring.merge_compliance_monitoring === "Merged Lead" || fy16_monitoring.merge_compliance_monitoring === "Stand-Alone" });
+document.getElementById("fy16_monitoring_reports_count").innerHTML = Object.keys(fy16_monitoring_reports).length;
+    
+var fy15_monitoring_reports = fy15_monitoring.filter(function(fy15_monitoring){
+    return fy15_monitoring.merge_compliance_monitoring === "Merged Lead" || fy15_monitoring.merge_compliance_monitoring === "Stand-Alone" });
+document.getElementById("fy15_monitoring_reports_count").innerHTML = Object.keys(fy15_monitoring_reports).length;
+    
+    
+    
+}
+);
+}
+</script>
+  
+    
+    
+ <!-- DataTables js -->
+
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Initalize Data Tables -->
+    <script type="text/javascript" class="init">
+      $(document).ready(function() {
+        $('#example').DataTable({
+          "aaSorting": [[2,'asc'], [3,'desc']],
+          aLengthMenu: [
+            [10, 25, -1],
+            [10, 25, "All"]
+          ],
+          iDisplayLength: -1
+        });
+      });
+    </script>
+
+    
+</body>
+
+</html>
