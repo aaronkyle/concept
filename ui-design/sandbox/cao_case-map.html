@@ -397,24 +397,7 @@ h1 {
       <div id="output"></div>
     </div>
 
-    <script type="module">
-      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-      import notebook from "https://api.observablehq.com/@aaronkyle/cao-caseload-growth-by-year?v=3";
-      const renders = {
-        "viewof year": "#labels",
-        "chart": "#output",
-      };
-  
-  for (let i in renders)
-    renders[i] = document.querySelector(renders[i]);
-
-  Runtime.load(notebook, (variable) => {
-    if (renders[variable.name])
-      return new Inspector(renders[variable.name]);
-  });
-    </script>
-    
-       
+   
         
         </div class="container">
 
@@ -1218,6 +1201,25 @@ document.getElementById("fy15_monitoring_reports_count").innerHTML = Object.keys
         });
       });
     </script>
+    
+    
+     <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from "https://api.observablehq.com/@aaronkyle/cao-caseload-growth-by-year?v=3";
+      const renders = {
+        "viewof year": "#labels",
+        "chart": "#output",
+      };
+  
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+    </script>
+    
 
     
 </body>
