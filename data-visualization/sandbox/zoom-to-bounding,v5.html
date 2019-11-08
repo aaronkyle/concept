@@ -26,7 +26,7 @@
 </style>
 <body>
 <script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://d3js.org/topojson.v3.min.js"></script>
 <script>
 
 var width = 960,
@@ -53,8 +53,7 @@ svg.append("rect")
 var g = svg.append("g")
     .style("stroke-width", "1.5px");
 
-d3.json("https://cors-anywhere.herokuapp.com/https://bl.ocks.org/mbostock/raw/4090846/us.json", function(error, us) {
-  if (error) throw error;
+d3.json("https://cors-anywhere.herokuapp.com/https://bl.ocks.org/mbostock/raw/4090846/us.json").then(function(us) {
 
   g.selectAll("path")
       .data(topojson.feature(us, us.objects.states).features)
