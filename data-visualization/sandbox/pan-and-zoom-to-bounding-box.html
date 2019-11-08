@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.feature {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+.feature.active {
+  fill: orange;
+}
+
+.mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+</style>
+<body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/topojson.v3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500,
+    active = d3.select(null);
+
+var zoom = d3.zoom()
+   .scaleExtent([1, 8])
+   .on("zoom", zoomed);
+
+var projection = d3.geoAlbers()
+    .scale(1000)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geoPath()
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", reset);
+
+var g = svg.append("g")
+    .style("stroke-width", "1.5px");
+
+d3.json("https://cors-anywhere.herokuapp.com/https://bl.ocks.org/mbostock/raw/4090846/us.json").then(function(us) {
+
+  g.selectAll("path")
+      .data(topojson.feature(us, us.objects.states).features)
+    .enter().append("path")
+      .attr("d", path)
+      .attr("class", "feature")
+      .on("click", clicked);
+
+  g.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("class", "mesh")
+      .attr("d", path);
+});
+
+svg.call(zoom);
+
+  function reset() {
+    svg.transition().duration(750).call(
+      zoom.transform,
+      d3.zoomIdentity,
+      d3.zoomTransform(svg.node()).invert([width / 2, height / 2])
+    );
+  }
+
+  function clicked(d) {
+    const [[x0, y0], [x1, y1]] = path.bounds(d);
+    d3.event.stopPropagation();
+    svg.transition().duration(750).call(
+      zoom.transform,
+      d3.zoomIdentity
+        .translate(width / 2, height / 2)
+        .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
+        .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
+      d3.mouse(svg.node())
+    );
+  }
+
+  function zoomed() {
+    const {transform} = d3.event;
+    g.attr("transform", transform);
+    g.attr("stroke-width", 1 / transform.k);
+  }
+
+</script>
