@@ -1,23 +1,33 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<title>Nepal Layers</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
-<body>
-<script type="module">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Embedded Observable notebook</title>
+    <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
 
-import define from "./index.js";
-import {Inspector, Runtime} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  </head>
+  <body>
+  <p>
+    <div class="wrapper">
+      <div class="title">Map Test</div>
+      <div id="output"></div>
+    </div>
+  </p>
+    <script type="module">
+      import {Inspector, Runtime} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from "./9aef18a2b092b886@429.js";
 
-const renders = {
-    "map": "#output",
-  };
+	  const renders = {
+        "map": "#output",
+      };
 
-for (let i in renders)
-renders[i] = document.querySelector(renders[i]);
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
 
-Runtime.load(notebook, (variable) => {
-if (renders[variable.name])
-  return new Inspector(renders[variable.name]);
-});
-
-</script>
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+    </script>
+  </body>
+</html>
