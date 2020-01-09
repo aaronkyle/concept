@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Nepal Layers</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+<script type="module">
+
+import define from "./index.js";
+import {Inspector, Runtime} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+
+const renders = {
+    "map": "#output",
+  };
+
+for (let i in renders)
+renders[i] = document.querySelector(renders[i]);
+
+Runtime.load(notebook, (variable) => {
+if (renders[variable.name])
+  return new Inspector(renders[variable.name]);
+});
+
+</script>
