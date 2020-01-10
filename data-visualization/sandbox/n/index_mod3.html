@@ -14,9 +14,6 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/9aef18a2b092b886.js?v=3";
 
-const inspect = Inspector.into("#title");
-(new Runtime).module(define, name => (name === "title") && inspect());
-
 const inspect = Inspector.into("#map");
 (new Runtime).module(define, name => (name === "map") && inspect());
   
