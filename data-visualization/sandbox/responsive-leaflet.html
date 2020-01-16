@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Mobile tutorial - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	<script src="https://unpkg.com/esri-leaflet@2.3.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+	
+	<style>
+		html, body {
+			height: 90%;
+		}
+		.fill {
+			flex: 1 1 auto;
+		}
+		#map { 
+			height: 100%; 
+			width: 100vw; 
+		}
+	</style>
+</head>
+<body>
+
+<div class="container-fluid h-100 d-flex flex-column">
+<h3>Figure 5c</h3>
+  <div class="col-sm-12" id="map-5c">
+  </div>
+  <h3>Figure 12a</h3>
+  <div class="col-sm-12" id="map-12a">
+  </div>
+  <h3>Figure 19</h3>
+  <div class="col-sm-12" id="map-19">
+  </div>
+</div>
+  
+<script>
+	var map = L.map('map-5c').setView([27.7283365,85.6068682], 10.5);
+	
+	 let osmLayer = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}@2x.png', {
+      attribution: 'Wikimedia maps beta | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  
+  /// Additional Base Layers
+      
+    let world_imagry = L.esri.tiledMapLayer({
+      url: 'http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer',
+      maxZoom: 17
+  });
+    
+    let world_topo = L.esri.tiledMapLayer({
+      url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer',
+      maxZoom: 17
+  });
+  
+  let baseLayers = {
+       "Open Street Maps":osmLayer,
+       "World Imagery":world_imagry,
+       "World Topo Map":world_topo, 
+  };
+  
+  
+  let overlayLayers = {
+  };
+  
+  let c_layers = new L.control.layers(baseLayers, overlayLayers,{position:'topright',collapsed:false})
+  
+ 
+  map.addLayer(osmLayer);
+  map.addControl(c_layers);
+  
+  // Custom Style
+
+var polygon_style_orange = {
+    "color": "#ff7800",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+var polygon_style_purple = {
+    "color": "#8860bf",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+  
+var point_style_orange = {
+    radius: 6,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_purple = {
+    radius: 6,
+    fillColor: "#8860bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_blue = {
+    radius: 6,
+    fillColor: "#6084bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+  var point_style_white = {
+    radius: 6,
+    fillColor: "#F2F4F7",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+  // Additional Layers
+
+ 
+var barhabise_substation = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/barhabise-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+  .bindPopup("Barhabise Substation");
+  });
+  
+
+ var changunarayan_substation_alt = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/changunarayan-substation_alt.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+   .bindPopup("Changunarayan Substation");
+  });
+  
+ 
+var chapagaun_substation = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/chapagaun-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+     .bindPopup("Chapagaun Substation");
+  });
+
+var jorpati_moolpani_substation = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/jorpati-moolpani-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+     .bindPopup("Jorpati/Moolpani Substation");
+  });
+
+var lapsiphedi = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/lapsiphedi.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+     .bindPopup("Lapsiphedi Substation");
+  });
+
+var major_settlements = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/major-settlements.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_white);}}).addTo(map);
+  });
+
+var makalbari_substation = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/makalbari-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+  .bindPopup("Makalbari Substation");
+  });
+
+  var phutung_substation = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/phutung-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map)
+      .bindPopup("Phutung Substation");
+  });
+
+	
+</script>
+<script>
+	var map2 = L.map('map-12a').setView([27.6837024,85.3310939], 12);
+	
+	 let osmLayer2 = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}@2x.png', {
+      attribution: 'Wikimedia maps beta | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map2);
+  
+  /// Additional Base Layers
+      
+    let world_imagry2 = L.esri.tiledMapLayer({
+      url: 'http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer',
+      maxZoom: 17
+  });
+    
+    let world_topo2 = L.esri.tiledMapLayer({
+      url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer',
+      maxZoom: 17
+  });
+  
+  let baseLayers2 = {
+       "Open Street Maps":osmLayer2,
+       "World Imagery":world_imagry2,
+       "World Topo Map":world_topo2, 
+  };
+  
+  
+  let overlayLayers2 = {
+  };
+  
+  let c_layers2 = new L.control.layers(baseLayers2, overlayLayers2,{position:'topright',collapsed:false})
+  
+ 
+  map2.addLayer(world_topo2);
+  map2.addControl(c_layers2);
+  
+  // Custom Style
+
+var polygon_style_orange = {
+    "color": "#ff7800",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+var polygon_style_purple = {
+    "color": "#8860bf",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+  
+var point_style_orange = {
+    radius: 6,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_purple = {
+    radius: 6,
+    fillColor: "#8860bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_blue = {
+    radius: 6,
+    fillColor: "#6084bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+   
+  var point_style_white = {
+    radius: 6,
+    fillColor: "#F2F4F7",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+  
+  // Additional Layers
+
+ 
+var barhabise_substation2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/barhabise-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+  .bindPopup("Barhabise Substation");
+  });
+  
+ var changunarayan_substation_alt2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/changunarayan-substation_alt.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+   .bindPopup("Changunarayan Substation");
+  });
+  
+var chapagaun_substation2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/chapagaun-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+     .bindPopup("Chapagaun Substation");
+  });
+
+var jorpati_moolpani_substation2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/jorpati-moolpani-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+     .bindPopup("Jorpati/Moolpani Substation");
+  });
+
+var lapsi_phedi2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/lapsi-phedi.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+       .bindPopup("Lapsiphedi Substation");
+  });
+
+var makalbari_substation2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/makalbari-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+    .bindPopup("Makalbari Substation");
+  });
+  
+var phutung_substation2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/phutung-substation.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_blue);}}).addTo(map2)
+     .bindPopup("Phutung Substation");
+  });
+  
+  var bhaktapur_datatre_square_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/bhaktapur-datatre-square-heritage-site.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_orange}).addTo(map2)
+      .bindPopup("Bhaktapur Datatre Square Heritage Site");
+  });
+  
+
+var changunarayan_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/changunarayan-heritage-site.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map2)   
+     .bindPopup("Changunarayan Heritage Site");
+  });
+  
+var boudha_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/boudha-heritage-site.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map2)   
+     .bindPopup("Boudha Heritage Site");
+  });
+  
+var hanumandhoka_proposed_buffer_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/hanumandhoka-proposed-buffer-heritage-site.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_orange}).addTo(map2)
+     .bindPopup("Hanumandhokat Heritage Site - Buffer");
+  });
+
+  var hanumandhoka_gazetted_1984_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/hanumandhoka-gazetted-1984-heritage-site.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_orange}).addTo(map2)
+     .bindPopup("Hanumandhokat Heritage Site<br /> Gazetted 1984");
+  });
+
+var hanumandhoka_proposed_core_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/hanumandhoka-proposed-core-heritage-site.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_orange}).addTo(map2)
+     .bindPopup("Hanumandhokat Heritage Site");
+  });
+  
+var pashupatinat_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/pashupatinat-heritage-site.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map2)
+     .bindPopup("Pashupatinat Heritage Site");
+  });
+
+var patan_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/patan-heritage-site.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_orange}).addTo(map2)
+     .bindPopup("Patan Heritage Site");
+  });
+  
+var swayambhunath_heritage_site2 = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/swayambhunath-heritage-site.geojson",function(data){
+    L.geoJson(data,{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, point_style_orange);}}).addTo(map2)
+     .bindPopup("Swayambhunath Heritage Site");
+  });
+
+	
+</script>
+<script>
+	var map3 = L.map('map-19').setView([27.7913582,85.9058971], 14);
+	
+	 let osmLayer3 = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}@2x.png', {
+      attribution: 'Wikimedia maps beta | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map3);
+  
+  /// Additional Base Layers
+      
+    let world_imagry3 = L.esri.tiledMapLayer({
+      url: 'http://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer',
+      maxZoom: 17
+  });
+    
+    let world_topo3 = L.esri.tiledMapLayer({
+      url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer',
+      maxZoom: 17
+  });
+  
+  let baseLayers3 = {
+       "Open Street Maps":osmLayer3,
+       "World Imagery":world_imagry3,
+       "World Topo Map":world_topo3, 
+  };
+  
+  
+  let overlayLayers3 = {
+  };
+  
+  let c_layers3 = new L.control.layers(baseLayers3, overlayLayers3,{position:'topright',collapsed:false})
+  
+ 
+  map3.addLayer(world_topo3);
+  map3.addControl(c_layers3);
+  
+  // Custom Style
+
+var polygon_style_orange = {
+    "color": "#ff7800",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+var polygon_style_purple = {
+    "color": "#8860bf",
+    "weight": 2,
+    "opacity": 0.65
+};
+
+  
+var point_style_orange = {
+    radius: 6,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_purple = {
+    radius: 6,
+    fillColor: "#8860bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.5
+};
+  
+var point_style_blue = {
+    radius: 6,
+    fillColor: "#6084bf",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+ var point_style_gray = {
+    radius: 4,
+    fillColor: "#ACAEAF",
+    color: "#000",
+    weight: 0.7,
+    opacity: 0.8,
+    fillOpacity: 0.7
+};
+  
+  var point_style_white = {
+    radius: 6,
+    fillColor: "#F2F4F7",
+    color: "#000",
+    weight: 0.8,
+    opacity: 0.9,
+    fillOpacity: 0.8
+};
+  
+  
+  // Additional Layers
+
+ 
+var barhabise_substation_polygon = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/barhabise-substation_polygon.geojson",function(data){
+    L.geoJson(data,{style: polygon_style_purple}).addTo(map3)
+    .bindPopup("Barhabise Substation").openPopup();
+  });
+
+
+var barhabise_access_road_line = $.getJSON("https://geospatial-analysis.s3.amazonaws.com/NEP/50059-002/barhabise-access-road_line.geojson",function(data){
+    L.geoJson(data).addTo(map3)
+    .bindPopup("Barhabise Access Road");
+  });	
+</script>
+
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+  </html>
