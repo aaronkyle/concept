@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<style>
+
+@import url("https://cdn.jsdelivr.net/npm/leaflet@1.3.0/dist/leaflet.css");
+
+body {
+  margin: auto;
+  max-width:800px
+}
+
+</style>
+<body>
+<div id="title1"></div>
+<div id="map1"></div>
+<div id="title2"></div>
+<div id="map2"></div>
+<div id="title3"></div>
+<div id="map3"></div>
+<script type="module">
+
+import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import notebook1 from "https://api.observablehq.com/d/310b9c62aec0e434.js?v=3";
+import notebook2 from "https://api.observablehq.com/d/f8f1418e77913946.js?v=3";
+import notebook3 from "https://api.observablehq.com/d/95b7937b99c9f664.js?v=3";
+
+
+const runtime = new Runtime;
+
+runtime.module(notebook1, name => {
+  if (name === "title") {
+    return new Inspector(document.querySelector(`#title1`));
+  }
+  else if (name === "map") {
+    return new Inspector(document.querySelector(`#map1`));
+  }
+});
+
+runtime.module(notebook2, name => {
+  if (name === "title") {
+    return new Inspector(document.querySelector(`#title2`));
+  }
+  else if (name === "map") {
+    return new Inspector(document.querySelector(`#map2`));
+  }
+});
+
+runtime.module(notebook3, name => {
+  if (name === "title") {
+    return new Inspector(document.querySelector(`#title3`));
+  }
+  else if (name === "map") {
+    return new Inspector(document.querySelector(`#map3`));
+  }
+});
+
+</script>
