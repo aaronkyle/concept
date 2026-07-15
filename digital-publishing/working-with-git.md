@@ -1,67 +1,105 @@
-## Notes on using Git
+# working with Git
 
--  initialized empty Git repository in /var/www/ by running `git init`
-- [attempted to link server and GitHub repositories](https://help.github.com/articles/create-a-repo) using `git remote add origin https://github.com/cccs-web/core.git`
-  - error: src refspec master does not match any.
-  - error: failed to push some refs to 'https://github.com/cccs-web/production.git'
-- [attempted to import and link](https://help.github.com/articles/importing-an-external-git-repository) 'core' repo using `git clone --bare https://githost.org/extuser/repo.git` followed by `git push --mirror https://github.com/ghuser/repo.git`
-  - remote: error: refusing to delete the current branch: refs/heads/master To https://github.com/cccs-web/production.git ! [remote rejected] master (deletion of the current branch prohibited)
-  - error: failed to push some refs to 'https://github.com/cccs-web/production.git'
-- cloned 'production' repo using `git clone git://github.com/cccs-web/core.git`
-  - Success.
+[Git](https://git-scm.com/) records snapshots of a set of files and the relationships among those snapshots. For a publishing project, it makes prose, data, templates, and build instructions reviewable together. It also lets us develop a discussion on a branch, compare it with the current publication, and preserve an intelligible history when it is accepted.
 
-## Additional Notes Regarding Git Usage
+Git is not itself a writing interface, backup policy, public release system, or permission model. Those capabilities may be built around it, but they need their own decisions.
 
-### Initializing a Git folder
+## understand the working states
 
-Create a git repo locally just by making a folder, `cd` into it and execute  `git init`.
+A file in a working copy may be untracked, tracked and unchanged, modified, or staged for the next commit. The basic review cycle is:
 
+```bash
+git status --short
+git diff
+git add path/to/file.md
+git diff --staged
+git commit
+```
 
-Understand what commits and branches are and use them as necessary.
+`git add` selects a particular version of a file for the next commit; it does not merely “turn Git on” for that filename. If the file changes again after staging, review and stage the new change intentionally.
 
-### Commits
+Before staging broad paths, inspect untracked files and local configuration. Credentials, exports, caches, generated bundles, and private research material can be difficult to remove after they are shared. A `.gitignore` file reduces noise but is not a security boundary: an already tracked file remains tracked, and an ignored secret is still a secret on the filesystem.
 
-http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History
+## make a focused branch
 
+The repository's default branch represents its accepted line of development. Its name is a repository choice—often `main`, but it should not be assumed. Create a short-lived branch for a coherent change:
 
-To see a history of commits, run `git log`.
+```bash
+git switch --create retrospective/digital-publishing
+```
 
-Explore `git log` flags.  For example, `-p` shows the diff introduced in each commit; `-2` limits the output to only the last two entries.
+A branch should make the review easier to understand, not encode a universal branching philosophy. Keep unrelated work separate when it would require different reviewers, evidence, or release timing. Bring the current default branch into a long-running branch according to the project’s chosen merge or rebase practice, and do not rewrite history that other people are already using without coordination.
 
-Sometimes it's easier to review changes on the word level rather than on the line level. There is a --word-diff option available in Git, that you can append to the git log -p command to get word diff instead of normal line by line diff. Word diff format is quite useless when applied to source code, but it comes in handy when applied to large text files, like books or your dissertation.
+## write commits as editorial records
 
+A useful commit captures one meaningful state and explains why it exists. Review both the content and scope before recording it:
 
-### Branches 
+```bash
+git diff --check
+git diff --staged
+git commit -m "Clarify the digital publication lifecycle"
+```
 
-Good references for learning about branches are [the git-scm branching overview](http://git-scm.com/book/en/Git-Branching-What-a-Branch-Is) and [detailed discussion of branching and merging](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging). Use them. A half-hour read will help you save time and work more efficiently. To get the most out of the references, experiment.
+The subject should complete the thought “this change will …”. The body can record important evidence, tradeoffs, migrations, or follow-up work. Avoid messages that merely say “updates”; the diff already shows that something changed.
 
-There is a lot of over complicated stuff on the web about using this or that branching strategy, but think in simple terms:
+Text-oriented options can help with prose:
 
-There is a master branch which should be the main-line of development. It should aim to be stable at all times and its head is always the 'latest stable build'.
+```bash
+git diff --word-diff
+git log --stat
+git log -p -- path/to/discussion.md
+git blame path/to/discussion.md
+```
 
-If there is a 'release', create a tag for it.
+`git blame` identifies the last commit to touch each line, not the original author or final authority on a claim. Follow the commit history and discussion before drawing conclusions.
 
-If there are release fixes or updates, branch from the tag (a tag is just a label for a commit).
+## review before integration
 
-Other than that, make branches for whatever is convenient. If you want branch history (e.g. to identify a set of commits as relating to each other) be sure not to fast forward back int master (use git merge --no-ff ...) so that the branch knowledge is retained. If that makes no sense to you, go back and read the above guides again ;)
+A pull request or equivalent review should explain:
 
-Once production becomes live and changes less frequently, we might tag the production builds but with just one target website, this is generally overkill. The current commit on the production working copy is our tag - the only advantage of creating a named tag is that we can easily go back to that tagged state if necessary.
+- the purpose and intended audience of the change;
+- important files, relocations, or deletions;
+- sources used to update technical or factual claims;
+- previews or generated outputs that need visual review;
+- privacy, accessibility, compatibility, and migration consequences; and
+- questions that remain intentionally unresolved.
 
-## GitHub Labels
+Automated checks can catch broken links, malformed markup, spelling variants, or a failed build. They complement a human review of argument, voice, evidence, and public meaning.
 
-| Label | Meaning |
-|-------|---------|
-| bug | |
-| data | |
-| duplicate | |
-| enhancement | |
-| help wanted | |
-| high priority | |
-| invalid | |
-| low priority | |
-| question | |
-| urgent | |
-| wontfix | |
+## connect history to publication
 
+A merge records accepted source history, but readers also need to know which state produced a publication. A release may use an annotated tag, a release record, a deployment identifier, or a dated dataset version:
 
-* [Using Custom Javascript In Jekyll Blogs](http://blog.emmatosch.com/2016/03/09/using-custom-javascript-in-jekyll-blogs.html)
+```bash
+git tag --annotate v1.0.0 --message "First reviewed public release"
+git show v1.0.0
+```
+
+Do not tag every deployment mechanically unless that label helps someone identify, reproduce, support, or cite it. For a static site, record the source commit with the build and deployment logs. For a downloadable report or dataset, include a human-meaningful version and a durable path to its release context.
+
+## use remotes deliberately
+
+A remote is a named location for exchanging repository objects:
+
+```bash
+git remote --verbose
+git fetch origin
+git push --set-upstream origin retrospective/digital-publishing
+```
+
+Fetching updates local knowledge without modifying the working branch. Pulling combines fetching with an integration action whose behavior depends on configuration. In shared work, explicit fetch, inspect, and integrate steps are often easier to reason about.
+
+Use authenticated HTTPS or SSH according to the hosting service and organization policy. Never place credentials in a remote URL that will be stored in repository configuration or copied into logs.
+
+## know what does not fit ordinary Git
+
+Git is strongest with reasonably sized text files. Frequently changing binaries and large datasets make clones and history expensive, while line-oriented diffs reveal little about their meaning. [Revision control and publication history](revision-control.md) considers Git LFS, git-annex, object storage, manifests, and release snapshots for these cases.
+
+The practical test is not whether a file can be committed. It is whether collaborators can review, retrieve, verify, and preserve the versions the project promises.
+
+## references
+
+- [Pro Git: recording changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- [Pro Git: branching workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+- [Git reference documentation](https://git-scm.com/docs)
+- [GitHub: about pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)

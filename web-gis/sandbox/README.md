@@ -1,23 +1,14 @@
-This ArcGIS shapefile is extracted from CloudMade data, derived from 
-OpenStreetMap and is licensed under the terms of the Creative Commons 
-Attribution Share-Alike 2.0 license. It is made available here by MapCruzin. 
-If you use these files please make sure you attribute the OpenStreetMap 
-community and MapCruzin by including a link to www.openstreetmap.org and 
-www.mapcruzin.com. If you alter, transform, or build upon this work, you 
-may distribute the resulting work only under the same or similar license 
-to this one. Find out more about Creative Commons licenses at 
-www.creativecommons.org.
+# historical demonstration
 
-OpenStreetMaps is a work-in-progress and these shafile map layers are 
-offered for free for any use you see fit. Therefore we cannot guarantee 
-that they are accurate, but we do promise that using the map layer may be 
-fun, entertaining or educational - perhaps frustrating. Beyond this, we 
-make no guarantee as to its suitability for any purpose. We assume no 
-liability or responsibility for errors or inaccuracies. Please understand 
-that you use these map layers at your own risk. 
+`20180618_mercator/` is retained as a historical browser-map experiment. It converts a small set of shapefiles into GeoJSON and uses D3 3, an older projection plugin, and locally styled SVG paths to display the result.
 
-More free shapefiles are available at: 
-www.mapcruzin.com/download-free-arcgis-shapefiles.htm
+The demonstration is not a current implementation example. It loads several scripts over unencrypted `http` URLs, depends on obsolete library versions, has no documented source or license for the underlying features, and does not meet the current accessibility, provenance, or build practices described in the [web GIS discussion](../README.md). Do not publish or extend it without resolving those issues.
 
-Affordable shapefiles that we have created are available at:
-www.mapcruzin.com/do-it-yourself-gis-maps-shapefiles/
+It remains useful as evidence of several durable goals:
+
+- convert desktop spatial data into browser-readable files;
+- fit a projection to the data extent;
+- connect geometry with attributes and styles; and
+- publish a map without a continuously running GIS server.
+
+A current reconstruction would preserve and document its source, transform it with a reproducible loader, minimize the published attributes, use a maintained renderer such as Observable Plot, Leaflet, or MapLibre, and produce an accessible table and source note alongside the map.

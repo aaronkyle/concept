@@ -1,6 +1,163 @@
-<div class="container">
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>file metadata editor concept</title>
+	<style>
+		:root {
+			color-scheme: light dark;
+			font-family: system-ui, sans-serif;
+			line-height: 1.5;
+		}
 
-		<h1>Meta Editor</h1>
+		body {
+			margin: 0;
+			background: Canvas;
+			color: CanvasText;
+		}
+
+		.container {
+			width: min(72rem, calc(100% - 2rem));
+			margin: 2rem auto 4rem;
+		}
+
+		.context {
+			max-width: 58rem;
+			padding: 1rem 1.25rem;
+			border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+			border-left: 0.35rem solid #356da4;
+			background: color-mix(in srgb, Canvas 94%, #356da4);
+		}
+
+		.context h1 {
+			margin-top: 0;
+		}
+
+		.interpretation {
+			max-width: 58rem;
+			margin-top: 2rem;
+		}
+
+		.interpretation table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.interpretation th,
+		.interpretation td {
+			padding: 0.65rem;
+			border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+			text-align: left;
+			vertical-align: top;
+		}
+
+		.context nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.6rem 1rem;
+		}
+
+		a {
+			color: LinkText;
+		}
+
+		.row {
+			display: flex;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+
+		.col-md-4 {
+			flex: 0 0 28%;
+		}
+
+		.col-md-5,
+		.col-md-8 {
+			flex: 1;
+			min-width: 0;
+		}
+
+		input {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 0.45rem 0.55rem;
+		}
+
+		.legacy-interface {
+			margin-top: 2rem;
+		}
+
+		.media-placeholder {
+			padding: 2rem 1rem;
+			border: 1px dashed color-mix(in srgb, CanvasText 35%, transparent);
+			color: color-mix(in srgb, CanvasText 70%, transparent);
+		}
+
+		@media (max-width: 44rem) {
+			.row {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+<main class="container">
+
+	<section class="context" aria-labelledby="page-title">
+		<h1 id="page-title">file metadata editor concept</h1>
+		<p>This historical interface mockup explored which technical and descriptive information we wanted to expose and edit as file metadata. The fields below do not load or save data; they preserve an early expression of the requirement.</p>
+		<p>The idea is now being developed through <a href="https://archive.categori.se/">Archive</a>, where original files, extraction results, curated metadata, and access decisions can remain distinct, and <a href="https://docs-repo.categori.se/">Docs Repo</a>, where people can work with files, previews, metadata, and revisions in a project context.</p>
+		<nav aria-label="Related discussions">
+			<a href="README.md">data structures</a>
+			<a href="modeling-records-and-relationships.md">modeling records and relationships</a>
+			<a href="document-metadata.md">document metadata</a>
+			<a href="identifiers-names-and-controlled-values.md">identifiers and names</a>
+			<a href="../data-capture/extracting-text-and-data-from-files.md">extracting text and data from files</a>
+			<a href="../data-capture/extracting-metadata-with-exiftool.md">extracting metadata with ExifTool</a>
+		</nav>
+	</section>
+
+	<section class="interpretation" aria-labelledby="interpretation-title">
+		<h2 id="interpretation-title">how the concept has changed</h2>
+		<p>The original form flattened tool output and human description into similar text inputs. The renewed model keeps the visual goal—technical and descriptive information available together—while giving each value a source, authority, history, and publication boundary.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>original field</th>
+					<th>current interpretation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>FileName</code> and <code>Directory</code></td>
+					<td>Original names and storage locations are intake or administrative facts. They are not durable identity and may have different visibility.</td>
+				</tr>
+				<tr>
+					<td><code>FileType</code>, <code>FileSize</code>, and <code>PageCount</code></td>
+					<td>Technical observations should normally be read-only and identify the tool, version, input checksum, and observation time.</td>
+				</tr>
+				<tr>
+					<td><code>Title</code>, <code>Author</code>, and <code>Keywords</code></td>
+					<td>Embedded values remain source observations. Curated descriptions, identified agents, and controlled subjects are separate assertions that can cite or reject them.</td>
+				</tr>
+				<tr>
+					<td><code>CreateDate</code>, <code>CreationDate</code>, <code>ModDate</code>, and <code>MetadataDate</code></td>
+					<td>Similar tag names can carry different provenance and meaning. Preserve the raw tag namespace and map only reviewed values to defined project dates.</td>
+				</tr>
+				<tr>
+					<td><code>DocumentID</code></td>
+					<td>An embedded document identifier is not automatically the managed file, work, version, or external catalog ID. Store the scheme and entity being identified.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>A current editor should show conflicting observations, the preferred curated value, revision history, and the exact public view before a change is approved. Archive and Docs Repo are where those requirements now develop.</p>
+	</section>
+
+	<section class="legacy-interface" aria-labelledby="legacy-title">
+
+		<h2 id="legacy-title">original metadata form</h2>
+		<p>The fields below remain nonfunctional historical controls. They are preserved to show the scope of the original interface rather than to propose a present schema.</p>
 
 		<div class="row"> <!--start row span -->
 
@@ -15,7 +172,7 @@
 						<p><code>-FileName</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-FileName" class="form-control" id="FileName" placeholder="-FileName Output from First Object" name="FileName"></p>
+						<p><input type="text" class="form-control" id="FileName" placeholder="-FileName Output from First Object" name="FileName"></p>
 					</div>
 				</div>
 
@@ -24,7 +181,7 @@
 						<p><code>-Directory</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Directory" class="form-control" id="-Directory" placeholder="-Directory Output from First Object" name="FileName"></p>
+						<p><input type="text" class="form-control" id="Directory" placeholder="-Directory Output from First Object" name="Directory"></p>
 					</div>
 				</div>
 
@@ -33,7 +190,7 @@
 						<p><code>-FileType</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-FileType" class="form-control" id="-FileType" placeholder="-FileType Output from First Object" name="FileName"></p>
+						<p><input type="text" class="form-control" id="FileType" placeholder="-FileType Output from First Object" name="FileType"></p>
 					</div>
 				</div>
 
@@ -42,7 +199,7 @@
 						<p><code>-PageCount</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-PageCount" class="form-control" id="-PageCount" placeholder="-PageCount Output from First Object" name="-PageCount"></p>
+						<p><input type="text" class="form-control" id="PageCount" placeholder="-PageCount Output from First Object" name="PageCount"></p>
 					</div>
 				</div>
 
@@ -51,7 +208,7 @@
 						<p><code>-FileSize</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-FileSize" class="form-control" id="-FileSize" placeholder="-FileSize Output from First Object" name="-FileSize"></p>
+						<p><input type="text" class="form-control" id="FileSize" placeholder="-FileSize Output from First Object" name="FileSize"></p>
 					</div>
 				</div>
 
@@ -60,7 +217,7 @@
 						<p><code>-Language</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Language" class="form-control" id="-Language" placeholder="-Language Output from First Object" name="-Language"></p>
+						<p><input type="text" class="form-control" id="Language" placeholder="-Language Output from First Object" name="Language"></p>
 					</div>
 				</div>
 
@@ -69,7 +226,7 @@
 						<p><code>-Title</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Title" class="form-control" id="-Title" placeholder="-Title Output from First Object" name="-Title"></p>
+						<p><input type="text" class="form-control" id="Title" placeholder="-Title Output from First Object" name="Title"></p>
 					</div>
 				</div>
 
@@ -78,7 +235,7 @@
 						<p><code>-Description</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Description" class="form-control" id="-Description" placeholder="-Description Output from First Object" name="-Description"></p>
+						<p><input type="text" class="form-control" id="Description" placeholder="-Description Output from First Object" name="Description"></p>
 					</div>
 				</div>
 
@@ -87,7 +244,7 @@
 						<p><code>-Subject</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Subject" class="form-control" id="-Subject" placeholder="-Subject Output from First Object" name="-Subject"></p>
+						<p><input type="text" class="form-control" id="Subject" placeholder="-Subject Output from First Object" name="Subject"></p>
 					</div>
 				</div>
 
@@ -96,16 +253,7 @@
 						<p><code>-Author</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Author" class="form-control" id="-Author" placeholder="-Author Output from First Object" name="-Author"></p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-4">
-						<p><code>-Author</code></p>
-					</div>
-					<div class="col-md-8">
-						<p><input type="-Author" class="form-control" id="-Author" placeholder="-Author Output from First Object" name="-Author"></p>
+						<p><input type="text" class="form-control" id="Author" placeholder="-Author Output from First Object" name="Author"></p>
 					</div>
 				</div>
 
@@ -114,7 +262,7 @@
 						<p><code>-Company</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Company" class="form-control" id="-Company" placeholder="-Company Output from First Object" name="-Company"></p>
+						<p><input type="text" class="form-control" id="Company" placeholder="-Company Output from First Object" name="Company"></p>
 					</div>
 				</div>
 
@@ -123,7 +271,7 @@
 						<p><code>-Keywords</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Keywords" class="form-control" id="-Keywords" placeholder="-Keywords Output from First Object" name="-Keywords"></p>
+						<p><input type="text" class="form-control" id="Keywords" placeholder="-Keywords Output from First Object" name="Keywords"></p>
 					</div>
 				</div>
 
@@ -132,7 +280,7 @@
 						<p><code>-DocumentID</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-DocumentID" class="form-control" id="-DocumentID" placeholder="-DocumentID Output from First Object" name="-DocumentID"></p>
+						<p><input type="text" class="form-control" id="DocumentID" placeholder="-DocumentID Output from First Object" name="DocumentID"></p>
 					</div>
 				</div>
 
@@ -141,7 +289,7 @@
 						<p><code>-CreateDate</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-CreateDate" class="form-control" id="-CreateDate" placeholder="-CreateDate Output from First Object" name="-CreateDate"></p>
+						<p><input type="text" class="form-control" id="CreateDate" placeholder="-CreateDate Output from First Object" name="CreateDate"></p>
 					</div>
 				</div>
 
@@ -150,7 +298,7 @@
 						<p><code>-CreationDate</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-CreationDate" class="form-control" id="-CreationDate" placeholder="-CreationDate Output from First Object" name="-CreationDate"></p>
+						<p><input type="text" class="form-control" id="CreationDate" placeholder="-CreationDate Output from First Object" name="CreationDate"></p>
 					</div>
 				</div>
 
@@ -159,7 +307,7 @@
 						<p><code>-ModDate</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Language" class="form-control" id="-Language" placeholder="-Language Output from First Object" name="-Language"></p>
+						<p><input type="text" class="form-control" id="ModDate" placeholder="-ModDate Output from First Object" name="ModDate"></p>
 					</div>
 				</div>
 
@@ -168,7 +316,7 @@
 						<p><code>-ModifyDate</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Language" class="form-control" id="-Language" placeholder="-Language Output from First Object" name="-Language"></p>
+						<p><input type="text" class="form-control" id="ModifyDate" placeholder="-ModifyDate Output from First Object" name="ModifyDate"></p>
 					</div>
 				</div>
 
@@ -177,7 +325,7 @@
 						<p><code>-MetadataDate</code></p>
 					</div>
 					<div class="col-md-8">
-						<p><input type="-Language" class="form-control" id="-Language" placeholder="-Language Output from First Object" name="-Language"></p>
+						<p><input type="text" class="form-control" id="MetadataDate" placeholder="-MetadataDate Output from First Object" name="MetadataDate"></p>
 					</div>
 				</div>
 
@@ -189,10 +337,14 @@
 
 			<div class="col-md-4">
         <h3>JPG/JPEG/PNG</h3>
-				<img class="img-fluid" src="http://cdn-image.travelandleisure.com/sites/default/files/1508870991/aescher-hotel-restaurant-swiss-alps-SWISSCLIFFHOTEL1017.jpg" alt="Photo input.">
+				<div class="media-placeholder">Image preview and image-specific metadata fields were anticipated here.</div>
 			</div>
 
 			<div class="col-md-5">
+			</div>
 		</div> <!--end row span -->
 
-	</div> <!--end container -->
+	</section>
+</main>
+</body>
+</html>

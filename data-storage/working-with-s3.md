@@ -1,432 +1,165 @@
-## About S3
+# working with object storage
 
-Amazon S3 is a cloud storage provided by Amazon Web Services (AWS).
+Object storage is the durable file layer for many contemporary data applications. It stores each object as bytes plus a key and metadata, addresses it through an API, and scales without requiring us to manage a filesystem server. Amazon S3 is our usual starting point. In Microsoft-oriented workplaces, Azure Blob Storage and Azure Data Lake Storage provide the corresponding foundation.
 
+This page replaces an earlier tutorial that used `s3cmd`, permanent IAM-user keys, broad `s3:*` permissions, and public bucket policies. Those examples described a period of the project, but they are unsafe as current defaults. Use federated or temporary credentials, least-privilege roles, private origins, and deliberate publication.
 
-### Root user
+## objects are not ordinary files
 
+An object store presents containers and object keys rather than a POSIX filesystem. A key such as `canonical/places/2026-07-15/places.parquet` may look like a directory path, but its slashes are normally naming conventions rather than directories with ordinary file locking and rename behavior.
 
-### User accounts
+This difference matters:
 
-[Granting Applications that Run on Amazon EC2 Instances Access to AWS Resources](http://docs.aws.amazon.com/IAM/latest/UserGuide/role-usecase-ec2app.html)
+- applications should use the object API instead of assuming local filesystem semantics;
+- a large object is replaced as an object rather than edited safely in place by several users;
+- concurrent writers need version, conditional-write, or application-level coordination;
+- listing, copying, renaming, and deleting a large prefix may involve many object operations; and
+- mounting a bucket as a filesystem can be useful for compatible read workflows but should not disguise these semantics from an application that needs transactional file access.
 
-[Administering Access Keys for IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html#Using_CreateAccessKey)
+Store collaborative record state in a database when atomic multi-record changes or concurrent editing matter. Store source files, immutable versions, analytical snapshots, media, backups, and published assets in object storage.
 
-[And I created users via the Identity and Access Management console:](https://console.aws.amazon.com/iam/#home)
+## AWS and Azure concepts
 
+The services are not identical, but the following concepts help translate an architecture:
 
-## Working with S3
+| concern | AWS | Azure |
+| --- | --- | --- |
+| object service | Amazon S3 | Azure Blob Storage |
+| analytical namespace | S3 with data-lake services and table formats | Azure Data Lake Storage capabilities on Blob Storage |
+| top-level account boundary | AWS account and bucket ownership | subscription, resource group, and storage account |
+| object container | bucket | container within a storage account |
+| object name | key | blob name |
+| human and workload identity | IAM Identity Center, IAM roles, and temporary credentials | Microsoft Entra ID, Azure RBAC, and managed identities |
+| temporary delegated URL | S3 presigned URL | user-delegation SAS or other scoped SAS |
+| archival or access class | S3 storage classes | Blob access tiers |
+| immutable retention | S3 Object Lock | immutable storage policies for Blob Storage |
+| event integration | S3 event notifications and EventBridge | Event Grid and storage events |
 
-### Gaining terminal access with s3cmd
+Use the provider's own terminology in implementation documentation. A conceptual mapping does not imply identical consistency, identity, retention, networking, replication, pricing, or recovery behavior.
 
-A popular and simple Amazon S3 command line tool is **s3cmd**, (written in python).  **s3cmd** is not only helpful for active maintenance; it can be deployed run scripted [cron](http://en.wikipedia.org/wiki/Cron) jobs such as daily backups.
+## our storage layers
 
-#### s3cmd installation
+A project may separate responsibilities by bucket, account, storage account, or carefully governed prefix. Stronger boundaries are appropriate when access and lifecycle differ materially.
 
-To install s3cmd on Ubuntu or Debian:
-
-`sudo apt-get install s3cmd`
-
-#### s3cmd configuration
-
-You need to configure s3cmd before using it for the first time by running `s3cmd --configure`. You'll be prompted with series of questions:
-
-*    access key and secret key for AWS S3
-*    encryption password for encrypted data transfer to and from AWS S3.
-*    path to GPG program used to encrypt data (e.g., /usr/bin/gpg)
-*    whether to use HTTPS protocol
-*    name and port of HTTP proxy if used 
-
-Configuration will then be saved as a plain text in `~/.s3cfg`.
-
-#### Basic Usage of s3cmd
-
-* http://xmodulo.com/how-to-access-amazon-s3-cloud-storage-from-command-line-in-linux.html
-
-#### Copying without redundancy
-
-* [man page](http://s3tools.org/usage)
-* [quick examples for file syncing](http://s3tools.org/s3cmd-sync)
-
-`s3cmd sync -r --skip-existing . s3://foldername/`
-
-### Mounting S3 to your file system
-
-http://cloud-engineering.forthscale.com/2011/04/mounting-s3-as-file-system-on-linux.html
-
-### Configuring AWS users and giving them access to S3
-
-In order to access S3 resources securely, we use AWS users who are granted access through their policies so that they can read and write to appropriate buckets. The credentials for these users are stored in secret.py files associated with the relevant Django settings to ensure that the credential information is kept secret.
-
-The policies are kept as simple as possible, so for example the cccs-docs user set up to access the cccs S3 document repository on behalf of the cccs production website has the following policy:
-```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": ["s3:*"],
-      "Resource": [
-        "arn:aws:s3:::cccs-docs",
-        "arn:aws:s3:::cccs-docs/*"
-      ]
-    }
-  ]
-}
+```text
+received/     immutable original objects and capture manifests
+canonical/    reviewed sources used by current transformations
+derived/      reproducible Parquet, indexes, tiles, and previews
+published/    files deliberately approved for public delivery
+recovery/     protected exports and backup material
 ```
 
-This policy grants the duly authenticated cccs-docs user the ability to carry out all s3 operations on the cccs-docs bucket and its contents.
+Do not make `received/` public because one derived output is public. Do not give a website build role permission to delete recovery objects. Use stable object names or version identifiers for sources and versioned snapshot paths for reproducible analysis. A `latest` pointer can aid convenience, but a published result should identify the immutable version it used.
 
-The visibility of this policy here in no way affects security. Full details on modifying the policies as necessary are available (here)[http://docs.aws.amazon.com/IAM/latest/UserGuide/policy-reference.html].
+## access without permanent keys
 
+For people using AWS CLI v2, prefer organizational federation through [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html):
 
-<!--
-## [Using Bucket Policies and User Policies](http://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html)
+```bash
+aws configure sso
+aws sso login --profile research-readonly
+aws s3 ls s3://example-data/canonical/ --profile research-readonly
+```
 
+For AWS services, assign a narrowly scoped role to Lambda, the build runner, container, or instance. Do not place a person's access keys in application source, a `secret.py` file, an image, or a CI variable when workload identity is available.
 
-Bucket policy and user policy are two of the access policy options available for you to grant permission to your Amazon S3 resources. Both use JSON-based access policy language. The topics in this section describe the key policy language elements, with emphasis on Amazon S3–specific details, and provide example bucket and user policies.
+For Azure, authenticate people through Microsoft Entra ID and workloads through managed identities. Microsoft recommends [authorizing blob access with Entra ID](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) rather than distributing storage-account keys:
 
-Important
+```bash
+az login
+az storage blob list \
+  --account-name examplestorage \
+  --container-name canonical \
+  --auth-mode login \
+  --output table
+```
 
-We recommend you first review the introductory topics that explain the basic concepts and options available for you to manage access to your Amazon S3 resources. For more information, see Introduction to Managing Access Permissions to Your Amazon S3 Resources. 
+Grant access at the smallest practical resource and operation scope. Separate read, write, publish, retention administration, and deletion. A function that reads `canonical/project-a/` and writes `derived/project-a/` does not need administrative access to every bucket or storage account.
 
+## ordinary transfers
 
+With an approved AWS profile, explicit copies are easy to review:
 
-...
+```bash
+aws s3 cp ./data/places.parquet \
+  s3://example-data/derived/places/2026-07-15/places.parquet \
+  --profile research-writer
 
-Topics
+aws s3 cp \
+  s3://example-data/derived/places/2026-07-15/places.parquet \
+  ./data/places.parquet \
+  --profile research-readonly
+```
 
-  * [Access Policy Language Overview](http://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html)
+Azure CLI provides the equivalent blob operations with `--auth-mode login`:
 
-The topics in this section describe the basic elements used in bucket and user policies as used in Amazon S3. For complete policy language information, see the Overview of AWS IAM Policies and the AWS IAM Policy Reference topics in the Using IAM.
-Common Elements in an Access Policy
+```bash
+az storage blob upload \
+  --account-name examplestorage \
+  --container-name derived \
+  --name places/2026-07-15/places.parquet \
+  --file ./data/places.parquet \
+  --auth-mode login
+```
 
-In its most basic sense, a policy contains the following elements:
+Use provider documentation for current command behavior. Test a transfer against a non-production location before using recursive copy or synchronization. Options that mirror deletion can remove valid remote versions quickly; versioning and recovery procedures should be in place before automation is allowed to delete.
 
-    Resources – Buckets and objects are the Amazon S3 resources for which you can allow or deny permissions. In a policy, you use the Amazon Resource Name (ARN) to identify the resource.
+For large or repeated transfers, prefer checksummed, resumable provider tools or maintained libraries, record the transfer manifest, and compare object counts, byte sizes, and checksums where supported. Copy completion does not establish that an application can interpret the result.
 
-    Actions – For each resource, Amazon S3 supports a set of operations. You identify resource operations you will allow (or deny) by using action keywords (see Specifying Permissions in a Policy).
+## secure publication
 
-    For example, the s3:ListBucket permission will allow the user permission to the Amazon S3 GET Bucket (List Objects) operation.
+Keep buckets and containers private by default. For an AWS static site, place CloudFront in front of a private S3 origin and use [Origin Access Control](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html). Publish only the reviewed build prefix. For Azure, use an appropriate private-origin delivery design and verify which identity the CDN or front-door service uses to reach Blob Storage.
 
-    Effect – What the effect will be when the user requests the specific action—this can be either allow or deny.
+Every file downloaded by a browser should be treated as public to that visitor. Client-side JavaScript cannot protect a private JSON or Parquet file it must download. Authorization must occur before the object is returned.
 
-    If you do not explicitly grant access to (allow) a resource, access is implicitly denied. You can also explicitly deny access to a resource, which you might do in order to make sure that a user cannot access it, even if a different policy grants access.
+Presigned S3 URLs and Azure shared access signatures are bearer capabilities. Anyone who obtains a still-valid URL may exercise its permitted operation. Restrict the resource, method, and lifetime; prefer user-delegation SAS on Azure where appropriate; avoid placing these URLs in durable logs or analytics; and make revocation and incident response part of the design.
 
-    Principal – The account or user who is allowed access to the actions and resources in the statement. You specify principal only in a bucket policy. It is the user, account, service, or other entity who is the recipient of this permission. In a user policy, the user to which the policy is attached is the implicit principal.
+## encryption, metadata, and integrity
 
-The following example bucket policy shows the preceding common policy elements. The policy allows Dave, a user in account Account-ID, s3:GetBucketLocation, s3:ListBucket and s3:GetObject Amazon S3 permissions on the examplebucket bucket.
+Both providers encrypt managed storage, but encryption settings do not decide who is allowed to request decryption. Use IAM or Azure RBAC as the primary authorization model and customer-managed keys only when their control, audit, residency, or separation benefits justify the additional recovery and availability responsibilities.
 
-{
-   "Version": "2012-10-17",
-   "Statement": [
-      {
-         "Sid": "ExampleStatement1",
-         "Effect": "Allow",
-         "Principal": {
-            "AWS": "arn:aws:iam::Account-ID:user/Dave"
-         },
-         "Action": [
-            "s3:GetBucketLocation",
-            "s3:ListBucket",
-             "s3:GetObject"
-         ],
-         "Resource": [
-            "arn:aws:s3:::examplebucket"
-         ]
-      }
-   ]
-}
+Object metadata is useful for content type, encoding, cache behavior, or a small stable identifier. Do not rely on provider metadata as the only copy of a rich data description: tools may omit it during download or migration. Store a manifest or sidecar file containing schema, provenance, rights, sensitivity, checksums, and relationships.
 
-Because this is a bucket policy, it includes the Principal  element, which specifies who gets the permission.
+Validate checksums at intake and after migrations. Remember that an ETag is not universally a simple content checksum, particularly for multipart or encrypted uploads. Use the provider's explicit checksum features or a project manifest whose algorithm is recorded.
 
-For more information about the access policy elements, see the following topics:
+## versions, retention, and recovery
 
-    Specifying Resources in a Policy
+Enable versioning where accidental overwrite or deletion matters, then define lifecycle rules for noncurrent versions. Versioning can increase storage cost indefinitely if retention is left unspecified. Object Lock or Azure immutable storage can protect selected records from alteration, but governance and compliance modes have consequential differences; test retention design before applying it to irreplaceable or regulated data.
 
-    Specifying a Principal in a Policy
+Replication improves availability but can also reproduce unwanted changes. It is not automatically an independent backup. Decide which deletions and version states replicate, protect recovery administration separately from production, and rehearse restoration into an isolated location.
 
-    Specifying Permissions in a Policy
+Lifecycle policies should follow the information's expected use rather than simply moving every older object to the cheapest tier. Archival tiers may have minimum durations, retrieval charges, delayed access, or regional constraints. Record acceptable recovery time and cost before selecting them.
 
-    Specifying Conditions in a Policy
+AWS's [S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html), [storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html), and [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) documentation provide current implementation detail. Microsoft's [Azure Storage introduction](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction), [Blob access tiers](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview), and [immutable storage](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview) cover the corresponding Azure choices.
 
-The following topics provide additional policy examples:
+## analytical datasets in object storage
 
+Object storage works especially well for immutable analytical snapshots. Partitioned Parquet can be queried by DuckDB, Athena, Spark, Trino, Azure services, and other engines without loading the whole collection into a transactional database.
 
-    [Bucket Policy Examples](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html)
+Design the dataset rather than merely uploading files:
 
+- choose partitions from common filters and keep individual files large enough for efficient scans;
+- maintain an explicit schema and consistent types across snapshots;
+- prevent readers from observing a partially written release by writing to a versioned path and publishing a manifest or pointer only after validation;
+- compact small files and expire abandoned intermediate uploads;
+- distinguish immutable source snapshots from mutable table formats; and
+- record the engine and query that produced every published result.
 
+When several writers must update a very large analytical table, an open table format such as Apache Iceberg can coordinate snapshots and schema evolution. That is a further system—with catalog and maintenance responsibilities—not a property gained by placing Parquet files in a bucket.
 
-    [User Policy Examples](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-policies-s3.html)
+## operational checklist
 
-
-
-
-..
-
-
-
-
-http://docs.aws.amazon.com/gettingstarted/latest/swh/getting-started-create-bucket.html
-
-When you first create an Amazon S3 bucket, only you can access the bucket and its contents. This default behavior ensures that you do not accidentally expose your data to other users. The point of a website, however, is to be visited, so we'll apply a policy to the root domain and subdomain buckets that anyone to view their contents.
-
-Bucket policies control user access to both a bucket and the objects in it. The policies provide a fine granularity of access control for Amazon S3 resources. The policies also allow you to set permissions for a large number of objects with one statement. For more information, see Using Bucket Policies in the Amazon Simple Storage Service Developer Guide.
-
-To set access permissions on your S3 bucket
-
-1.    In the Amazon S3 console, in the Buckets pane, right-click the root domain bucket you created (in this guide, we used example.com) and then click Properties. In the details pane, click Permissions. 
-
-
-1. Under Permissions, click Add bucket policy.
-
-1.The following policy gives everyone permission to view any file in the example.com bucket. A bucket policy is a collection of JavaScript Object Notation (JSON) statements written in the access policy language. Copy the text from this document, and then paste it into the Bucket Policy Editor. Replace example.com with the name of your bucket. For more information about bucket policies, see Access Control in the Amazon Simple Storage Service Developer Guide.
-
-
-````````
-
-{
-  "Version":"2012-10-17",
-  "Statement": [{
-    "Sid": "Allow Public Access to All Objects",
-    "Effect": "Allow",
-    "Principal": "*",
-    "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::example.com/*"
-  }
- ]
-}
-
-````````
-
-
-1.When you have finished revising the policy for your bucket, in the Bucket Policy Editor, click Save. In the Amazon S3 bucket, under Permissions, click Save.
-
-
-
-## [Configuring the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
-
-
-
-This section explains how to configure settings that the AWS Command Line Interface uses when interacting with AWS, such as your security credentials and the default region.
-
-Topics
-
-    Configuration Settings and Precedence
-    Configuring Credentials
-    Configuring the AWS Region
-    Configuring Command Output
-    Setting and Using Named Profiles
-    Using an HTTP Proxy
-    Command Completion
-
-Configuration Settings and Precedence
-
-To connect to any of the supported services with the AWS CLI, you must provide your AWS credentials. The AWS CLI uses a provider chain to look for AWS credentials in a number of different places, including system or user environment variables and local AWS configuration files.
-
-For information on creating access keys for your account, see Managing Access Keys in the IAM User Guide.
-
-The AWS CLI looks for credentials and configuration settings in the following order:
-
-    Environment Variables – AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
-
-    The AWS credential profiles file – located at ~/.aws/credentials on Linux, OS X, or Unix, or at C:\Users\USERNAME\.aws\credentials on Windows. This file can contain multiple named profiles in addition to a default profile.
-
-    The CLI configuration file – typically located at ~/.aws/config on Linux, OS X, or Unix, or at C:\Users\USERNAME\.aws\config on Windows. This file can contain a default profile, named profiles, and CLI specific configuration parameters for each.
-
-    Instance profile credentials – these credentials can be used on EC2 instances with an assigned instance role, and are delivered through the Amazon EC2 metadata service.
-
-Configuring Credentials
-
-Setting your credentials for use by the AWS CLI can be done in a number of ways, but here are the recommended approaches:
-
-    Use the AWS CLI to set credentials with the following command:
-
-    $ aws configure
-
-    Enter your access key and secret key when prompted. Pressing the enter key without typing a value will keep any previously configured value or assign a default if no value currently exists.
-
-    Tip
-
-    Use aws configure --profile PROFILE_NAME to configure a named profile. For information about using a named profile when executing an AWS CLI command, see Using Profiles with the AWS CLI.
-
-    The CLI will store credentials that are specified with aws configure in a local file, typically ~/.aws/config on Linux, OS X, or Unix and C:\Users\USERNAME\.aws\config on Windows. If a profile is configured in both this file and the AWS credentials file, the profile in the AWS credentials file will take precedence.
-
-    The default CLI config file location can be overridden by setting the AWS_CONFIG_FILE environmental variable to another local path. If this variable is set, aws configure will write to the specified file, and the CLI will attempt to read profiles from there instead of the default path. Regardless of the location of the config file, if a credentials file exists, it takes precedence when the CLI looks for credentials.
-
-    Set credentials in the AWS credentials profile file on your local system, located at:
-
-        ~/.aws/credentials on Linux, OS X, or Unix
-
-        C:\Users\USERNAME\.aws\credentials on Windows
-
-    This file should contain lines in the following format:
-
-    [default]
-    aws_access_key_id = your_access_key_id
-    aws_secret_access_key = your_secret_access_key
-
-    Substitute your own AWS credentials values for the values your_access_key_id and your_secret_access_key.
-
-    Set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables.
-
-    To set these variables in Linux, OS X, or Unix, use export:
-
-    export AWS_ACCESS_KEY_ID=your_access_key_id
-    export AWS_SECRET_ACCESS_KEY=your_secret_access_key
-
-    To set these variables in Windows, use set:
-
-    set AWS_ACCESS_KEY_ID=your_access_key_id
-    set AWS_SECRET_ACCESS_KEY=your_secret_access_key
-
-    To use the CLI from an EC2 instance, create a role that has access to the resources needed and assign that role to the instance when it is launched. Credentials will be configured automatically and CLI commands will work without any additional setup. For more information, see Granting Applications that Run on Amazon EC2 Instances Access to AWS Resources in Using IAM.
-
-Important
-
-The AWS CLI does not allow you to specify credentials on an AWS CLI command (aws s3 ..., and so forth). You must provide credentials using one of the preceding methods before running any AWS CLI commands.
-Setting Temporary Security Tokens
-
-If you are using a temporary security token to access AWS, you have a number of options:
-
-    Edit the CLI config file and add the security token to the default profile. For example:
-
-    [default]
-    aws_access_key_id=AKIAIOSFODNN7EXAMPLE
-    aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    aws_session_token=example123324
-
-    Configure the environment variable AWS_SESSION_TOKEN with your temporary security token. For example:
-
-    $ export AWS_SESSION_TOKEN=example123324
-
-Configuring the AWS Region
-
-You must specify an AWS region when using the AWS CLI. For a list of services and available regions, see Regions and Endpoints. To specify the region, you have the following options:
-
-    Configure the region setting using the aws configure command:
-
-    $ aws configure
-
-    Here's an example where the user is changing the default region from us-west-2 to us-east-1.
-
-    AWS Access Key ID [********************]:
-    AWS Secret Access Key [********************]:
-    Default region name [us-west-2]: us-east-1
-    Default output format [None]:
-
-    Specify the region in the AWS_DEFAULT_REGION environment variable.
-
-    Use the --region option with an AWS CLI command. The following example lists the Amazon SQS queues for the us-west-2 region.
-
-    $ aws sqs list-queues --region us-west-2
-
-Configuring Command Output
-
-The default response output format for the AWS CLI is JSON. This format provides the complete response information and can be processed by tools such as jq. An ASCII table format and a tab-delimited text format are also available. To change the default output format (json, table, or text) you have the following options:
-
-Option #1: Configure the default format using the aws configure command:
-
-$ aws configure
-
-Here's an example where the user sets the default output format to text.
-
-AWS Access Key ID [********************]:
-AWS Secret Access Key [********************]:
-Default region name [us-west-2]:
-Default output format [None]: text
-
-Option #2: Specify the format in the AWS_DEFAULT_OUTPUT environment variable.
-
-Option #3: Use the --output option with an AWS CLI command. The following example lists the Amazon EBS volumes in a table format.
-
-$ aws ec2 describe-volumes --output table
-
-Setting and Using Named Profiles
-
-The AWS CLI and SDKs support named profiles stored in the CLI config file. The following example shows a config file with two profiles:
-
-[default]
-aws_access_key_id=AKIAIOSFODNN7EXAMPLE
-aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-region=us-east-1
-
-[profile test-user]
-aws_access_key_id=AKIAI44QH8DHBEXAMPLE
-aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
-region=us-west-2
-
-Each profile uses different credentials—perhaps from two different IAM users—and can also use different regions and output formats.
-
-Important
-
-The AWS credentials file uses a different naming format than the CLI config file for named profiles. Do not include the 'profile ' prefix when configuring a named profile in the AWS credentials file. The credentials file also does not support the region and output settings that can be set in the CLI config file.
-
-While both SDKs and CLI will read from either file, the SDKs may output warnings if you store credentials in the CLI config file. If you are using both CLI and SDK, you can avoid these warnings by putting credentials in the credentials file and region/output settings in the config file. For a named profile that would look like this:
-
-~/.aws/credentials
-
-[test-user]
-aws_access_key_id=AKIAI44QH8DHBEXAMPLE
-aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
-
-~/.aws/config
-
-[profile test-user]
-region=us-east-1
-output=text
-
-Using Profiles with the AWS CLI
-
-To use a named profile with the AWS CLI, you can specify the profile on the command-line or in the environment. The CLI will use profiles specified on the command-line first, but if none is specified, then it will look for the AWS_DEFAULT_PROFILE environment variable. If neither could be found, it uses the default profile.
-
-To specify which profile to use for an AWS CLI command, add the --profile switch followed by the profile name. For example, to list S3 buckets using the test-user profile from the previous example, you could type:
-
-$ aws --profile test-user s3 ls
-
-To specify the profile in the environment, set the AWS_DEFAULT_PROFILE environment variable with the profile name. The profile specified will be used automatically by all AWS CLI commands that are executed within the same environment. For example:
-
-$ export AWS_DEFAULT_PROFILE=test-user
-$ aws s3 ls
-
-Tip
-
-Even if you set a profile in your environment, you can override it with the --profile AWS CLI command switch.
-Using an HTTP Proxy
-
-If you need to access AWS through proxy servers, you should configure the HTTP_PROXY and HTTPS_PROXY environment variables with the IP addresses for your proxy servers.
-
-Linux, OS X, or Unix
-
-$ export HTTP_PROXY=http://a.b.c.d:n
-$ export HTTPS_PROXY=http://w.x.y.z:m
-
-
-
-In these examples, http://a.b.c.d:n and http://w.x.y.z:m are the IP addresses and ports for the HTTP and HTTPS proxies.
-
-If you are using IAM roles, you should also set the NO_PROXY environment variable with the IP address 169.254.169.254, so that the AWS CLI can access the Instance Meta Data Service (IMDS).
-Linux, OS X, or Unix
-
-$ export NO_PROXY=169.254.169.254
-
-
-
-
-Command Completion
-
-On Unix-like systems, the AWS CLI includes a command-completion feature that enables you to use the Tab key to complete a partially typed command. This feature is not automatically installed so you need to configure it manually.
-
-To enable tab completion for bash, use the built-in command complete:
-
-$ complete -C '/usr/local/aws/bin/aws_completer' aws
-
-If you installed the CLI to a location other than /usr/local/aws, replace the path in the above command with the location of aws_completer on your system. If you are not sure where the CLI is installed, use find / -name aws_completer to find the path.
-
-
-After enabling command completion, type in a partial command (e.g. aws s) and press tab to see the available commands. If you see a command not found error, confirm that the installation folder is in your PATH variable.
-
-Finally, to ensure that completion continues to work after a reboot, add the configuration command that you used to enable command completion to your shell configuration file (e.g. ~/.bash_profile). 
-
-
--->
+Before an object-storage area becomes authoritative, confirm:
+
+1. the account, region, residency, ownership, and responsible administrators;
+2. whether objects are received, canonical, derived, published, cached, or recovery material;
+3. separate identities and least-privilege policies for intake, processing, publication, and recovery;
+4. public-access blocks and the exact private-origin publication path;
+5. encryption, key ownership, rotation, and recovery decisions;
+6. versioning, immutable-retention, replication, lifecycle, and deletion behavior;
+7. inventory, manifest, schema, checksum, provenance, and validation procedures;
+8. access, configuration, cost, capacity, and failed-operation monitoring;
+9. a tested restore and provider-exit procedure; and
+10. a documented mapping if the same architecture must operate in both AWS and Azure.
+
+Object storage makes durable bytes readily available. The project must still make those bytes intelligible, governed, secure, and recoverable.

@@ -1,131 +1,62 @@
+# mathematical notation
 
-* [Using IPython Notebook with Django](https://andrewbrookins.com/python/using-ipython-notebook-with-django/)
-* [How to setup Jupyter/IPython notebook for Django?](https://stackoverflow.com/questions/35483328/how-to-setup-jupyter-ipython-notebook-for-django)
+Mathematical notation is part of the publication, not an ornamental interface
+feature. A formula should remain connected to its explanation, variables, units,
+assumptions, source, and result. Rendering TeX attractively does not by itself make
+an analysis reproducible or understandable.
 
-* [kramdown Syntax](https://kramdown.gettalong.org/syntax.html#math-blocks)
+The older notes combined Django, Jupyter, kramdown, GitHub Pages, MathJax, and
+KaTeX workarounds. Our Observable Framework applications now have a direct path
+for most web notation.
 
-* [Math Engine MathJax](https://kramdown.gettalong.org/math_engine/mathjax.html)
-* [Math on GitHub Pages](http://g14n.info/2014/09/math-on-github-pages/)
+## use the Framework TeX integration
 
+Observable Framework provides [`tex`](https://observablehq.com/framework/lib/tex)
+as a recommended npm library. A fenced `tex` block creates display mathematics,
+while the `tex` tagged template can place a formula inline with explanatory text.
+This keeps the source readable in Markdown and includes the rendering library,
+styles, and supporting fonts in the Framework build.
 
-* [How to supported latex in github-pages](https://stackoverflow.com/questions/26275645/how-to-supported-latex-in-github-pages)
+Use display math for an equation that needs its own visual line and inline math
+for a short expression that belongs grammatically in a sentence. Define symbols
+near their first use, give equations identifiers only when the discussion refers
+back to them, and avoid turning an entire paragraph into notation.
 
+## source, calculation, and display are different
 
-* [Django Pandoc Field](https://github.com/JaapJoris/django-pandocfield)
+TeX source expresses notation. It is not normally the calculation that produced a
+number. Keep executable analysis in a tested data loader, notebook, SQL query, or
+JavaScript module; preserve its inputs and environment; and use the page to
+explain the method and display selected results.
 
+Where a reader needs to reuse an equation, consider showing the TeX source or a
+plain-text definition alongside the rendered form. Where a formula represents a
+model, link it to the variables and data fields used by the application rather
+than allowing labels to drift independently.
 
----
+## accessibility and resilient meaning
 
+Introduce important equations in prose and explain what the result means. Test
+the rendered mathematics with the browsers and assistive technologies supported
+by the project; do not assume visual rendering establishes an equivalent spoken
+or navigable representation. Avoid encoding essential distinctions through color
+or precise two-dimensional position alone.
 
-* [KaTeX](https://khan.github.io/KaTeX/)
-    - The fastest math typesetting library for the web.
+For a simple expression, ordinary text or semantic HTML may be clearer than a
+math renderer. For a complex derivation, a downloadable accessible document or a
+specialized math workflow may be needed in addition to the web page.
 
-* [KaTeX](https://github.com/Khan/KaTeX)
+## when another renderer is appropriate
 
-* [kramdown: Math Engine MathJax](https://kramdown.gettalong.org/math_engine/mathjax.html)
+[KaTeX](https://katex.org/) remains a focused, fast TeX renderer, and
+[MathJax](https://www.mathjax.org/) remains a broader web mathematics system.
+Choose another integration when the required notation, accessibility behavior,
+document pipeline, or host environment is not adequately served by Framework’s
+default. Pin the implementation, self-host supporting assets where practical, and
+test the actual formulas: TeX dialects and supported commands differ.
 
-* [kramdown: Math Blocks](https://kramdown.gettalong.org/syntax.html#math-blocks)
-    - This syntax feature is not part of the original Markdown syntax. The idea comes from the Maruku and Pandoc packages.
-
-
----
-
-https://github.com/github/markup/issues/897
-
-A workaround mentioned by @cyhsutw at education/classroom#675 (comment) :
-
-Another hack is utilizing the Jupyter Notebook.
-
-GitHub has built-in support for rendering .ipynb files. You can write inline and display LaTeX code in the notebook and GitHub will render it for you.
-
-Here's a sample notebook file: https://gist.github.com/cyhsutw/d5983d166fb70ff651f027b2aa56ee4e
-
-
-NOTA BENE formulas are not rendered in the GitHub website but on your GitHub Pages website, emh like this one you are reading right now.
-
----
-
-$$
-M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
-\end{array} \right)
-$$
-
-
-<!-- testing Using MathJax -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
----
-
-http://g14n.info/2014/09/math-on-github-pages/
-
-Using KaTeX
-I am going to show how to render math snippets server side with KaTeX in order to import them in your GitHub Pages static web site using Jekyll include feature. Note that client side rendering is also possible, but it is not in the scope of this article, by now.
-
-This is an updated version of the original article, that contained a different solution using MathJax and Redcarpet markdown. That solution is obsolete, I found KaTeX and server side rendering, a far better solution.
-
-What is KaTeX?
-
-KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering on the web.
-
-Install katex cli, with npm do
-
-npm install katex -g
-Create two folders that will contain inline and display snippets
-
-mkdir -p tex-snippets/inline
-mkdir -p tex-snippets/display
-An inline snippet, like ∀x∈R∀x∈R , does not break its row.
-
-A snippet in display mode will be centered, usually it is a formula, for example
-
-
-Create file tex-snippets/inline/for-any-real.tex with the following content
-
-\forall x \in R
-Create file tex-snippets/display/matrix.tex with the following content
-
-M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
-\end{array} \right)
-Create two folders that will contain inline and display rendered output in your Jekyll includes folder
-
-mkdir -p _includes/math/inline
-mkdir -p _includes/math/display
-Generate html output
-
-cat tex-snippets/display/matrix.tex | katex --display-mode > _includes/math/display/matrix.html
-cat tex-snippets/inline/for-any-real.tex | katex > _includes/math/inline/for-any-real.html
-
-Finally, add KaTeX CSS to your html page.
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-
-If you read KaTeX Usage, there is also a JavaScript tag to add, but it is required only for client side rendering.
-
-Now you can include the snippets in your website using Jekyll include tags
-
-{% include math/inline/for-any-real.html %}
-{% include math/display/matrix.html %}
-
-
----
-
-Rendering Math in GitHub using iPython notebooks
-
-* [Grabbed from https://github.com/odewahn/ipynb-examples, converted to v3 for GitHub to render.](https://gist.github.com/cyhsutw/d5983d166fb70ff651f027b2aa56ee4e)
-
-* [testing github](https://github.com/cben/sandbox)
-* [testing github](https://github-cben-sandbox.anat-beni.net/README)
-
-
-
----
-
-
-* [Integrating mathjax and markdown in django](https://somesquares.org/blog/2013/4/integrating-mathjax-and-markdown-django/)
+Jupyter notebooks can remain useful for executable exploration, while Pandoc can
+produce math-bearing HTML, PDF, DOCX, or other formats from maintained sources.
+Their roles belong to [data analysis](../data-analysis/) and [digital
+publishing](../digital-publishing/); they do not need to be coupled to Django or a
+CMS merely to place an equation on a web page.

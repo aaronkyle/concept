@@ -1,155 +1,100 @@
-## About
+# writing with Markdown
 
-Markdown refers to both:
+Markdown is a plain-text notation for structured documents. Its great advantage is not that it can reproduce every visual detail of a word processor, but that a source file remains legible, searchable, comparable, and editable without special software. A publishing system can then transform that source into HTML, PDF, DOCX, or another representation.
 
-1. a [markup syntax](http://en.wikipedia.org/wiki/Markup_language) that was designed as an "easy-to-read, easy-to-write plain text format"
-1. a text-to-XHTML/HTML conversion tool, written in Perl 
+There is no single universal Markdown implementation. [CommonMark](https://spec.commonmark.org/) provides an unambiguous core specification. [GitHub Flavored Markdown](https://github.github.com/gfm/) adds features used in GitHub content, including tables, task lists, strikethrough, and extended autolinks. Pandoc, static-site generators, notebooks, and content systems may add their own metadata, citations, footnotes, math, or directives. Name the expected dialect when those differences matter.
 
-The overriding design goal in initial formulation of Markdown’s formatting syntax was to make it as "readable" as possible. The idea is that any Markdown-formatted document can be publishable "as-is"--i.e., as plain text file that can be logically interpreted by an unfamiliar reader without having to process it's formatting syntax through some form of 'printing' application [unlike text formatted in other a markup languages, such as Rich Text Format (RTF) or HTML, which--in their raw form--are cluttered with tags and formatting instructions to an extent that makes them difficult for human consumption].
+## a useful core
 
-It is important to note that there is no clearly-defined Markdown standard.  The original writeup and implementation by John Gruber is referred to by some as 'vanilla' Markdown, with other "flavours" of the syntax being created as different vendors write their own variants of the language to correct flaws or add missing features.
+The most portable documents rely on a small set of structural elements:
 
-Markdown is free software, available under a [BSD-style open source license](http://daringfireball.net/projects/markdown/license).
+````markdown
+# a document title
 
+An introductory paragraph with *emphasis*, **strong emphasis**,
+and a [descriptive link](https://example.org/).
 
-## Getting Started <sup>[[ref]](# "Adapted from the introductary post of [Ghost](https://ghost.org/) blogging software")
+## a section
 
-Writing in markdown is designed to be easy, using minimat *formatting* to style content.
+- one item
+- another item
 
+1. a first step
+2. a second step
 
-### Headers
+> A short quotation, followed by its source in the surrounding text.
 
-Headers are done with `#`:
+![A concise description of the image](images/example.png)
 
+`inline code` belongs within a sentence.
+
+```text
+A fenced block preserves preformatted text.
 ```
-### Here's a third-level sub-header
+````
 
+Use headings to express hierarchy rather than visual size. A page should normally have one first-level title, followed by second-level sections without skipping levels. Lists should contain genuinely parallel items; a sequence of paragraphs is often clearer when the relationship is not a list.
+
+Link text should identify its destination or purpose. Image descriptions should convey the information the image contributes, not repeat “image of.” Decorative images generally need empty alternative text in the final HTML, while complex charts may need a nearby explanation or data table.
+
+## paragraphs and line breaks
+
+A blank line separates paragraphs. A single newline inside a paragraph is usually treated as a space, which lets authors wrap source lines without forcing visual line breaks. Avoid manual line breaks for visual spacing; presentation belongs in the output style.
+
+Indentation has structural meaning in lists and code blocks. Use spaces consistently and preview nested content in the actual target renderer, because edge cases differ among dialects.
+
+## tables, notes, and other extensions
+
+GitHub-style tables are convenient for small comparisons:
+
+```markdown
+| format | useful for |
+| --- | --- |
+| Markdown | portable prose |
+| CSV | simple tabular data |
 ```
 
-### Here's a third-level sub-header
+They are a poor fit for long prose, complex relationships, or layouts. Tables also need meaningful headers and a sensible reading order in the rendered publication.
 
+Footnotes, definition lists, citations, attributes, mathematics, diagrams, and callouts are extensions rather than a dependable Markdown core. Use them when the publishing pipeline explicitly supports them, and document the dependency. If an extension carries important meaning, confirm that fallback outputs retain that meaning.
 
-Lists are stated with `*`:
+## metadata and assets
 
-```
-* Item number one
-* Item number two
-    * A nested item
-* A final item
-```
+Many tools recognize a YAML metadata block at the start of a file:
 
-* Item number one
-* Item number two
-    * A nested item
-* A final item
-
-### Numbered Lists
-
-
-For a numbered list:
-
-```
-1. Remember to buy some milk
-2. Drink the milk
-3. Tweet that I remembered to buy the milk, and drank it
-```
-
-1. Remember to buy some milk
-2. Drink the milk
-3. Tweet that I remembered to buy the milk, and drank it
-
-
-### Links
-
-Want to link to a source? No problem. If you paste in url, like http://ghost.org - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to [the Ghost website](http://ghost.org). Neat.
-
-### What about Images?
-
-Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
-
-{<1>}![The Ghost Logo](http://tryghost.org/ghost.png)
-
-Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:
-
-{<2>}![A bowl of bananas]
-
-
-### Quoting
-
-Sometimes a link isn't enough, you want to quote someone on what they've said. It was probably very wisdomous. Is wisdomous a word? Find out in a future release when we introduce spellcheck! For now - it's definitely a word.
-
-> Wisdomous - it's definitely a word.
-
-### Working with Code
-
-Got a streak of geek? We've got you covered there, too. You can write inline `<code>` blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.
-
-    .awesome-thing {
-        display: block;
-        width: 100%;
-    }
-
-### Ready for a Break? 
-
-Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.
-
+```yaml
 ---
-
-
-### Advanced Usage
-
-There's one fantastic secret about Markdown. If you want, you can  write plain old HTML and it'll still work! Very flexible.
-
-<input type="text" placeholder="I'm an input field!" />
-
-That should be enough to get you started. Have fun - and let us know what you think :)
-
+title: a reviewed publication
+date: 2026-07-15
+lang: en
 ---
-
-
-
-* [kramdown Syntax](https://kramdown.gettalong.org/syntax.html#math-blocks)
-    - fast, pure-Ruby Markdown-superset converter
-
----
-
-
-* [Markdown: continue numbered list](https://stackoverflow.com/questions/18088955/markdown-continue-numbered-list)
-* [Support starting numbered lists with arbitrary number #211](https://github.com/gettalong/kramdown/issues/211#issuecomment-256508905)
-
-With kramdown:
-
-```
-{:start="3"}
-1. test
-1. test
-1. test
 ```
 
-output:
+This is not part of CommonMark or GFM. Treat the accepted fields as a project schema: define their meaning, validate them, and avoid exposing private workflow metadata when the source is published.
 
-```
-3. test
-4. test
-5. test
-```
+Prefer relative links for files that travel with the repository and stable absolute URLs for external resources. Give assets descriptive, durable filenames. Do not paste generated binary data, temporary signed links, or local filesystem paths into source documents.
 
----
+## raw HTML
 
+Some Markdown processors permit raw HTML, while others sanitize or omit it. HTML can be appropriate for a semantic element the selected dialect cannot express, but it reduces portability and may introduce accessibility or security problems. A large amount of embedded HTML is usually evidence that the document needs a template, component, or different source format.
 
-## Converting Markdown to HTML
+## an editorial practice
 
-Markdown can be [converted easily](Working-with-Pandoc) to other formatting and printing languages.  It is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+Markdown works best when the source is treated as writing rather than abbreviated web design:
 
+1. state the purpose and audience near the beginning;
+2. give each section one conceptual job;
+3. prefer direct sentences and concrete terms;
+4. cite the source of claims and distinguish evidence from interpretation;
+5. keep filenames, heading style, and terminology consistent;
+6. review the plain text as well as every important rendered output; and
+7. use [Git](working-with-git.md) to make changes reviewable rather than silently replacing files.
 
-## Other Markdown Flavors
+The source should be comfortable to read in a text editor and structurally rich enough to publish elsewhere. [Pandoc](working-with-pandoc.md) can convert maintained Markdown into several delivery formats, but the conversion will only be as coherent as the source structure.
 
-* [Markdown Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+## references
 
-### References:
-
-* [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
-* [Wikipedia: Markdown](http://en.wikipedia.org/wiki/Markdown)
-* [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-    * [Markdown Basics](https://help.github.com/articles/markdown-basics/)
-    * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [CommonMark specification](https://spec.commonmark.org/)
+- [GitHub Flavored Markdown specification](https://github.github.com/gfm/)
+- [GitHub: basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Pandoc Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
