@@ -2,17 +2,17 @@
 
 This repository seeks to define a system for open digital communication that aids investigation of complex social and environmental phenomena.
 
-It began as an inventory of what we wanted from a web-based data and knowledge management application. The notes ask how people can gather source material, organize data and documents, work together, retain a meaningful history of changes, carry out analysis, and publish what they learn. This README provides context for that inquiry and points toward the more detailed discussions collected throughout the repository.
+It began as an inventory of what I wanted from a web-based data and knowledge management application. The notes ask how people can gather source material, organize data and documents, work together, retain a meaningful history of changes, carry out analysis, and publish what they learn. This README provides context for that inquiry and points toward the more detailed discussions collected throughout the repository.
 
 The system may ultimately be a set of connected applications rather than a single, monolithic platform. What matters is that the parts share a coherent approach to data, metadata, identity, permissions, revision history, and publication.
 
 ## intentions
 
-We want people to be able to move from collecting information to understanding and communicating it without repeatedly losing context along the way. A file, dataset, map, note, or web source should remain connected to where it came from, what has been done to it, who is responsible for it, and which projects or conclusions depend upon it.
+I want people to be able to move from collecting information to understanding and communicating it without repeatedly losing context along the way. A file, dataset, map, note, or web source should remain connected to where it came from, what has been done to it, who is responsible for it, and which projects or conclusions depend upon it.
 
 The project is therefore concerned with both data management and knowledge management. Data management helps us store, describe, protect, transform, and retrieve information. Knowledge management helps a team relate that information to questions, decisions, interpretations, and published work.
 
-Toward a 'common public good', we want the resulting system to make serious research and publication more accessible while respecting the privacy, security, licensing, and permissions that some work requires.
+Toward a 'common public good', I want the resulting system to make serious research and publication more accessible while respecting the privacy, security, licensing, and permissions that some work requires.
 
 ## design parameters
 
@@ -38,7 +38,7 @@ Toward a 'common public good', we want the resulting system to make serious rese
 
 6. **specialized tools should remain interoperable.**
 
-   People need different interfaces for writing, file management, project coordination, data analysis, visualization, and mapping. We expect variety in these interfaces, but greater standardization in how the underlying information is identified, described, related, secured, and exchanged. A useful result created in one part of the system should be available to another without being copied into an unrelated information silo.
+   People need different interfaces for writing, file management, project coordination, data analysis, visualization, and mapping. I expect variety in these interfaces, but greater standardization in how the underlying information is identified, described, related, secured, and exchanged. A useful result created in one part of the system should be available to another without being copied into an unrelated information silo.
 
 ## application context
 
@@ -68,7 +68,7 @@ Our use of static-state data applications can reduce live access to source syste
 
 ## current prototypes
 
-Recent work in `framework` and `framework/ai` develops working examples of several ideas first collected here. The [categori.se development hub](https://categori.se/) provides an entry point to this wider family of information systems, knowledge tools, maps, documents, data, and AI-assisted workflows.
+The [categori.se development hub](https://categori.se/) provides an entry point to this wider family of information systems, knowledge tools, maps, documents, data, and AI-assisted workflows.
 
 - [archive](https://archive.categori.se/) explores durable document intake, immutable file identity, metadata extraction and curation, connected sources, and controlled access;
 - [docs repo](https://docs-repo.categori.se/) explores project-oriented file management, editing, previews, metadata, and revision workflows;
@@ -90,10 +90,10 @@ The repository expands the concept through several related areas:
 - [application architecture](application-architecture/), [platform hosting](platform-hosting/), and [user-interface design](ui-design/) consider responsibilities and trust boundaries, our preferred Observable Framework and AWS static-publication pattern, deployment environments, and the interfaces through which people use the system; and
 - [web GIS](web-gis/) develops the specialized case of managing, analyzing, and publishing geospatial information.
 
-Many of these pages began as scratch notes, tutorials, or collections of possible tools. Some references are historical, some discussions are incomplete, and some named products have changed or disappeared. We are revisiting them to distinguish durable requirements from dated implementation choices, improve the depth and clarity of the research, and preserve useful history without presenting it as current guidance.
+Many of these pages began as scratch notes, tutorials, or collections of possible tools. Some references are historical, some discussions are incomplete, and some named products have changed or disappeared. I am revisiting them to distinguish durable requirements from dated implementation choices, improve the depth and clarity of the research, and preserve useful history without presenting it as current guidance.
 
 ## how this repository will evolve
 
 The [retrospective working parameters](retrospective/working-parameters.md) record the editorial and research principles guiding this review. Each page will be evaluated for its purpose, voice, evidence, current relevance, and relationship to the rest of the concept before it is revised, merged, archived, or removed.
 
-The aim is not to make the old inquiry look as though it had already reached today's conclusions. It is to show what we were trying to solve, what we have learned since, and what a more coherent system should now make possible.
+The aim is not to make the old inquiry look as though it had already reached today's conclusions. It is to show what I am trying to solve, what I have learned since, and what a more coherent system should now make possible.
